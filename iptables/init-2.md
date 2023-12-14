@@ -37,36 +37,6 @@
 -A FORWARD -m conntrack --ctstate NEW -j KUBE-EXTERNAL-SERVICES
 ```
 
-```bash
--A FORWARD -j DOCKER-USER
--A DOCKER-USER -j RETURN
-```
-
-```bash
--A FORWARD -j DOCKER-ISOLATION-STAGE-1
--A DOCKER-ISOLATION-STAGE-1 -i docker0 ! -o docker0 -j DOCKER-ISOLATION-STAGE-2
--A DOCKER-ISOLATION-STAGE-2 -o docker0 -j DROP
--A DOCKER-ISOLATION-STAGE-2 -j RETURN
--A DOCKER-ISOLATION-STAGE-1 -j RETURN
-```
-
-```bash
--A FORWARD -o docker0 -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
-```
-
-```bash
--A FORWARD -o docker0 -j DOCKER
--A DOCKER -i docker0 -j RETURN
-```
-
-```bash
--A FORWARD -i docker0 ! -o docker0 -j ACCEPT
-```
-
-```bash
--A FORWARD -i docker0 -o docker0 -j ACCEPT
-```
-
 
 #### kubernetes load balancer firewall:
 ```bash
@@ -88,17 +58,6 @@
 ```bash
 -A PREROUTING -j KUBE-SERVICES
 ...
-```
-
-```bash
--A PREROUTING -d 192.168.49.1/32 -j DOCKER_OUTPUT
--A DOCKER_OUTPUT -d 192.168.49.1/32 -p tcp -m tcp --dport 53 -j DNAT --to-destination 127.0.0.11:37849
--A DOCKER_OUTPUT -d 192.168.49.1/32 -p udp -m udp --dport 53 -j DNAT --to-destination 127.0.0.11:40300
-```
-
-```bash
--A PREROUTING -m addrtype --dst-type LOCAL -j DOCKER
--A DOCKER -i docker0 -j RETURN
 ```
 
 
@@ -151,17 +110,6 @@
 -A KUBE-SERVICES -m addrtype --dst-type LOCAL -j KUBE-NODEPORTS
 ```
 
-```bash
--A OUTPUT -d 192.168.49.1/32 -j DOCKER_OUTPUT
--A DOCKER_OUTPUT -d 192.168.49.1/32 -p tcp -m tcp --dport 53 -j DNAT --to-destination 127.0.0.11:37849
--A DOCKER_OUTPUT -d 192.168.49.1/32 -p udp -m udp --dport 53 -j DNAT --to-destination 127.0.0.11:40300
-```
-
-```bash
--A OUTPUT ! -d 127.0.0.0/8 -m addrtype --dst-type LOCAL -j DOCKER
--A DOCKER -i docker0 -j RETURN
-```
-
 
 #### kubernetes postrouting rules:
 ```bash
@@ -169,16 +117,6 @@
 -A KUBE-POSTROUTING -m mark ! --mark 0x4000/0x4000 -j RETURN
 -A KUBE-POSTROUTING -j MARK --set-xmark 0x4000/0x0
 -A KUBE-POSTROUTING -m comment --comment "kubernetes service traffic requiring SNAT" -j MASQUERADE --random-fully
-```
-
-```bash
--A POSTROUTING -s 172.17.0.0/16 ! -o docker0 -j MASQUERADE
-```
-
-```bash
--A POSTROUTING -d 192.168.49.1/32 -j DOCKER_POSTROUTING
--A DOCKER_POSTROUTING -s 127.0.0.11/32 -p tcp -j SNAT --to-source 192.168.49.1:53
--A DOCKER_POSTROUTING -s 127.0.0.11/32 -p udp -j SNAT --to-source 192.168.49.1:53
 ```
 #### CoreDNS Pod:
 ```bash
