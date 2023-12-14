@@ -1,0 +1,655 @@
+I1210 12:32:27.066456       1 httplog.go:132] "HTTP" verb="CONNECT" URI="/api/v1/namespaces/kube-system/pods/coredns-5d78c9869d-2j2hn/log?container=coredns&follow=true" latency="4.385771982s" userAgent="kubectl/v1.27.8 (linux/amd64) kubernetes/66fee42" audit-ID="a8e7d9b4-04c6-49f4-9391-aea1368bb09e" srcIP="192.168.49.1:58060" resp=200
+I1210 12:32:27.066465       1 httplog.go:132] "HTTP" verb="CONNECT" URI="/api/v1/namespaces/kube-system/pods/etcd-minikube/log?container=etcd&follow=true" latency="4.384668449s" userAgent="kubectl/v1.27.8 (linux/amd64) kubernetes/66fee42" audit-ID="f1c6e156-3ac3-44b3-9fed-50635e831b27" srcIP="192.168.49.1:58048" resp=200
+I1210 12:32:27.066755       1 httplog.go:132] "HTTP" verb="CONNECT" URI="/api/v1/namespaces/kube-system/pods/kube-proxy-pb5tg/log?container=kube-proxy&follow=true" latency="4.347806502s" userAgent="kubectl/v1.27.8 (linux/amd64) kubernetes/66fee42" audit-ID="b51865e6-05df-42f2-aefe-7007a302a28f" srcIP="192.168.49.1:58100" resp=200
+I1210 12:32:27.066856       1 httplog.go:132] "HTTP" verb="CONNECT" URI="/api/v1/namespaces/kube-system/pods/kube-apiserver-minikube/log?container=kube-apiserver&follow=true" latency="4.380765578s" userAgent="kubectl/v1.27.8 (linux/amd64) kubernetes/66fee42" audit-ID="f03ac877-26be-49ae-badb-c562f9c3a280" srcIP="192.168.49.1:58084" resp=200
+I1210 12:32:27.068587       1 httplog.go:132] "HTTP" verb="CONNECT" URI="/api/v1/namespaces/kube-system/pods/kube-scheduler-minikube/log?container=kube-scheduler&follow=true" latency="4.386766478s" userAgent="kubectl/v1.27.8 (linux/amd64) kubernetes/66fee42" audit-ID="e64d29e3-91f9-4dd1-8cb8-9cf101a2b0cc" srcIP="192.168.49.1:58068" resp=200
+I1210 12:32:27.069396       1 httplog.go:132] "HTTP" verb="CONNECT" URI="/api/v1/namespaces/kube-system/pods/storage-provisioner/log?container=storage-provisioner&follow=true" latency="4.334908828s" userAgent="kubectl/v1.27.8 (linux/amd64) kubernetes/66fee42" audit-ID="f0f67a1d-34be-493c-adb7-760a622fad3f" srcIP="192.168.49.1:58106" resp=200
+I1210 12:32:27.069654       1 httplog.go:132] "HTTP" verb="CONNECT" URI="/api/v1/namespaces/kube-system/pods/kube-controller-manager-minikube/log?container=kube-controller-manager&follow=true" latency="4.386165247s" userAgent="kubectl/v1.27.8 (linux/amd64) kubernetes/66fee42" audit-ID="901bc9b3-0b12-41c8-a931-b5e8359f20b8" srcIP="192.168.49.1:58054" resp=200
+I1210 12:32:27.708671       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:27.708756       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:27.847484       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:32:27.848335       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="978.392µs" userAgent="kube-probe/1.27" audit-ID="dab23850-eda4-4e94-9a0a-637eeaa29645" srcIP="192.168.49.2:46940" apf_pl="exempt" apf_fs="probes" apf_execution_time="872.95µs" resp=200
+I1210 12:32:27.918004       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:27.918431       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:27.995482       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:32:27.995507       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:32:27.996447       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="1.44106ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="138d2c0d-6f41-4166-b999-380f690c07b4" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="936.404µs" resp=200
+I1210 12:32:27.997219       1 handler.go:153] kube-aggregator: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:32:27.997240       1 handler.go:143] kube-apiserver: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:32:28.001051       1 httplog.go:132] "HTTP" verb="PUT" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="4.15548ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="0a487ebd-9a1f-46ab-9ebc-4e71109295e0" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="3.783397ms" resp=200
+I1210 12:32:28.709268       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:28.709357       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:28.847723       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:32:28.849071       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="1.538425ms" userAgent="kube-probe/1.27" audit-ID="fb7cbab9-77ad-4ac4-a61a-617dadeb23c6" srcIP="192.168.49.2:51128" apf_pl="exempt" apf_fs="probes" apf_execution_time="1.380023ms" resp=200
+I1210 12:32:28.919140       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:28.919472       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:29.709753       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:29.709820       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:29.847034       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:32:29.847305       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="397.863µs" userAgent="kube-probe/1.27" audit-ID="aec65533-c16b-4808-ae2d-d0b82c419322" srcIP="192.168.49.2:51142" apf_pl="exempt" apf_fs="probes" apf_execution_time="294.959µs" resp=200
+I1210 12:32:29.920017       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:29.920434       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:29.964789       1 handler.go:153] kube-aggregator: PUT "/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/apiserver-eqt674mfxb4j56mrjjkoe7b7ii" satisfied by nonGoRestful
+I1210 12:32:29.964830       1 handler.go:143] kube-apiserver: PUT "/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/apiserver-eqt674mfxb4j56mrjjkoe7b7ii" satisfied by gorestful with webservice /apis/coordination.k8s.io/v1
+I1210 12:32:29.968091       1 httplog.go:132] "HTTP" verb="PUT" URI="/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/apiserver-eqt674mfxb4j56mrjjkoe7b7ii" latency="3.434526ms" userAgent="kube-apiserver/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="d5a1cfba-2c6f-4ff7-a8e7-c2a531e4bc2f" srcIP="127.0.0.1:35480" apf_pl="exempt" apf_fs="exempt" apf_execution_time="3.295515ms" resp=200
+I1210 12:32:29.968224       1 round_trippers.go:553] PUT https://localhost:8443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/apiserver-eqt674mfxb4j56mrjjkoe7b7ii 200 OK in 3 milliseconds
+I1210 12:32:30.002883       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:32:30.002898       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:32:30.003751       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="1.156247ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="c6aa73a7-6aa2-4eca-a71d-8f46e8d63ce2" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="833.537µs" resp=200
+I1210 12:32:30.004486       1 handler.go:153] kube-aggregator: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:32:30.004508       1 handler.go:143] kube-apiserver: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:32:30.007557       1 httplog.go:132] "HTTP" verb="PUT" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="3.353665ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="af40b76d-4bc9-4209-8aeb-e9af5a0f9706" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="3.00629ms" resp=200
+I1210 12:32:30.422517       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/default" satisfied by nonGoRestful
+I1210 12:32:30.422538       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/default" satisfied by gorestful with webservice /api/v1
+I1210 12:32:30.423286       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/default" latency="878.85µs" userAgent="kube-apiserver/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="ae2365f7-e385-464a-9b47-ed1b520f3dc5" srcIP="127.0.0.1:35480" apf_pl="exempt" apf_fs="exempt" apf_execution_time="774.587µs" resp=200
+I1210 12:32:30.423419       1 round_trippers.go:553] GET https://localhost:8443/api/v1/namespaces/default 200 OK in 1 milliseconds
+I1210 12:32:30.423686       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/default/services/kubernetes" satisfied by nonGoRestful
+I1210 12:32:30.423707       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/default/services/kubernetes" satisfied by gorestful with webservice /api/v1
+I1210 12:32:30.424375       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/default/services/kubernetes" latency="765.587µs" userAgent="kube-apiserver/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="8aaec635-ebd5-4e96-bb42-28974726a838" srcIP="127.0.0.1:35480" apf_pl="exempt" apf_fs="exempt" apf_execution_time="687.134µs" resp=200
+I1210 12:32:30.424475       1 round_trippers.go:553] GET https://localhost:8443/api/v1/namespaces/default/services/kubernetes 200 OK in 0 milliseconds
+I1210 12:32:30.424911       1 lease.go:115] Resetting TTL on master IP "192.168.49.2" listed in storage to 15
+I1210 12:32:30.429449       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/default/endpoints/kubernetes" satisfied by nonGoRestful
+I1210 12:32:30.429471       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/default/endpoints/kubernetes" satisfied by gorestful with webservice /api/v1
+I1210 12:32:30.430177       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/default/endpoints/kubernetes" latency="821.007µs" userAgent="kube-apiserver/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="27c5588e-4ebb-4607-87de-5e904ebf2a8a" srcIP="127.0.0.1:35480" apf_pl="exempt" apf_fs="exempt" apf_execution_time="722.479µs" resp=200
+I1210 12:32:30.430303       1 round_trippers.go:553] GET https://localhost:8443/api/v1/namespaces/default/endpoints/kubernetes 200 OK in 1 milliseconds
+I1210 12:32:30.430781       1 lease.go:89] Current master IPs listed in storage are [192.168.49.2]
+I1210 12:32:30.431001       1 handler.go:153] kube-aggregator: GET "/apis/discovery.k8s.io/v1/namespaces/default/endpointslices/kubernetes" satisfied by nonGoRestful
+I1210 12:32:30.431021       1 handler.go:143] kube-apiserver: GET "/apis/discovery.k8s.io/v1/namespaces/default/endpointslices/kubernetes" satisfied by gorestful with webservice /apis/discovery.k8s.io/v1
+I1210 12:32:30.431715       1 httplog.go:132] "HTTP" verb="GET" URI="/apis/discovery.k8s.io/v1/namespaces/default/endpointslices/kubernetes" latency="789.875µs" userAgent="kube-apiserver/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="d2cc94c2-0b23-413f-a8c5-6bedbb687ae7" srcIP="127.0.0.1:35480" apf_pl="exempt" apf_fs="exempt" apf_execution_time="702.984µs" resp=200
+I1210 12:32:30.431855       1 round_trippers.go:553] GET https://localhost:8443/apis/discovery.k8s.io/v1/namespaces/default/endpointslices/kubernetes 200 OK in 1 milliseconds
+I1210 12:32:30.710706       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:30.710808       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:30.848027       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:32:30.849288       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="1.410584ms" userAgent="kube-probe/1.27" audit-ID="46518a9a-5a8d-4536-9d67-5e3d71f650dd" srcIP="192.168.49.2:51146" apf_pl="exempt" apf_fs="probes" apf_execution_time="1.291271ms" resp=200
+I1210 12:32:30.920743       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:30.921145       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:31.711876       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:31.711958       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:31.847593       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:32:31.847843       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="378.359µs" userAgent="kube-probe/1.27" audit-ID="4710bf41-3b9c-4cdb-844c-2ef6bf8273f4" srcIP="192.168.49.2:51158" apf_pl="exempt" apf_fs="probes" apf_execution_time="268.241µs" resp=200
+I1210 12:32:31.922150       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:31.922440       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:32.009246       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:32:32.009263       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:32:32.010091       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="1.216718ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="ed654f24-eb0d-4590-bbcc-bfd415661c11" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="818.815µs" resp=200
+I1210 12:32:32.010796       1 handler.go:153] kube-aggregator: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:32:32.010810       1 handler.go:143] kube-apiserver: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:32:32.014129       1 httplog.go:132] "HTTP" verb="PUT" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="3.572379ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="1b82ae45-631d-4185-acb6-281f14121939" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="3.263071ms" resp=200
+I1210 12:32:32.712701       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:32.712778       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:32.848366       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:32:32.849742       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="1.496913ms" userAgent="kube-probe/1.27" audit-ID="1ade52c9-f174-4712-8370-6253f0dd8188" srcIP="192.168.49.2:51168" apf_pl="exempt" apf_fs="probes" apf_execution_time="1.399413ms" resp=200
+I1210 12:32:32.923026       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:32.923431       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:33.268979       1 handler.go:153] kube-aggregator: PUT "/apis/coordination.k8s.io/v1/namespaces/kube-node-lease/leases/minikube" satisfied by nonGoRestful
+I1210 12:32:33.269009       1 handler.go:143] kube-apiserver: PUT "/apis/coordination.k8s.io/v1/namespaces/kube-node-lease/leases/minikube" satisfied by gorestful with webservice /apis/coordination.k8s.io/v1
+I1210 12:32:33.272824       1 httplog.go:132] "HTTP" verb="PUT" URI="/apis/coordination.k8s.io/v1/namespaces/kube-node-lease/leases/minikube?timeout=10s" latency="4.641939ms" userAgent="kubelet/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="8733b8ec-4e2f-45e2-91eb-b202538a9098" srcIP="192.168.49.2:43024" apf_pl="node-high" apf_fs="system-node-high" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="3.762355ms" resp=200
+I1210 12:32:33.713197       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:33.713281       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:33.847282       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:32:33.847474       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="344.612µs" userAgent="kube-probe/1.27" audit-ID="deeabff5-6126-4672-8223-aa5a38e9a08a" srcIP="192.168.49.2:51172" apf_pl="exempt" apf_fs="probes" apf_execution_time="225.377µs" resp=200
+I1210 12:32:33.924267       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:33.924560       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:33.939263       1 handler.go:153] kube-aggregator: GET "/api/v1/nodes/minikube" satisfied by nonGoRestful
+I1210 12:32:33.939283       1 handler.go:143] kube-apiserver: GET "/api/v1/nodes/minikube" satisfied by gorestful with webservice /api/v1
+I1210 12:32:33.939691       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/nodes/minikube?resourceVersion=0&timeout=10s" latency="923.891µs" userAgent="kubelet/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="6d7378cb-b2b3-4e84-880a-8149f38dcfc8" srcIP="192.168.49.2:43024" apf_pl="node-high" apf_fs="system-node-high" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="369.41µs" resp=200
+I1210 12:32:33.985599       1 handler.go:153] kube-aggregator: GET "/api" satisfied by nonGoRestful
+I1210 12:32:33.985632       1 handler.go:143] kube-apiserver: GET "/api" satisfied by gorestful with webservice /api
+I1210 12:32:33.985978       1 httplog.go:132] "HTTP" verb="GET" URI="/api" latency="1.268008ms" userAgent="kube-controller-manager/v1.27.4 (linux/amd64) kubernetes/fa3d799/system:serviceaccount:kube-system:resourcequota-controller" audit-ID="bd213218-1af6-4152-8f0f-9f0c7e0dbd60" srcIP="192.168.49.2:54220" apf_pl="workload-high" apf_fs="kube-system-service-accounts" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="339.963µs" resp=200
+I1210 12:32:33.986757       1 handler.go:153] kube-aggregator: GET "/apis" satisfied by nonGoRestful
+I1210 12:32:33.987058       1 httplog.go:132] "HTTP" verb="GET" URI="/apis" latency="510.738µs" userAgent="kube-controller-manager/v1.27.4 (linux/amd64) kubernetes/fa3d799/system:serviceaccount:kube-system:resourcequota-controller" audit-ID="f18e97b1-aeae-498e-8783-b3e442bbda45" srcIP="192.168.49.2:54220" apf_pl="workload-high" apf_fs="kube-system-service-accounts" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="272.01µs" resp=200
+I1210 12:32:34.015274       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:32:34.015294       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:32:34.016279       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="1.391523ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="3412f0db-2a23-4b54-abc2-893f4e8a5111" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="970.43µs" resp=200
+I1210 12:32:34.017085       1 handler.go:153] kube-aggregator: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:32:34.017109       1 handler.go:143] kube-apiserver: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:32:34.020167       1 httplog.go:132] "HTTP" verb="PUT" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="3.365441ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="7702b603-3f6a-4414-b73e-19dfe5cf3fe5" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="3.008365ms" resp=200
+I1210 12:32:34.304576       1 handler.go:153] kube-aggregator: GET "/api" satisfied by nonGoRestful
+I1210 12:32:34.304590       1 handler.go:143] kube-apiserver: GET "/api" satisfied by gorestful with webservice /api
+I1210 12:32:34.304920       1 httplog.go:132] "HTTP" verb="GET" URI="/api" latency="1.076951ms" userAgent="kube-controller-manager/v1.27.4 (linux/amd64) kubernetes/fa3d799/system:serviceaccount:kube-system:generic-garbage-collector" audit-ID="bfb4a484-9d4b-4d80-96f7-e52ba888b3ec" srcIP="192.168.49.2:54220" apf_pl="workload-high" apf_fs="kube-system-service-accounts" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="301.159µs" resp=200
+I1210 12:32:34.305775       1 handler.go:153] kube-aggregator: GET "/apis" satisfied by nonGoRestful
+I1210 12:32:34.306236       1 httplog.go:132] "HTTP" verb="GET" URI="/apis" latency="718.923µs" userAgent="kube-controller-manager/v1.27.4 (linux/amd64) kubernetes/fa3d799/system:serviceaccount:kube-system:generic-garbage-collector" audit-ID="51e59c24-4647-4a00-a45c-7191c06001b5" srcIP="192.168.49.2:54220" apf_pl="workload-high" apf_fs="kube-system-service-accounts" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="418.356µs" resp=200
+I1210 12:32:34.327064       1 handler.go:153] kube-aggregator: GET "/livez" satisfied by nonGoRestful
+I1210 12:32:34.327854       1 httplog.go:132] "HTTP" verb="GET" URI="/livez" latency="924.447µs" userAgent="kube-probe/1.27" audit-ID="0149a970-e17a-473b-9a07-2ed8a5aeb667" srcIP="192.168.49.2:51182" apf_pl="exempt" apf_fs="probes" apf_execution_time="813.976µs" resp=200
+I1210 12:32:34.713496       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:34.713579       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:34.847840       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:32:34.848670       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="965.92µs" userAgent="kube-probe/1.27" audit-ID="38dd8884-cbae-4289-9821-76666c81d2d4" srcIP="192.168.49.2:51190" apf_pl="exempt" apf_fs="probes" apf_execution_time="854.382µs" resp=200
+I1210 12:32:34.925327       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:34.925611       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:34.975035       1 versioning.go:225] a memory allocator was provided but the encoder {"name":"json","pretty":"false","strict":"false","yaml":"false"} doesn't implement the runtime.EncoderWithAllocator, using regular encoder.Encode method
+I1210 12:32:34.975118       1 versioning.go:225] a memory allocator was provided but the encoder {"name":"json","pretty":"false","strict":"false","yaml":"false"} doesn't implement the runtime.EncoderWithAllocator, using regular encoder.Encode method
+I1210 12:32:35.275621       1 versioning.go:225] a memory allocator was provided but the encoder {"name":"json","pretty":"false","strict":"false","yaml":"false"} doesn't implement the runtime.EncoderWithAllocator, using regular encoder.Encode method
+I1210 12:32:35.275687       1 versioning.go:225] a memory allocator was provided but the encoder {"name":"json","pretty":"false","strict":"false","yaml":"false"} doesn't implement the runtime.EncoderWithAllocator, using regular encoder.Encode method
+I1210 12:32:35.714372       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:35.714492       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:35.844728       1 versioning.go:225] a memory allocator was provided but the encoder {"name":"json","pretty":"false","strict":"false","yaml":"false"} doesn't implement the runtime.EncoderWithAllocator, using regular encoder.Encode method
+I1210 12:32:35.844777       1 versioning.go:225] a memory allocator was provided but the encoder {"name":"json","pretty":"false","strict":"false","yaml":"false"} doesn't implement the runtime.EncoderWithAllocator, using regular encoder.Encode method
+I1210 12:32:35.847851       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:32:35.849127       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="1.418299ms" userAgent="kube-probe/1.27" audit-ID="94f4f8a6-42f5-4184-a772-1f9a892e5df7" srcIP="192.168.49.2:51200" apf_pl="exempt" apf_fs="probes" apf_execution_time="1.298537ms" resp=200
+I1210 12:32:35.926343       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:35.926641       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:36.022181       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:32:36.022198       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:32:36.023092       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="1.595948ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="2dc520e6-d717-453a-89c0-3f4449ad2c86" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="887.912µs" resp=200
+I1210 12:32:36.023726       1 handler.go:153] kube-aggregator: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:32:36.023740       1 handler.go:143] kube-apiserver: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:32:36.026773       1 httplog.go:132] "HTTP" verb="PUT" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="3.262828ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="fc23b467-eac4-4a8d-927a-162d5090170d" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="2.982974ms" resp=200
+I1210 12:32:36.715088       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:36.715189       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:36.848001       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:32:36.849330       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="1.506389ms" userAgent="kube-probe/1.27" audit-ID="d4f1893b-a592-4fea-ad10-e13cc33dae98" srcIP="192.168.49.2:51202" apf_pl="exempt" apf_fs="probes" apf_execution_time="1.397633ms" resp=200
+I1210 12:32:36.927185       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:36.927583       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:37.716258       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:37.716327       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:37.848063       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:32:37.849327       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="1.393997ms" userAgent="kube-probe/1.27" audit-ID="7a1362c3-0e90-4de5-aace-fcda918e6ab9" srcIP="192.168.49.2:51206" apf_pl="exempt" apf_fs="probes" apf_execution_time="1.283688ms" resp=200
+I1210 12:32:37.928419       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:37.928673       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:38.027963       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:32:38.027979       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:32:38.028861       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="1.266599ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="f1c19d19-5a26-4075-82e3-bcf98d8a9a35" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="875.181µs" resp=200
+I1210 12:32:38.029593       1 handler.go:153] kube-aggregator: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:32:38.029615       1 handler.go:143] kube-apiserver: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:32:38.032777       1 httplog.go:132] "HTTP" verb="PUT" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="3.47997ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="32825e99-f96f-4adb-874a-1e660d36817b" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="3.139273ms" resp=200
+I1210 12:32:38.716826       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:38.716890       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:38.847175       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:32:38.847390       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="351.284µs" userAgent="kube-probe/1.27" audit-ID="0452ddda-a484-4ae5-9af5-a11230d962c0" srcIP="192.168.49.2:57122" apf_pl="exempt" apf_fs="probes" apf_execution_time="254.183µs" resp=200
+I1210 12:32:38.928931       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:38.929314       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:39.717144       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:39.717239       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:39.847883       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:32:39.849134       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="1.390931ms" userAgent="kube-probe/1.27" audit-ID="f73eacb9-8840-49c5-8c86-88319b1900fb" srcIP="192.168.49.2:57130" apf_pl="exempt" apf_fs="probes" apf_execution_time="1.285022ms" resp=200
+I1210 12:32:39.930138       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:39.930673       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:40.034562       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:32:40.034578       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:32:40.035419       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="1.213382ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="f2f397dd-78e3-41bf-952e-e9a90271bfb6" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="853.118µs" resp=200
+I1210 12:32:40.036187       1 handler.go:153] kube-aggregator: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:32:40.036205       1 handler.go:143] kube-apiserver: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:32:40.039324       1 httplog.go:132] "HTTP" verb="PUT" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="3.45302ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="f9d9654c-580b-4bcd-a4f7-6fd0d5b909ac" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="3.092954ms" resp=200
+I1210 12:32:40.068922       1 handler.go:153] kube-aggregator: PUT "/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/apiserver-eqt674mfxb4j56mrjjkoe7b7ii" satisfied by nonGoRestful
+I1210 12:32:40.068942       1 handler.go:143] kube-apiserver: PUT "/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/apiserver-eqt674mfxb4j56mrjjkoe7b7ii" satisfied by gorestful with webservice /apis/coordination.k8s.io/v1
+I1210 12:32:40.072174       1 httplog.go:132] "HTTP" verb="PUT" URI="/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/apiserver-eqt674mfxb4j56mrjjkoe7b7ii" latency="3.360937ms" userAgent="kube-apiserver/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="41bc5756-36cd-4cdc-9287-03cd0203cbe7" srcIP="127.0.0.1:35480" apf_pl="exempt" apf_fs="exempt" apf_execution_time="3.250733ms" resp=200
+I1210 12:32:40.072300       1 round_trippers.go:553] PUT https://localhost:8443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/apiserver-eqt674mfxb4j56mrjjkoe7b7ii 200 OK in 3 milliseconds
+I1210 12:32:40.423300       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/default" satisfied by nonGoRestful
+I1210 12:32:40.423332       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/default" satisfied by gorestful with webservice /api/v1
+I1210 12:32:40.424198       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/default" latency="1.021202ms" userAgent="kube-apiserver/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="36ad92bc-4fe7-4a27-97fc-91923b74f1f2" srcIP="127.0.0.1:35480" apf_pl="exempt" apf_fs="exempt" apf_execution_time="888.092µs" resp=200
+I1210 12:32:40.424304       1 round_trippers.go:553] GET https://localhost:8443/api/v1/namespaces/default 200 OK in 1 milliseconds
+I1210 12:32:40.424532       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/default/services/kubernetes" satisfied by nonGoRestful
+I1210 12:32:40.424555       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/default/services/kubernetes" satisfied by gorestful with webservice /api/v1
+I1210 12:32:40.425187       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/default/services/kubernetes" latency="733.062µs" userAgent="kube-apiserver/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="0680f552-9dbb-4709-977f-a3230cde8fe1" srcIP="127.0.0.1:35480" apf_pl="exempt" apf_fs="exempt" apf_execution_time="647.058µs" resp=200
+I1210 12:32:40.425304       1 round_trippers.go:553] GET https://localhost:8443/api/v1/namespaces/default/services/kubernetes 200 OK in 0 milliseconds
+I1210 12:32:40.425795       1 lease.go:115] Resetting TTL on master IP "192.168.49.2" listed in storage to 15
+I1210 12:32:40.430277       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/default/endpoints/kubernetes" satisfied by nonGoRestful
+I1210 12:32:40.430294       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/default/endpoints/kubernetes" satisfied by gorestful with webservice /api/v1
+I1210 12:32:40.430926       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/default/endpoints/kubernetes" latency="770.841µs" userAgent="kube-apiserver/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="1edea863-7443-4993-bc07-1fc1a493cfc3" srcIP="127.0.0.1:35480" apf_pl="exempt" apf_fs="exempt" apf_execution_time="650.608µs" resp=200
+I1210 12:32:40.431028       1 round_trippers.go:553] GET https://localhost:8443/api/v1/namespaces/default/endpoints/kubernetes 200 OK in 0 milliseconds
+I1210 12:32:40.431527       1 lease.go:89] Current master IPs listed in storage are [192.168.49.2]
+I1210 12:32:40.431743       1 handler.go:153] kube-aggregator: GET "/apis/discovery.k8s.io/v1/namespaces/default/endpointslices/kubernetes" satisfied by nonGoRestful
+I1210 12:32:40.431759       1 handler.go:143] kube-apiserver: GET "/apis/discovery.k8s.io/v1/namespaces/default/endpointslices/kubernetes" satisfied by gorestful with webservice /apis/discovery.k8s.io/v1
+I1210 12:32:40.432423       1 httplog.go:132] "HTTP" verb="GET" URI="/apis/discovery.k8s.io/v1/namespaces/default/endpointslices/kubernetes" latency="757.139µs" userAgent="kube-apiserver/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="aa72b63f-3aab-4399-a028-9efd86903940" srcIP="127.0.0.1:35480" apf_pl="exempt" apf_fs="exempt" apf_execution_time="657.554µs" resp=200
+I1210 12:32:40.432552       1 round_trippers.go:553] GET https://localhost:8443/apis/discovery.k8s.io/v1/namespaces/default/endpointslices/kubernetes 200 OK in 0 milliseconds
+I1210 12:32:40.717703       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:40.717782       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:40.848149       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:32:40.849755       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="1.77596ms" userAgent="kube-probe/1.27" audit-ID="86b21002-392c-409e-8575-0eceba319d00" srcIP="192.168.49.2:57138" apf_pl="exempt" apf_fs="probes" apf_execution_time="1.634407ms" resp=200
+I1210 12:32:40.930919       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:40.931263       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:41.718573       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:41.718648       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:41.847872       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:32:41.848171       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="513.237µs" userAgent="kube-probe/1.27" audit-ID="ae794a5e-509c-4da8-94fd-79d3c232a4f6" srcIP="192.168.49.2:57140" apf_pl="exempt" apf_fs="probes" apf_execution_time="347.136µs" resp=200
+I1210 12:32:41.931464       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:41.931856       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:42.041334       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:32:42.041358       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:32:42.042266       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="1.354529ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="78e6c613-8879-4264-9b69-5526045f0007" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="875.994µs" resp=200
+I1210 12:32:42.043116       1 handler.go:153] kube-aggregator: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:32:42.043143       1 handler.go:143] kube-apiserver: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:32:42.046508       1 httplog.go:132] "HTTP" verb="PUT" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="3.745753ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="5db5408b-0fd7-4a5b-8129-4d382fb5111e" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="3.280173ms" resp=200
+I1210 12:32:42.719653       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:42.719767       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:42.847712       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:32:42.849014       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="1.43614ms" userAgent="kube-probe/1.27" audit-ID="58593760-0ff7-4a1a-8f48-a564e2e12081" srcIP="192.168.49.2:57146" apf_pl="exempt" apf_fs="probes" apf_execution_time="1.326724ms" resp=200
+I1210 12:32:42.932957       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:42.933288       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:43.449913       1 handler.go:153] kube-aggregator: PUT "/apis/coordination.k8s.io/v1/namespaces/kube-node-lease/leases/minikube" satisfied by nonGoRestful
+I1210 12:32:43.449936       1 handler.go:143] kube-apiserver: PUT "/apis/coordination.k8s.io/v1/namespaces/kube-node-lease/leases/minikube" satisfied by gorestful with webservice /apis/coordination.k8s.io/v1
+I1210 12:32:43.454075       1 httplog.go:132] "HTTP" verb="PUT" URI="/apis/coordination.k8s.io/v1/namespaces/kube-node-lease/leases/minikube?timeout=10s" latency="4.736268ms" userAgent="kubelet/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="a35ad955-b020-41aa-9ca3-6da81cbb9364" srcIP="192.168.49.2:43024" apf_pl="node-high" apf_fs="system-node-high" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="4.055189ms" resp=200
+I1210 12:32:43.720558       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:43.720678       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:43.848370       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:32:43.849781       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="1.535808ms" userAgent="kube-probe/1.27" audit-ID="fedb8b94-ea14-4263-8b3c-e066765766ba" srcIP="192.168.49.2:57158" apf_pl="exempt" apf_fs="probes" apf_execution_time="1.428793ms" resp=200
+I1210 12:32:43.934117       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:43.934487       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:44.048381       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:32:44.048401       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:32:44.049306       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="1.341607ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="788d0a3c-8f05-463f-9161-5ad9901f4668" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="896.6µs" resp=200
+I1210 12:32:44.050113       1 handler.go:153] kube-aggregator: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:32:44.050133       1 handler.go:143] kube-apiserver: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:32:44.053356       1 httplog.go:132] "HTTP" verb="PUT" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="3.552169ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="7a5277a9-d1a7-4747-afe2-10bbe61c874d" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="3.183192ms" resp=200
+I1210 12:32:44.112051       1 handler.go:153] kube-aggregator: GET "/api/v1/nodes/minikube" satisfied by nonGoRestful
+I1210 12:32:44.112068       1 handler.go:143] kube-apiserver: GET "/api/v1/nodes/minikube" satisfied by gorestful with webservice /api/v1
+I1210 12:32:44.112516       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/nodes/minikube?resourceVersion=0&timeout=10s" latency="1.053195ms" userAgent="kubelet/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="7c6939d6-2714-4133-89f6-350da4fdea89" srcIP="192.168.49.2:43024" apf_pl="node-high" apf_fs="system-node-high" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="392.365µs" resp=200
+I1210 12:32:44.325987       1 handler.go:153] kube-aggregator: GET "/livez" satisfied by nonGoRestful
+I1210 12:32:44.326114       1 httplog.go:132] "HTTP" verb="GET" URI="/livez" latency="256.714µs" userAgent="kube-probe/1.27" audit-ID="bbea503a-9143-42a8-99dd-aa1b3d5c2474" srcIP="192.168.49.2:57172" apf_pl="exempt" apf_fs="probes" apf_execution_time="145.324µs" resp=200
+I1210 12:32:44.721595       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:44.721678       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:44.847769       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:32:44.848052       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="382.726µs" userAgent="kube-probe/1.27" audit-ID="eeb10fd8-c804-4bae-8e82-9539ebfacd84" srcIP="192.168.49.2:57174" apf_pl="exempt" apf_fs="probes" apf_execution_time="291.462µs" resp=200
+I1210 12:32:44.934588       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:44.934978       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:45.722413       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:45.722493       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:45.847238       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:32:45.848549       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="1.474865ms" userAgent="kube-probe/1.27" audit-ID="65b3bba9-7c33-4c46-8d89-ed6126e40925" srcIP="192.168.49.2:57182" apf_pl="exempt" apf_fs="probes" apf_execution_time="1.338823ms" resp=200
+I1210 12:32:45.935593       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:45.935842       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:46.054893       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:32:46.054917       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:32:46.055915       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="1.930967ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="8a53c71b-2af0-4660-b49e-e759fd819d61" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="966.174µs" resp=200
+I1210 12:32:46.056822       1 handler.go:153] kube-aggregator: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:32:46.056848       1 handler.go:143] kube-apiserver: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:32:46.060736       1 httplog.go:132] "HTTP" verb="PUT" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="4.282661ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="7a0c0e8a-4ea3-4eda-90ca-1e5a11b44437" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="3.857698ms" resp=200
+I1210 12:32:46.723096       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:46.723190       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:46.847726       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:32:46.848962       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="1.362768ms" userAgent="kube-probe/1.27" audit-ID="022b56cd-3cdc-4d5a-8e37-7f48b1fcaa4d" srcIP="192.168.49.2:57194" apf_pl="exempt" apf_fs="probes" apf_execution_time="1.252038ms" resp=200
+I1210 12:32:46.936808       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:46.937055       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:47.724234       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:47.724317       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:47.847439       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:32:47.847659       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="347.449µs" userAgent="kube-probe/1.27" audit-ID="4e064b34-c5a6-4960-985a-1c1d97b71445" srcIP="192.168.49.2:57204" apf_pl="exempt" apf_fs="probes" apf_execution_time="240.795µs" resp=200
+I1210 12:32:47.937756       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:47.938009       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:48.062533       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:32:48.062558       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:32:48.063473       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="1.294761ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="0982e379-8f09-4362-a42f-a628168460e4" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="914.274µs" resp=200
+I1210 12:32:48.064155       1 handler.go:153] kube-aggregator: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:32:48.064187       1 handler.go:143] kube-apiserver: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:32:48.089471       1 httplog.go:132] "HTTP" verb="PUT" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="25.556444ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="5d165324-4570-4ae7-b13f-216dabf508be" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="25.24829ms" resp=200
+I1210 12:32:48.724431       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:48.724496       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:48.848198       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:32:48.849668       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="1.666924ms" userAgent="kube-probe/1.27" audit-ID="4e199966-f012-4457-bb63-52608d621f9a" srcIP="192.168.49.2:33190" apf_pl="exempt" apf_fs="probes" apf_execution_time="1.525015ms" resp=200
+I1210 12:32:48.938283       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:48.938669       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:49.725559       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:49.725632       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:49.847368       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:32:49.847650       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="441.412µs" userAgent="kube-probe/1.27" audit-ID="1784168c-0a2f-4dcf-92d1-665d1bcf81ea" srcIP="192.168.49.2:33196" apf_pl="exempt" apf_fs="probes" apf_execution_time="308.295µs" resp=200
+I1210 12:32:49.939551       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:49.940105       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:50.091134       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:32:50.091160       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:32:50.092223       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="1.429767ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="f0b39a1e-6621-45a6-85e7-0137a1d86bd7" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="1.040556ms" resp=200
+I1210 12:32:50.093072       1 handler.go:153] kube-aggregator: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:32:50.093099       1 handler.go:143] kube-apiserver: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:32:50.096329       1 httplog.go:132] "HTTP" verb="PUT" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="3.60303ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="9b37177e-5e2f-4087-afc3-d7683b7caff8" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="3.175948ms" resp=200
+I1210 12:32:50.204187       1 handler.go:153] kube-aggregator: PUT "/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/apiserver-eqt674mfxb4j56mrjjkoe7b7ii" satisfied by nonGoRestful
+I1210 12:32:50.204210       1 handler.go:143] kube-apiserver: PUT "/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/apiserver-eqt674mfxb4j56mrjjkoe7b7ii" satisfied by gorestful with webservice /apis/coordination.k8s.io/v1
+I1210 12:32:50.207491       1 httplog.go:132] "HTTP" verb="PUT" URI="/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/apiserver-eqt674mfxb4j56mrjjkoe7b7ii" latency="3.409585ms" userAgent="kube-apiserver/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="f4dd6d63-1e0d-488d-b257-8340ee82af0a" srcIP="127.0.0.1:35480" apf_pl="exempt" apf_fs="exempt" apf_execution_time="3.309929ms" resp=200
+I1210 12:32:50.207644       1 round_trippers.go:553] PUT https://localhost:8443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/apiserver-eqt674mfxb4j56mrjjkoe7b7ii 200 OK in 3 milliseconds
+I1210 12:32:50.423546       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/default" satisfied by nonGoRestful
+I1210 12:32:50.423579       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/default" satisfied by gorestful with webservice /api/v1
+I1210 12:32:50.424490       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/default" latency="1.118334ms" userAgent="kube-apiserver/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="018c27d5-a924-4f51-b34a-b72c3aa82083" srcIP="127.0.0.1:35480" apf_pl="exempt" apf_fs="exempt" apf_execution_time="941.065µs" resp=200
+I1210 12:32:50.424613       1 round_trippers.go:553] GET https://localhost:8443/api/v1/namespaces/default 200 OK in 1 milliseconds
+I1210 12:32:50.424849       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/default/services/kubernetes" satisfied by nonGoRestful
+I1210 12:32:50.424870       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/default/services/kubernetes" satisfied by gorestful with webservice /api/v1
+I1210 12:32:50.425520       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/default/services/kubernetes" latency="746.308µs" userAgent="kube-apiserver/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="f552c204-7371-4f5d-a489-f9d06ec6cf50" srcIP="127.0.0.1:35480" apf_pl="exempt" apf_fs="exempt" apf_execution_time="667.364µs" resp=200
+I1210 12:32:50.425614       1 round_trippers.go:553] GET https://localhost:8443/api/v1/namespaces/default/services/kubernetes 200 OK in 0 milliseconds
+I1210 12:32:50.426098       1 lease.go:115] Resetting TTL on master IP "192.168.49.2" listed in storage to 15
+I1210 12:32:50.430516       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/default/endpoints/kubernetes" satisfied by nonGoRestful
+I1210 12:32:50.430553       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/default/endpoints/kubernetes" satisfied by gorestful with webservice /api/v1
+I1210 12:32:50.431193       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/default/endpoints/kubernetes" latency="803.946µs" userAgent="kube-apiserver/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="0b253f00-6290-4000-bc77-5b0d09bd2412" srcIP="127.0.0.1:35480" apf_pl="exempt" apf_fs="exempt" apf_execution_time="678.223µs" resp=200
+I1210 12:32:50.431298       1 round_trippers.go:553] GET https://localhost:8443/api/v1/namespaces/default/endpoints/kubernetes 200 OK in 0 milliseconds
+I1210 12:32:50.431770       1 lease.go:89] Current master IPs listed in storage are [192.168.49.2]
+I1210 12:32:50.431973       1 handler.go:153] kube-aggregator: GET "/apis/discovery.k8s.io/v1/namespaces/default/endpointslices/kubernetes" satisfied by nonGoRestful
+I1210 12:32:50.431993       1 handler.go:143] kube-apiserver: GET "/apis/discovery.k8s.io/v1/namespaces/default/endpointslices/kubernetes" satisfied by gorestful with webservice /apis/discovery.k8s.io/v1
+I1210 12:32:50.432529       1 httplog.go:132] "HTTP" verb="GET" URI="/apis/discovery.k8s.io/v1/namespaces/default/endpointslices/kubernetes" latency="630.028µs" userAgent="kube-apiserver/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="dbacbbf6-a0cc-411b-9e58-a48f79081b82" srcIP="127.0.0.1:35480" apf_pl="exempt" apf_fs="exempt" apf_execution_time="555.474µs" resp=200
+I1210 12:32:50.432621       1 round_trippers.go:553] GET https://localhost:8443/apis/discovery.k8s.io/v1/namespaces/default/endpointslices/kubernetes 200 OK in 0 milliseconds
+I1210 12:32:50.726703       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:50.726804       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:50.847869       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:32:50.849127       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="1.401665ms" userAgent="kube-probe/1.27" audit-ID="92197288-97a5-4705-a32e-f3943fd8727d" srcIP="192.168.49.2:33202" apf_pl="exempt" apf_fs="probes" apf_execution_time="1.285434ms" resp=200
+I1210 12:32:50.940581       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:50.940892       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:51.727120       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:51.727207       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:51.847910       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:32:51.849147       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="1.359777ms" userAgent="kube-probe/1.27" audit-ID="26c6cfe3-5526-4020-9960-de1b413e6f79" srcIP="192.168.49.2:33210" apf_pl="exempt" apf_fs="probes" apf_execution_time="1.24966ms" resp=200
+I1210 12:32:51.941812       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:51.942295       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:51.978406       1 handler.go:153] kube-aggregator: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:51.978498       1 httplog.go:132] "HTTP" verb="GET" URI="/openapi/v2?timeout=32s" latency="717.405µs" userAgent="kubectl/v1.27.8 (linux/amd64) kubernetes/66fee42" audit-ID="64dd4970-3f3a-41ed-b366-7c178022f30a" srcIP="192.168.49.1:53482" apf_pl="exempt" apf_fs="exempt" apf_execution_time="68.789µs" resp=304
+I1210 12:32:52.044768       1 handler.go:153] kube-aggregator: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:52.045053       1 httplog.go:132] "HTTP" verb="GET" URI="/openapi/v3?timeout=32s" latency="656.391µs" userAgent="kubectl/v1.27.8 (linux/amd64) kubernetes/66fee42" audit-ID="f0d18349-3fe8-4477-9e2b-2f1c73400ac0" srcIP="192.168.49.1:53482" apf_pl="exempt" apf_fs="exempt" apf_execution_time="277.115µs" resp=200
+I1210 12:32:52.088859       1 handler.go:153] kube-aggregator: POST "/api/v1/namespaces/default/pods" satisfied by nonGoRestful
+I1210 12:32:52.088884       1 handler.go:143] kube-apiserver: POST "/api/v1/namespaces/default/pods" satisfied by gorestful with webservice /api/v1
+I1210 12:32:52.089820       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/default/limitranges" satisfied by nonGoRestful
+I1210 12:32:52.089842       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/default/limitranges" satisfied by gorestful with webservice /api/v1
+I1210 12:32:52.090709       1 httplog.go:132] "HTTP" verb="LIST" URI="/api/v1/namespaces/default/limitranges" latency="982.427µs" userAgent="kube-apiserver/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="771dff17-6b15-4c4b-bb1a-06556bb8999b" srcIP="127.0.0.1:35480" apf_pl="exempt" apf_fs="exempt" apf_execution_time="881.249µs" resp=200
+I1210 12:32:52.090840       1 round_trippers.go:553] GET https://localhost:8443/api/v1/namespaces/default/limitranges 200 OK in 1 milliseconds
+I1210 12:32:52.091381       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/default/resourcequotas" satisfied by nonGoRestful
+I1210 12:32:52.091402       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/default/resourcequotas" satisfied by gorestful with webservice /api/v1
+I1210 12:32:52.092129       1 httplog.go:132] "HTTP" verb="LIST" URI="/api/v1/namespaces/default/resourcequotas" latency="853.426µs" userAgent="kube-apiserver/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="31506605-117b-424c-b4d1-1b294d59212d" srcIP="127.0.0.1:35480" apf_pl="exempt" apf_fs="exempt" apf_execution_time="749.438µs" resp=200
+I1210 12:32:52.092288       1 round_trippers.go:553] GET https://localhost:8443/api/v1/namespaces/default/resourcequotas 200 OK in 1 milliseconds
+I1210 12:32:52.094940       1 httplog.go:132] "HTTP" verb="POST" URI="/api/v1/namespaces/default/pods?fieldManager=kubectl-create&fieldValidation=Strict" latency="6.526279ms" userAgent="kubectl/v1.27.8 (linux/amd64) kubernetes/66fee42" audit-ID="34dd9fb2-de31-4cc3-b72f-1adb2b0bc9fe" srcIP="192.168.49.1:53482" apf_pl="exempt" apf_fs="exempt" apf_execution_time="6.059009ms" resp=201
+I1210 12:32:52.094965       1 graph_populator.go:77] updatePod default/vault, no node
+I1210 12:32:52.096010       1 handler.go:153] kube-aggregator: POST "/api/v1/namespaces/default/pods/vault/binding" satisfied by nonGoRestful
+I1210 12:32:52.096027       1 handler.go:143] kube-apiserver: POST "/api/v1/namespaces/default/pods/vault/binding" satisfied by gorestful with webservice /api/v1
+I1210 12:32:52.097747       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:32:52.097766       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:32:52.099116       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="1.692765ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="f83b13a0-d382-4ce7-a6c7-364e8eca452c" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="1.304864ms" resp=200
+I1210 12:32:52.099116       1 httplog.go:132] "HTTP" verb="POST" URI="/api/v1/namespaces/default/pods/vault/binding" latency="3.631002ms" userAgent="kube-scheduler/v1.27.4 (linux/amd64) kubernetes/fa3d799/scheduler" audit-ID="518a791f-a088-410b-9652-0a7890430f7a" srcIP="192.168.49.2:43016" apf_pl="workload-high" apf_fs="kube-scheduler" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="3.050207ms" resp=201
+I1210 12:32:52.099146       1 graph_populator.go:88] updatePod default/vault for node minikube
+I1210 12:32:52.099352       1 graph_populator.go:91] updatePod default/vault for node minikube completed in 23.828µs
+I1210 12:32:52.100522       1 handler.go:153] kube-aggregator: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:32:52.100547       1 handler.go:143] kube-apiserver: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:32:52.100733       1 handler.go:153] kube-aggregator: POST "/api/v1/namespaces/default/events" satisfied by nonGoRestful
+I1210 12:32:52.100753       1 handler.go:143] kube-apiserver: POST "/api/v1/namespaces/default/events" satisfied by gorestful with webservice /api/v1
+I1210 12:32:52.102145       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/default/pods/vault" satisfied by nonGoRestful
+I1210 12:32:52.102189       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/default/pods/vault" satisfied by gorestful with webservice /api/v1
+I1210 12:32:52.102848       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/default/configmaps" satisfied by nonGoRestful
+I1210 12:32:52.102877       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/default/configmaps" satisfied by gorestful with webservice /api/v1
+I1210 12:32:52.103199       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/default/configmaps?fieldSelector=metadata.name%3Dkube-root-ca.crt&limit=500&resourceVersion=0" latency="1.152059ms" userAgent="kubelet/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="6553e6dd-2a70-4b5c-b3ca-6090116c0e5c" srcIP="192.168.49.2:43024" apf_pl="system" apf_fs="system-nodes" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="276.701µs" resp=200
+I1210 12:32:52.104863       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/default/configmaps" satisfied by nonGoRestful
+I1210 12:32:52.104883       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/default/configmaps" satisfied by gorestful with webservice /api/v1
+I1210 12:32:52.105039       1 get.go:260] "Starting watch" path="/api/v1/namespaces/default/configmaps" resourceVersion="433" labels="" fields="metadata.name=kube-root-ca.crt" timeout="5m35s"
+I1210 12:32:52.106225       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/default/pods/vault" latency="5.257556ms" userAgent="kubelet/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="0539da66-6b62-4aa9-97ef-d33361ccf309" srcIP="192.168.49.2:43024" apf_pl="system" apf_fs="system-nodes" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="3.972865ms" resp=200
+I1210 12:32:52.106226       1 httplog.go:132] "HTTP" verb="PUT" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="6.187578ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="660c67df-5078-47e2-90a5-5c03aaa4d59c" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="5.611973ms" resp=200
+I1210 12:32:52.108252       1 httplog.go:132] "HTTP" verb="POST" URI="/api/v1/namespaces/default/events" latency="8.157464ms" userAgent="kube-scheduler/v1.27.4 (linux/amd64) kubernetes/fa3d799/scheduler" audit-ID="c45ce33d-fa20-4082-a73a-46dbc320f55f" srcIP="192.168.49.2:43016" apf_pl="workload-high" apf_fs="kube-scheduler" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="7.393349ms" resp=201
+I1210 12:32:52.108442       1 handler.go:153] kube-aggregator: PATCH "/api/v1/namespaces/default/pods/vault/status" satisfied by nonGoRestful
+I1210 12:32:52.108463       1 handler.go:143] kube-apiserver: PATCH "/api/v1/namespaces/default/pods/vault/status" satisfied by gorestful with webservice /api/v1
+I1210 12:32:52.113239       1 httplog.go:132] "HTTP" verb="PATCH" URI="/api/v1/namespaces/default/pods/vault/status" latency="5.976423ms" userAgent="kubelet/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="ac17a4e7-d62d-4629-b1a7-9f2250260a54" srcIP="192.168.49.2:43024" apf_pl="system" apf_fs="system-nodes" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="4.684743ms" resp=200
+I1210 12:32:52.113352       1 graph_populator.go:83] updatePod default/vault, node unchanged
+I1210 12:32:52.272825       1 handler.go:153] kube-aggregator: POST "/api/v1/namespaces/default/serviceaccounts/default/token" satisfied by nonGoRestful
+I1210 12:32:52.272850       1 handler.go:143] kube-apiserver: POST "/api/v1/namespaces/default/serviceaccounts/default/token" satisfied by gorestful with webservice /api/v1
+I1210 12:32:52.276185       1 httplog.go:132] "HTTP" verb="POST" URI="/api/v1/namespaces/default/serviceaccounts/default/token" latency="4.009531ms" userAgent="kubelet/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="a005e412-e440-423f-af84-cd9588b1cb1f" srcIP="192.168.49.2:43024" apf_pl="system" apf_fs="system-nodes" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="3.311324ms" resp=201
+I1210 12:32:52.635426       1 handler.go:153] kube-aggregator: POST "/api/v1/namespaces/default/events" satisfied by nonGoRestful
+I1210 12:32:52.635445       1 handler.go:143] kube-apiserver: POST "/api/v1/namespaces/default/events" satisfied by gorestful with webservice /api/v1
+I1210 12:32:52.639281       1 httplog.go:132] "HTTP" verb="POST" URI="/api/v1/namespaces/default/events" latency="4.439412ms" userAgent="kubelet/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="4996f599-78ad-4061-bc7a-968ffa1a7c53" srcIP="192.168.49.2:43024" apf_pl="system" apf_fs="system-nodes" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="3.794663ms" resp=201
+I1210 12:32:52.727544       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:52.727683       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:52.847571       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:32:52.847879       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="459.063µs" userAgent="kube-probe/1.27" audit-ID="9c266629-5873-495e-9e77-6d74f9fadeed" srcIP="192.168.49.2:33226" apf_pl="exempt" apf_fs="probes" apf_execution_time="324.607µs" resp=200
+I1210 12:32:52.942593       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:52.942854       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:53.728567       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:53.728672       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:53.809467       1 handler.go:153] kube-aggregator: PUT "/apis/coordination.k8s.io/v1/namespaces/kube-node-lease/leases/minikube" satisfied by nonGoRestful
+I1210 12:32:53.809491       1 handler.go:143] kube-apiserver: PUT "/apis/coordination.k8s.io/v1/namespaces/kube-node-lease/leases/minikube" satisfied by gorestful with webservice /apis/coordination.k8s.io/v1
+I1210 12:32:53.812815       1 httplog.go:132] "HTTP" verb="PUT" URI="/apis/coordination.k8s.io/v1/namespaces/kube-node-lease/leases/minikube?timeout=10s" latency="3.864081ms" userAgent="kubelet/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="3966214a-21ba-4f66-9c5d-85cea2b4e27b" srcIP="192.168.49.2:43024" apf_pl="node-high" apf_fs="system-node-high" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="3.282094ms" resp=200
+I1210 12:32:53.848138       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:32:53.849681       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="1.708064ms" userAgent="kube-probe/1.27" audit-ID="7d887713-2441-4b68-ad9f-ea1fb3a20ce7" srcIP="192.168.49.2:33228" apf_pl="exempt" apf_fs="probes" apf_execution_time="1.578ms" resp=200
+I1210 12:32:53.943074       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:53.943562       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:54.107975       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:32:54.107994       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:32:54.109048       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="1.432898ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="90ee1c3c-d6bd-4980-8472-d7ba9994b42b" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="1.058244ms" resp=200
+I1210 12:32:54.109841       1 handler.go:153] kube-aggregator: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:32:54.109858       1 handler.go:143] kube-apiserver: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:32:54.113019       1 httplog.go:132] "HTTP" verb="PUT" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="3.49921ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="6250c515-2fef-4860-ae62-75c0e0767c73" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="3.117215ms" resp=200
+I1210 12:32:54.326562       1 handler.go:153] kube-aggregator: GET "/livez" satisfied by nonGoRestful
+I1210 12:32:54.326712       1 httplog.go:132] "HTTP" verb="GET" URI="/livez" latency="352.41µs" userAgent="kube-probe/1.27" audit-ID="ec2a9bee-d768-45b8-8529-ddf9b18da570" srcIP="192.168.49.2:33242" apf_pl="exempt" apf_fs="probes" apf_execution_time="210.242µs" resp=200
+I1210 12:32:54.357755       1 handler.go:153] kube-aggregator: GET "/api/v1/nodes/minikube" satisfied by nonGoRestful
+I1210 12:32:54.357768       1 handler.go:143] kube-apiserver: GET "/api/v1/nodes/minikube" satisfied by gorestful with webservice /api/v1
+I1210 12:32:54.358089       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/nodes/minikube?resourceVersion=0&timeout=10s" latency="819.643µs" userAgent="kubelet/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="24526ef8-c70f-4e02-a1b5-a39dfa4d4e47" srcIP="192.168.49.2:43024" apf_pl="node-high" apf_fs="system-node-high" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="285.01µs" resp=200
+I1210 12:32:54.728878       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:54.728951       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:54.847196       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:32:54.847458       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="425.554µs" userAgent="kube-probe/1.27" audit-ID="0c5045e7-c0ab-4cfa-b059-6e3ff34e496d" srcIP="192.168.49.2:33250" apf_pl="exempt" apf_fs="probes" apf_execution_time="308.469µs" resp=200
+I1210 12:32:54.943977       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:54.944442       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:55.061544       1 handler.go:153] kube-aggregator: GET "/api/v1/pods" satisfied by nonGoRestful
+I1210 12:32:55.061563       1 handler.go:143] kube-apiserver: GET "/api/v1/pods" satisfied by gorestful with webservice /api/v1
+I1210 12:32:55.063620       1 httplog.go:132] "HTTP" verb="LIST" URI="/api/v1/pods?limit=500" latency="2.458013ms" userAgent="kubectl/v1.27.8 (linux/amd64) kubernetes/66fee42" audit-ID="06df0f38-1f13-4ca5-a966-5627aad5be17" srcIP="192.168.49.1:53484" apf_pl="exempt" apf_fs="exempt" apf_execution_time="2.057533ms" resp=200
+I1210 12:32:55.067581       1 handler.go:153] kube-aggregator: GET "/api/v1/pods" satisfied by nonGoRestful
+I1210 12:32:55.067601       1 handler.go:143] kube-apiserver: GET "/api/v1/pods" satisfied by gorestful with webservice /api/v1
+I1210 12:32:55.067765       1 get.go:260] "Starting watch" path="/api/v1/pods" resourceVersion="444" labels="" fields="" timeout="46m25.568153662s"
+I1210 12:32:55.488787       1 clientconn.go:178] "[core] [Channel #181] Channel created\n"
+I1210 12:32:55.488806       1 logging.go:43] "[core] [Channel #181] original dial target is: \"etcd-endpoints://0xc000fc01c0/127.0.0.1:2379\"\n"
+I1210 12:32:55.488833       1 logging.go:43] "[core] [Channel #181] parsed dial target is: {Scheme:etcd-endpoints Authority:0xc000fc01c0 Endpoint:127.0.0.1:2379 URL:{Scheme:etcd-endpoints Opaque: User: Host:0xc000fc01c0 Path:/127.0.0.1:2379 RawPath: OmitHost:false ForceQuery:false RawQuery: Fragment: RawFragment:}}\n"
+I1210 12:32:55.488849       1 logging.go:43] "[core] [Channel #181] Channel authority set to \"127.0.0.1:2379\"\n"
+I1210 12:32:55.488905       1 logging.go:43] "[core] [Channel #181] Resolver state updated: {\n  \"Addresses\": [\n    {\n      \"Addr\": \"127.0.0.1:2379\",\n      \"ServerName\": \"127.0.0.1\",\n      \"Attributes\": null,\n      \"BalancerAttributes\": null,\n      \"Type\": 0,\n      \"Metadata\": null\n    }\n  ],\n  \"ServiceConfig\": {\n    \"Config\": {\n      \"Config\": null,\n      \"LB\": \"round_robin\",\n      \"Methods\": {}\n    },\n    \"Err\": null\n  },\n  \"Attributes\": null\n} (service config updated; resolver returned new addresses)\n"
+I1210 12:32:55.488923       1 logging.go:43] "[core] [Channel #181] Channel switches to new LB policy \"round_robin\"\n"
+I1210 12:32:55.488960       1 balancer.go:98] "[balancer] base.baseBalancer: got new ClientConn state:  {{[{\n  \"Addr\": \"127.0.0.1:2379\",\n  \"ServerName\": \"127.0.0.1\",\n  \"Attributes\": null,\n  \"BalancerAttributes\": null,\n  \"Type\": 0,\n  \"Metadata\": null\n}] 0xc00dc0b040 <nil>} <nil>}\n"
+I1210 12:32:55.488982       1 clientconn.go:725] "[core] [Channel #181 SubChannel #182] Subchannel created\n"
+I1210 12:32:55.489007       1 roundrobin.go:50] "[roundrobin] roundrobinPicker: Build called with info: {map[]}\n"
+I1210 12:32:55.489020       1 logging.go:43] "[core] [Channel #181] Channel Connectivity change to CONNECTING\n"
+I1210 12:32:55.489056       1 logging.go:43] "[core] [Channel #181 SubChannel #182] Subchannel Connectivity change to CONNECTING\n"
+I1210 12:32:55.489075       1 logging.go:43] "[core] [Channel #181 SubChannel #182] Subchannel picks a new address \"127.0.0.1:2379\" to connect\n"
+I1210 12:32:55.489116       1 balancer.go:183] "[balancer] base.baseBalancer: handle SubConn state change: 0xc00dc03b90, CONNECTING\n"
+I1210 12:32:55.494490       1 logging.go:43] "[core] [Channel #181 SubChannel #182] Subchannel Connectivity change to READY\n"
+I1210 12:32:55.494512       1 balancer.go:183] "[balancer] base.baseBalancer: handle SubConn state change: 0xc00dc03b90, READY\n"
+I1210 12:32:55.494544       1 roundrobin.go:50] "[roundrobin] roundrobinPicker: Build called with info: {map[0xc00dc03b90:{{\n  \"Addr\": \"127.0.0.1:2379\",\n  \"ServerName\": \"127.0.0.1\",\n  \"Attributes\": null,\n  \"BalancerAttributes\": null,\n  \"Type\": 0,\n  \"Metadata\": null\n}}]}\n"
+I1210 12:32:55.494559       1 logging.go:43] "[core] [Channel #181] Channel Connectivity change to READY\n"
+I1210 12:32:55.495020       1 logging.go:43] "[core] [Channel #181] Channel Connectivity change to SHUTDOWN\n"
+I1210 12:32:55.495042       1 logging.go:43] "[core] [Channel #181 SubChannel #182] Subchannel Connectivity change to SHUTDOWN\n"
+I1210 12:32:55.495060       1 clientconn.go:1425] "[core] [Channel #181 SubChannel #182] Subchannel deleted\n"
+I1210 12:32:55.495075       1 clientconn.go:1055] "[core] [Channel #181] Channel deleted\n"
+I1210 12:32:55.495102       1 controlbuf.go:529] "[transport] transport: loopyWriter.run returning. connection error: desc = \"transport is closing\"\n"
+I1210 12:32:55.729703       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:55.729796       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:55.847313       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:32:55.848640       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="1.477614ms" userAgent="kube-probe/1.27" audit-ID="b1298b92-bf2b-469c-8910-00c1033b7086" srcIP="192.168.49.2:33254" apf_pl="exempt" apf_fs="probes" apf_execution_time="1.34669ms" resp=200
+I1210 12:32:55.945437       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:55.945680       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:56.116444       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:32:56.116491       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:32:56.117551       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="2.450112ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="86b67c9f-739a-4737-8b63-501df45cb979" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="1.05123ms" resp=200
+I1210 12:32:56.118635       1 handler.go:153] kube-aggregator: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:32:56.118655       1 handler.go:143] kube-apiserver: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:32:56.122541       1 httplog.go:132] "HTTP" verb="PUT" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="4.316651ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="bb61955e-c3a8-4494-ae3c-e423ab87401f" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="3.838962ms" resp=200
+I1210 12:32:56.730373       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:56.730471       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:56.847679       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:32:56.848925       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="1.374273ms" userAgent="kube-probe/1.27" audit-ID="628f58f2-6824-4a45-8788-1e787b9059d6" srcIP="192.168.49.2:33268" apf_pl="exempt" apf_fs="probes" apf_execution_time="1.26785ms" resp=200
+I1210 12:32:56.945759       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:56.946020       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:57.730551       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:57.730636       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:57.847575       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:32:57.847831       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="396.634µs" userAgent="kube-probe/1.27" audit-ID="b4849f6e-25a1-4cfb-92a5-44945c2e3ce4" srcIP="192.168.49.2:33274" apf_pl="exempt" apf_fs="probes" apf_execution_time="281.03µs" resp=200
+I1210 12:32:57.946985       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:57.947284       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:58.124261       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:32:58.124285       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:32:58.126052       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="2.205353ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="d835f8cf-ca21-4d9a-b417-ecee3e37412b" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="1.745362ms" resp=200
+I1210 12:32:58.127160       1 handler.go:153] kube-aggregator: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:32:58.127210       1 handler.go:143] kube-apiserver: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:32:58.131305       1 httplog.go:132] "HTTP" verb="PUT" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="4.642327ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="bcd647a1-feaf-4b4a-8c5e-0ae02c3091a9" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="4.070703ms" resp=200
+I1210 12:32:58.731045       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:58.731137       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:58.848396       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:32:58.850033       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="1.793313ms" userAgent="kube-probe/1.27" audit-ID="c2cffe99-1ee9-452e-9429-fcc6446e71c6" srcIP="192.168.49.2:55870" apf_pl="exempt" apf_fs="probes" apf_execution_time="1.662223ms" resp=200
+I1210 12:32:58.947554       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:58.947914       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:59.489029       1 handler.go:153] kube-aggregator: POST "/api/v1/namespaces/default/events" satisfied by nonGoRestful
+I1210 12:32:59.489046       1 handler.go:143] kube-apiserver: POST "/api/v1/namespaces/default/events" satisfied by gorestful with webservice /api/v1
+I1210 12:32:59.492293       1 httplog.go:132] "HTTP" verb="POST" URI="/api/v1/namespaces/default/events" latency="3.832007ms" userAgent="kubelet/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="483aa2da-2f87-4893-ad35-79bcbc17c9e6" srcIP="192.168.49.2:43024" apf_pl="system" apf_fs="system-nodes" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="3.170763ms" resp=201
+I1210 12:32:59.732015       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:59.732097       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:32:59.850921       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:32:59.851610       1 handler.go:153] kube-aggregator: POST "/api/v1/namespaces/default/events" satisfied by nonGoRestful
+I1210 12:32:59.851635       1 handler.go:143] kube-apiserver: POST "/api/v1/namespaces/default/events" satisfied by gorestful with webservice /api/v1
+I1210 12:32:59.856211       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="5.526102ms" userAgent="kube-probe/1.27" audit-ID="dee3584f-ee6f-49b0-a4bf-b335ee6750fc" srcIP="192.168.49.2:55874" apf_pl="exempt" apf_fs="probes" apf_execution_time="5.359607ms" resp=200
+I1210 12:32:59.856320       1 httplog.go:132] "HTTP" verb="POST" URI="/api/v1/namespaces/default/events" latency="5.757677ms" userAgent="kubelet/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="8339db5b-ae0c-45c3-a04e-d38a63958398" srcIP="192.168.49.2:43024" apf_pl="system" apf_fs="system-nodes" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="4.631082ms" resp=201
+I1210 12:32:59.945892       1 handler.go:153] kube-aggregator: POST "/api/v1/namespaces/default/events" satisfied by nonGoRestful
+I1210 12:32:59.945918       1 handler.go:143] kube-apiserver: POST "/api/v1/namespaces/default/events" satisfied by gorestful with webservice /api/v1
+I1210 12:32:59.948919       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:32:59.949114       1 httplog.go:132] "HTTP" verb="POST" URI="/api/v1/namespaces/default/events" latency="4.074166ms" userAgent="kubelet/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="dd228383-bc7d-479a-a205-0b2cdd8bac8c" srcIP="192.168.49.2:43024" apf_pl="system" apf_fs="system-nodes" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="3.153774ms" resp=201
+I1210 12:32:59.949256       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:33:00.132908       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:33:00.132934       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:33:00.133842       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="1.3494ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="0beaa70c-b67d-4de0-bd40-d0b647dad4e3" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="932.603µs" resp=200
+I1210 12:33:00.134608       1 handler.go:153] kube-aggregator: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:33:00.134629       1 handler.go:143] kube-apiserver: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:33:00.137797       1 httplog.go:132] "HTTP" verb="PUT" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="3.495621ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="06215df7-8882-4c20-b5f0-de7c512f8b3d" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="3.131318ms" resp=200
+I1210 12:33:00.284512       1 handler.go:153] kube-aggregator: PUT "/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/apiserver-eqt674mfxb4j56mrjjkoe7b7ii" satisfied by nonGoRestful
+I1210 12:33:00.284534       1 handler.go:143] kube-apiserver: PUT "/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/apiserver-eqt674mfxb4j56mrjjkoe7b7ii" satisfied by gorestful with webservice /apis/coordination.k8s.io/v1
+I1210 12:33:00.287700       1 httplog.go:132] "HTTP" verb="PUT" URI="/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/apiserver-eqt674mfxb4j56mrjjkoe7b7ii" latency="3.282728ms" userAgent="kube-apiserver/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="fd8cd851-793c-439c-baf3-bc7ed64afa7c" srcIP="127.0.0.1:35480" apf_pl="exempt" apf_fs="exempt" apf_execution_time="3.177258ms" resp=200
+I1210 12:33:00.287825       1 round_trippers.go:553] PUT https://localhost:8443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/apiserver-eqt674mfxb4j56mrjjkoe7b7ii 200 OK in 3 milliseconds
+I1210 12:33:00.395083       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/default/pods/vault" satisfied by nonGoRestful
+I1210 12:33:00.395105       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/default/pods/vault" satisfied by gorestful with webservice /api/v1
+I1210 12:33:00.396060       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/default/pods/vault" latency="1.511424ms" userAgent="kubelet/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="8fd79a78-1458-4068-b5a1-58315fdd7e58" srcIP="192.168.49.2:43024" apf_pl="system" apf_fs="system-nodes" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="920.755µs" resp=200
+I1210 12:33:00.397028       1 handler.go:153] kube-aggregator: PATCH "/api/v1/namespaces/default/pods/vault/status" satisfied by nonGoRestful
+I1210 12:33:00.397041       1 handler.go:143] kube-apiserver: PATCH "/api/v1/namespaces/default/pods/vault/status" satisfied by gorestful with webservice /api/v1
+I1210 12:33:00.400919       1 versioning.go:225] a memory allocator was provided but the encoder {"name":"json","pretty":"false","strict":"false","yaml":"false"} doesn't implement the runtime.EncoderWithAllocator, using regular encoder.Encode method
+I1210 12:33:00.401004       1 versioning.go:225] a memory allocator was provided but the encoder {"name":"json","pretty":"false","strict":"false","yaml":"false"} doesn't implement the runtime.EncoderWithAllocator, using regular encoder.Encode method
+I1210 12:33:00.401021       1 httplog.go:132] "HTTP" verb="PATCH" URI="/api/v1/namespaces/default/pods/vault/status" latency="4.401487ms" userAgent="kubelet/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="7a13ee01-e029-467b-95f4-e974f94f0397" srcIP="192.168.49.2:43024" apf_pl="system" apf_fs="system-nodes" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="3.897825ms" resp=200
+I1210 12:33:00.401078       1 graph_populator.go:83] updatePod default/vault, node unchanged
+I1210 12:33:00.424292       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/default" satisfied by nonGoRestful
+I1210 12:33:00.424321       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/default" satisfied by gorestful with webservice /api/v1
+I1210 12:33:00.428042       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/default" latency="3.939386ms" userAgent="kube-apiserver/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="b79f7b04-1c9d-4431-a213-6ecfc44e9334" srcIP="127.0.0.1:35480" apf_pl="exempt" apf_fs="exempt" apf_execution_time="3.793004ms" resp=200
+I1210 12:33:00.428181       1 round_trippers.go:553] GET https://localhost:8443/api/v1/namespaces/default 200 OK in 4 milliseconds
+I1210 12:33:00.428438       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/default/services/kubernetes" satisfied by nonGoRestful
+I1210 12:33:00.428456       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/default/services/kubernetes" satisfied by gorestful with webservice /api/v1
+I1210 12:33:00.429191       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/default/services/kubernetes" latency="840.928µs" userAgent="kube-apiserver/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="cf3b6a40-911c-4bf5-bb90-4c430902bdb5" srcIP="127.0.0.1:35480" apf_pl="exempt" apf_fs="exempt" apf_execution_time="741.325µs" resp=200
+I1210 12:33:00.429291       1 round_trippers.go:553] GET https://localhost:8443/api/v1/namespaces/default/services/kubernetes 200 OK in 1 milliseconds
+I1210 12:33:00.429791       1 lease.go:115] Resetting TTL on master IP "192.168.49.2" listed in storage to 15
+I1210 12:33:00.434967       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/default/endpoints/kubernetes" satisfied by nonGoRestful
+I1210 12:33:00.434989       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/default/endpoints/kubernetes" satisfied by gorestful with webservice /api/v1
+I1210 12:33:00.436116       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/default/endpoints/kubernetes" latency="1.29342ms" userAgent="kube-apiserver/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="2d438090-b346-4ab5-9121-fe65ee8696ce" srcIP="127.0.0.1:35480" apf_pl="exempt" apf_fs="exempt" apf_execution_time="1.146137ms" resp=200
+I1210 12:33:00.436252       1 round_trippers.go:553] GET https://localhost:8443/api/v1/namespaces/default/endpoints/kubernetes 200 OK in 1 milliseconds
+I1210 12:33:00.436782       1 lease.go:89] Current master IPs listed in storage are [192.168.49.2]
+I1210 12:33:00.437028       1 handler.go:153] kube-aggregator: GET "/apis/discovery.k8s.io/v1/namespaces/default/endpointslices/kubernetes" satisfied by nonGoRestful
+I1210 12:33:00.437051       1 handler.go:143] kube-apiserver: GET "/apis/discovery.k8s.io/v1/namespaces/default/endpointslices/kubernetes" satisfied by gorestful with webservice /apis/discovery.k8s.io/v1
+I1210 12:33:00.437760       1 httplog.go:132] "HTTP" verb="GET" URI="/apis/discovery.k8s.io/v1/namespaces/default/endpointslices/kubernetes" latency="822.639µs" userAgent="kube-apiserver/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="d1836475-87a1-40fa-bd31-54c37e93adee" srcIP="127.0.0.1:35480" apf_pl="exempt" apf_fs="exempt" apf_execution_time="731.249µs" resp=200
+I1210 12:33:00.437863       1 round_trippers.go:553] GET https://localhost:8443/apis/discovery.k8s.io/v1/namespaces/default/endpointslices/kubernetes 200 OK in 1 milliseconds
+I1210 12:33:00.732777       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:33:00.732882       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:33:00.847988       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:33:00.848198       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="330.881µs" userAgent="kube-probe/1.27" audit-ID="09f86a1e-89fa-4e37-bf62-0255554ce543" srcIP="192.168.49.2:55890" apf_pl="exempt" apf_fs="probes" apf_execution_time="237.774µs" resp=200
+I1210 12:33:00.949813       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:33:00.950066       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:33:01.320512       1 httplog.go:132] "HTTP" verb="WATCH" URI="/api/v1/pods?resourceVersion=444&watch=true" latency="6.253361115s" userAgent="kubectl/v1.27.8 (linux/amd64) kubernetes/66fee42" audit-ID="b658d7a0-ad1d-4fc7-bfc7-4257498568af" srcIP="192.168.49.1:53484" apf_pl="exempt" apf_fs="exempt" apf_init_latency="311.131µs" apf_execution_time="312.944µs" resp=200
+I1210 12:33:01.733355       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:33:01.733472       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:33:01.848296       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:33:01.849596       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="1.467603ms" userAgent="kube-probe/1.27" audit-ID="81de1058-3aeb-4ff3-b240-8c4a3bc2964e" srcIP="192.168.49.2:55892" apf_pl="exempt" apf_fs="probes" apf_execution_time="1.333017ms" resp=200
+I1210 12:33:01.950228       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:33:01.950618       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:33:02.138777       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:33:02.138791       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:33:02.139729       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="1.237101ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="15c6aec4-c497-4918-9c5e-773211eebe99" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="913.986µs" resp=200
+I1210 12:33:02.140401       1 handler.go:153] kube-aggregator: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:33:02.140415       1 handler.go:143] kube-apiserver: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:33:02.143393       1 httplog.go:132] "HTTP" verb="PUT" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="3.234883ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="f3d9d378-7e2e-4c01-a0ba-47a287bf7bbd" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="2.955084ms" resp=200
+I1210 12:33:02.734053       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:33:02.734142       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:33:02.847761       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:33:02.848052       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="424.067µs" userAgent="kube-probe/1.27" audit-ID="04ef2d10-6be8-4335-a9d8-471e3be7c241" srcIP="192.168.49.2:55904" apf_pl="exempt" apf_fs="probes" apf_execution_time="319.089µs" resp=200
+I1210 12:33:02.951334       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:33:02.951574       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:33:03.735040       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:33:03.735128       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:33:03.847801       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:33:03.849047       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="1.37332ms" userAgent="kube-probe/1.27" audit-ID="1de6f3cd-df56-4d62-b773-2321784c7fa2" srcIP="192.168.49.2:55914" apf_pl="exempt" apf_fs="probes" apf_execution_time="1.269664ms" resp=200
+I1210 12:33:03.952459       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:33:03.952883       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:33:03.966064       1 handler.go:153] kube-aggregator: PUT "/apis/coordination.k8s.io/v1/namespaces/kube-node-lease/leases/minikube" satisfied by nonGoRestful
+I1210 12:33:03.966085       1 handler.go:143] kube-apiserver: PUT "/apis/coordination.k8s.io/v1/namespaces/kube-node-lease/leases/minikube" satisfied by gorestful with webservice /apis/coordination.k8s.io/v1
+I1210 12:33:03.969320       1 httplog.go:132] "HTTP" verb="PUT" URI="/apis/coordination.k8s.io/v1/namespaces/kube-node-lease/leases/minikube?timeout=10s" latency="3.881063ms" userAgent="kubelet/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="9512fba5-8357-415c-affb-964e31319ede" srcIP="192.168.49.2:43024" apf_pl="node-high" apf_fs="system-node-high" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="3.192685ms" resp=200
+I1210 12:33:03.989879       1 handler.go:153] kube-aggregator: GET "/api" satisfied by nonGoRestful
+I1210 12:33:03.989895       1 handler.go:143] kube-apiserver: GET "/api" satisfied by gorestful with webservice /api
+I1210 12:33:03.990254       1 httplog.go:132] "HTTP" verb="GET" URI="/api" latency="1.055027ms" userAgent="kube-controller-manager/v1.27.4 (linux/amd64) kubernetes/fa3d799/system:serviceaccount:kube-system:resourcequota-controller" audit-ID="437e5645-62f7-4213-b1f9-1c2bea6c37c8" srcIP="192.168.49.2:54220" apf_pl="workload-high" apf_fs="kube-system-service-accounts" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="339.946µs" resp=200
+I1210 12:33:03.990887       1 handler.go:153] kube-aggregator: GET "/apis" satisfied by nonGoRestful
+I1210 12:33:03.991277       1 httplog.go:132] "HTTP" verb="GET" URI="/apis" latency="596.534µs" userAgent="kube-controller-manager/v1.27.4 (linux/amd64) kubernetes/fa3d799/system:serviceaccount:kube-system:resourcequota-controller" audit-ID="6c965b96-2493-41bf-97c6-3f01b1057165" srcIP="192.168.49.2:54220" apf_pl="workload-high" apf_fs="kube-system-service-accounts" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="345.683µs" resp=200
+I1210 12:33:04.130761       1 handler.go:153] kube-aggregator: GET "/api/v1/pods" satisfied by nonGoRestful
+I1210 12:33:04.130784       1 handler.go:143] kube-apiserver: GET "/api/v1/pods" satisfied by gorestful with webservice /api/v1
+I1210 12:33:04.133279       1 httplog.go:132] "HTTP" verb="LIST" URI="/api/v1/pods?limit=500" latency="2.95158ms" userAgent="kubectl/v1.27.8 (linux/amd64) kubernetes/66fee42" audit-ID="3c6767be-d253-4bbe-85d2-5a4df54c03fb" srcIP="192.168.49.1:36236" apf_pl="exempt" apf_fs="exempt" apf_execution_time="2.495556ms" resp=200
+I1210 12:33:04.144437       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:33:04.144463       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:33:04.145337       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="1.294374ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="ad040b9d-3a18-4765-9ef8-75027b95b7c4" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="865.245µs" resp=200
+I1210 12:33:04.146182       1 handler.go:153] kube-aggregator: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:33:04.146204       1 handler.go:143] kube-apiserver: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:33:04.149497       1 httplog.go:132] "HTTP" verb="PUT" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="3.692103ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="50d147a2-d23e-46e5-97a8-0c39cceb6f67" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="3.252333ms" resp=200
+I1210 12:33:04.262083       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/pods/coredns-5d78c9869d-2j2hn" satisfied by nonGoRestful
+I1210 12:33:04.262121       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/pods/coredns-5d78c9869d-2j2hn" satisfied by gorestful with webservice /api/v1
+I1210 12:33:04.266937       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/kube-system/pods/coredns-5d78c9869d-2j2hn" latency="5.488142ms" userAgent="kubectl/v1.27.8 (linux/amd64) kubernetes/66fee42" audit-ID="4835f598-2c48-409e-9630-f3267c3efd1c" srcIP="192.168.49.1:36246" apf_pl="exempt" apf_fs="exempt" apf_execution_time="4.645828ms" resp=200
+I1210 12:33:04.280301       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/pods/etcd-minikube" satisfied by nonGoRestful
+I1210 12:33:04.280357       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/pods/etcd-minikube" satisfied by gorestful with webservice /api/v1
+I1210 12:33:04.282732       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/pods/vault" satisfied by nonGoRestful
+I1210 12:33:04.282763       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/pods/vault" satisfied by gorestful with webservice /api/v1
+I1210 12:33:04.283355       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/kube-system/pods/etcd-minikube" latency="3.978644ms" userAgent="kubectl/v1.27.8 (linux/amd64) kubernetes/66fee42" audit-ID="0c725537-cc42-4d11-a6e8-23fee7ec457a" srcIP="192.168.49.1:36266" apf_pl="exempt" apf_fs="exempt" apf_execution_time="3.050193ms" resp=200
+I1210 12:33:04.284368       1 priority-and-fairness.go:106] Serving RequestInfo=&request.RequestInfo{IsResourceRequest:true, Path:"/api/v1/namespaces/kube-system/pods/coredns-5d78c9869d-2j2hn/log", Verb:"get", APIPrefix:"api", APIGroup:"", APIVersion:"v1", Namespace:"kube-system", Resource:"pods", Subresource:"log", Name:"coredns-5d78c9869d-2j2hn", Parts:[]string{"pods", "coredns-5d78c9869d-2j2hn", "log"}}, user.Info=&user.DefaultInfo{Name:"minikube-user", UID:"", Groups:[]string{"system:masters", "system:authenticated"}, Extra:map[string][]string(nil)} as longrunning
+I1210 12:33:04.284461       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/pods/coredns-5d78c9869d-2j2hn/log" satisfied by nonGoRestful
+I1210 12:33:04.284502       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/pods/coredns-5d78c9869d-2j2hn/log" satisfied by gorestful with webservice /api/v1
+I1210 12:33:04.287900       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/kube-system/pods/vault" latency="6.010975ms" userAgent="kubectl/v1.27.8 (linux/amd64) kubernetes/66fee42" audit-ID="f5e783f6-42e1-478e-b38c-252c3110d57b" srcIP="192.168.49.1:36258" apf_pl="exempt" apf_fs="exempt" apf_execution_time="5.117578ms" resp=404
+I1210 12:33:04.293915       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system" satisfied by nonGoRestful
+I1210 12:33:04.293974       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system" satisfied by gorestful with webservice /api/v1
+I1210 12:33:04.295232       1 priority-and-fairness.go:106] Serving RequestInfo=&request.RequestInfo{IsResourceRequest:true, Path:"/api/v1/namespaces/kube-system/pods/etcd-minikube/log", Verb:"get", APIPrefix:"api", APIGroup:"", APIVersion:"v1", Namespace:"kube-system", Resource:"pods", Subresource:"log", Name:"etcd-minikube", Parts:[]string{"pods", "etcd-minikube", "log"}}, user.Info=&user.DefaultInfo{Name:"minikube-user", UID:"", Groups:[]string{"system:masters", "system:authenticated"}, Extra:map[string][]string(nil)} as longrunning
+I1210 12:33:04.295283       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/pods/etcd-minikube/log" satisfied by nonGoRestful
+I1210 12:33:04.295303       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/pods/etcd-minikube/log" satisfied by gorestful with webservice /api/v1
+I1210 12:33:04.298668       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/kube-system" latency="5.879634ms" userAgent="kubectl/v1.27.8 (linux/amd64) kubernetes/66fee42" audit-ID="215373ff-fe7d-44f7-a4df-b74b060d66cb" srcIP="192.168.49.1:36258" apf_pl="exempt" apf_fs="exempt" apf_execution_time="4.732657ms" resp=200
+I1210 12:33:04.300138       1 round_trippers.go:553] GET https://192.168.49.2:10250/containerLogs/kube-system/coredns-5d78c9869d-2j2hn/coredns?follow=true 200 OK in 9 milliseconds
+I1210 12:33:04.305619       1 round_trippers.go:553] GET https://192.168.49.2:10250/containerLogs/kube-system/etcd-minikube/etcd?follow=true 200 OK in 4 milliseconds
+I1210 12:33:04.306187       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/pods/kube-proxy-pb5tg" satisfied by nonGoRestful
+I1210 12:33:04.306244       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/pods/kube-proxy-pb5tg" satisfied by gorestful with webservice /api/v1
+I1210 12:33:04.311040       1 handler.go:153] kube-aggregator: GET "/api" satisfied by nonGoRestful
+I1210 12:33:04.311062       1 handler.go:143] kube-apiserver: GET "/api" satisfied by gorestful with webservice /api
+I1210 12:33:04.311834       1 httplog.go:132] "HTTP" verb="GET" URI="/api" latency="2.650431ms" userAgent="kube-controller-manager/v1.27.4 (linux/amd64) kubernetes/fa3d799/system:serviceaccount:kube-system:generic-garbage-collector" audit-ID="50f77510-a881-422e-b6cc-7c13019e8519" srcIP="192.168.49.2:54220" apf_pl="workload-high" apf_fs="kube-system-service-accounts" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="721.404µs" resp=200
+I1210 12:33:04.313500       1 handler.go:153] kube-aggregator: GET "/apis" satisfied by nonGoRestful
+I1210 12:33:04.314888       1 httplog.go:132] "HTTP" verb="GET" URI="/apis" latency="1.86811ms" userAgent="kube-controller-manager/v1.27.4 (linux/amd64) kubernetes/fa3d799/system:serviceaccount:kube-system:generic-garbage-collector" audit-ID="051460eb-09f4-4f60-9178-437bce842ea3" srcIP="192.168.49.2:54220" apf_pl="workload-high" apf_fs="kube-system-service-accounts" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="1.344649ms" resp=200
+I1210 12:33:04.317136       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/kube-system/pods/kube-proxy-pb5tg" latency="12.069621ms" userAgent="kubectl/v1.27.8 (linux/amd64) kubernetes/66fee42" audit-ID="8221254f-2d10-48da-97f7-43b334743a48" srcIP="192.168.49.1:36280" apf_pl="exempt" apf_fs="exempt" apf_execution_time="10.93758ms" resp=200
+I1210 12:33:04.333657       1 handler.go:153] kube-aggregator: GET "/livez" satisfied by nonGoRestful
+I1210 12:33:04.333972       1 httplog.go:132] "HTTP" verb="GET" URI="/livez" latency="596.557µs" userAgent="kube-probe/1.27" audit-ID="67fc5682-a5e9-4ede-8802-bb7d2b17fc70" srcIP="192.168.49.2:55926" apf_pl="exempt" apf_fs="probes" apf_execution_time="395.791µs" resp=200
+I1210 12:33:04.338067       1 priority-and-fairness.go:106] Serving RequestInfo=&request.RequestInfo{IsResourceRequest:true, Path:"/api/v1/namespaces/kube-system/pods/kube-proxy-pb5tg/log", Verb:"get", APIPrefix:"api", APIGroup:"", APIVersion:"v1", Namespace:"kube-system", Resource:"pods", Subresource:"log", Name:"kube-proxy-pb5tg", Parts:[]string{"pods", "kube-proxy-pb5tg", "log"}}, user.Info=&user.DefaultInfo{Name:"minikube-user", UID:"", Groups:[]string{"system:masters", "system:authenticated"}, Extra:map[string][]string(nil)} as longrunning
+I1210 12:33:04.338134       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/pods/kube-proxy-pb5tg/log" satisfied by nonGoRestful
+I1210 12:33:04.338184       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/pods/kube-proxy-pb5tg/log" satisfied by gorestful with webservice /api/v1
+I1210 12:33:04.340290       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/pods/kube-scheduler-minikube" satisfied by nonGoRestful
+I1210 12:33:04.340351       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/pods/kube-scheduler-minikube" satisfied by gorestful with webservice /api/v1
+I1210 12:33:04.341836       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/pods/kube-apiserver-minikube" satisfied by nonGoRestful
+I1210 12:33:04.342521       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/pods/kube-apiserver-minikube" satisfied by gorestful with webservice /api/v1
+I1210 12:33:04.341891       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/kube-system/pods/kube-scheduler-minikube" latency="2.863919ms" userAgent="kubectl/v1.27.8 (linux/amd64) kubernetes/66fee42" audit-ID="26497098-1065-4815-a86c-c064dd24a2aa" srcIP="192.168.49.1:36296" apf_pl="exempt" apf_fs="exempt" apf_execution_time="1.73116ms" resp=200
+I1210 12:33:04.347572       1 round_trippers.go:553] GET https://192.168.49.2:10250/containerLogs/kube-system/kube-proxy-pb5tg/kube-proxy?follow=true 200 OK in 6 milliseconds
+I1210 12:33:04.347938       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/kube-system/pods/kube-apiserver-minikube" latency="8.163202ms" userAgent="kubectl/v1.27.8 (linux/amd64) kubernetes/66fee42" audit-ID="4c732ebc-1c55-4a47-8666-036491b75c0f" srcIP="192.168.49.1:36282" apf_pl="exempt" apf_fs="exempt" apf_execution_time="6.071672ms" resp=200
+I1210 12:33:04.349249       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/pods/kube-controller-manager-minikube" satisfied by nonGoRestful
+I1210 12:33:04.349288       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/pods/kube-controller-manager-minikube" satisfied by gorestful with webservice /api/v1
+I1210 12:33:04.351641       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/pods/storage-provisioner" satisfied by nonGoRestful
+I1210 12:33:04.351689       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/pods/storage-provisioner" satisfied by gorestful with webservice /api/v1
+I1210 12:33:04.353187       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/kube-system/pods/kube-controller-manager-minikube" latency="4.693788ms" userAgent="kubectl/v1.27.8 (linux/amd64) kubernetes/66fee42" audit-ID="1c9ddda9-0382-4de9-8ce2-5abe561c3070" srcIP="192.168.49.1:36304" apf_pl="exempt" apf_fs="exempt" apf_execution_time="3.890213ms" resp=200
+I1210 12:33:04.355275       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/kube-system/pods/storage-provisioner" latency="4.284272ms" userAgent="kubectl/v1.27.8 (linux/amd64) kubernetes/66fee42" audit-ID="3f16635b-8752-454b-9403-4093517a752c" srcIP="192.168.49.1:36310" apf_pl="exempt" apf_fs="exempt" apf_execution_time="3.613583ms" resp=200
+I1210 12:33:04.357794       1 priority-and-fairness.go:106] Serving RequestInfo=&request.RequestInfo{IsResourceRequest:true, Path:"/api/v1/namespaces/kube-system/pods/kube-apiserver-minikube/log", Verb:"get", APIPrefix:"api", APIGroup:"", APIVersion:"v1", Namespace:"kube-system", Resource:"pods", Subresource:"log", Name:"kube-apiserver-minikube", Parts:[]string{"pods", "kube-apiserver-minikube", "log"}}, user.Info=&user.DefaultInfo{Name:"minikube-user", UID:"", Groups:[]string{"system:masters", "system:authenticated"}, Extra:map[string][]string(nil)} as longrunning
+I1210 12:33:04.357921       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/pods/kube-apiserver-minikube/log" satisfied by nonGoRestful
+I1210 12:33:04.357963       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/pods/kube-apiserver-minikube/log" satisfied by gorestful with webservice /api/v1
+I1210 12:33:04.358578       1 priority-and-fairness.go:106] Serving RequestInfo=&request.RequestInfo{IsResourceRequest:true, Path:"/api/v1/namespaces/kube-system/pods/kube-controller-manager-minikube/log", Verb:"get", APIPrefix:"api", APIGroup:"", APIVersion:"v1", Namespace:"kube-system", Resource:"pods", Subresource:"log", Name:"kube-controller-manager-minikube", Parts:[]string{"pods", "kube-controller-manager-minikube", "log"}}, user.Info=&user.DefaultInfo{Name:"minikube-user", UID:"", Groups:[]string{"system:masters", "system:authenticated"}, Extra:map[string][]string(nil)} as longrunning
+I1210 12:33:04.358595       1 priority-and-fairness.go:106] Serving RequestInfo=&request.RequestInfo{IsResourceRequest:true, Path:"/api/v1/namespaces/kube-system/pods/kube-scheduler-minikube/log", Verb:"get", APIPrefix:"api", APIGroup:"", APIVersion:"v1", Namespace:"kube-system", Resource:"pods", Subresource:"log", Name:"kube-scheduler-minikube", Parts:[]string{"pods", "kube-scheduler-minikube", "log"}}, user.Info=&user.DefaultInfo{Name:"minikube-user", UID:"", Groups:[]string{"system:masters", "system:authenticated"}, Extra:map[string][]string(nil)} as longrunning
+I1210 12:33:04.358616       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/pods/kube-controller-manager-minikube/log" satisfied by nonGoRestful
+I1210 12:33:04.358633       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/pods/kube-scheduler-minikube/log" satisfied by nonGoRestful
+I1210 12:33:04.358637       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/pods/kube-controller-manager-minikube/log" satisfied by gorestful with webservice /api/v1
+I1210 12:33:04.358673       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/pods/kube-scheduler-minikube/log" satisfied by gorestful with webservice /api/v1
+I1210 12:33:04.364013       1 round_trippers.go:553] GET https://192.168.49.2:10250/containerLogs/kube-system/kube-scheduler-minikube/kube-scheduler?follow=true 200 OK in 2 milliseconds
+I1210 12:33:04.364837       1 priority-and-fairness.go:106] Serving RequestInfo=&request.RequestInfo{IsResourceRequest:true, Path:"/api/v1/namespaces/kube-system/pods/storage-provisioner/log", Verb:"get", APIPrefix:"api", APIGroup:"", APIVersion:"v1", Namespace:"kube-system", Resource:"pods", Subresource:"log", Name:"storage-provisioner", Parts:[]string{"pods", "storage-provisioner", "log"}}, user.Info=&user.DefaultInfo{Name:"minikube-user", UID:"", Groups:[]string{"system:masters", "system:authenticated"}, Extra:map[string][]string(nil)} as longrunning
+I1210 12:33:04.364932       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/pods/storage-provisioner/log" satisfied by nonGoRestful
+I1210 12:33:04.364966       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/pods/storage-provisioner/log" satisfied by gorestful with webservice /api/v1
+I1210 12:33:04.366618       1 round_trippers.go:553] GET https://192.168.49.2:10250/containerLogs/kube-system/kube-apiserver-minikube/kube-apiserver?follow=true 200 OK in 2 milliseconds
+I1210 12:33:04.366747       1 round_trippers.go:553] GET https://192.168.49.2:10250/containerLogs/kube-system/kube-controller-manager-minikube/kube-controller-manager?follow=true 200 OK in 2 milliseconds
+I1210 12:33:04.372609       1 round_trippers.go:553] GET https://192.168.49.2:10250/containerLogs/kube-system/storage-provisioner/storage-provisioner?follow=true 200 OK in 2 milliseconds
+I1210 12:33:04.661808       1 handler.go:153] kube-aggregator: GET "/api/v1/nodes/minikube" satisfied by nonGoRestful
+I1210 12:33:04.661829       1 handler.go:143] kube-apiserver: GET "/api/v1/nodes/minikube" satisfied by gorestful with webservice /api/v1
+I1210 12:33:04.662267       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/nodes/minikube?resourceVersion=0&timeout=10s" latency="1.514955ms" userAgent="kubelet/v1.27.4 (linux/amd64) kubernetes/fa3d799" audit-ID="efa13e7d-f5dd-405e-8f34-2cc5df9372a1" srcIP="192.168.49.2:43024" apf_pl="node-high" apf_fs="system-node-high" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="373.039µs" resp=200
+I1210 12:33:04.735213       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:33:04.735332       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:33:04.848513       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:33:04.851449       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="3.149037ms" userAgent="kube-probe/1.27" audit-ID="e07dbe57-873a-4e3b-8779-a297767ff169" srcIP="192.168.49.2:55928" apf_pl="exempt" apf_fs="probes" apf_execution_time="2.989976ms" resp=200
+I1210 12:33:04.952923       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:33:04.953357       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:33:05.735930       1 handler.go:153] kube-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:33:05.736027       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v2" satisfied by nonGoRestful
+I1210 12:33:05.848041       1 handler.go:153] kube-aggregator: GET "/readyz" satisfied by nonGoRestful
+I1210 12:33:05.848318       1 httplog.go:132] "HTTP" verb="GET" URI="/readyz" latency="411.834µs" userAgent="kube-probe/1.27" audit-ID="c35b9aa2-a9c5-4d35-a39a-1a281da386d3" srcIP="192.168.49.2:55944" apf_pl="exempt" apf_fs="probes" apf_execution_time="301.997µs" resp=200
+I1210 12:33:05.954189       1 handler.go:153] kube-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:33:05.954648       1 handler.go:153] apiextensions-apiserver: GET "/openapi/v3" satisfied by nonGoRestful
+I1210 12:33:06.151325       1 handler.go:153] kube-aggregator: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:33:06.151349       1 handler.go:143] kube-apiserver: GET "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:33:06.154785       1 httplog.go:132] "HTTP" verb="GET" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="4.285419ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="0c8a7a24-47a7-4074-af46-d05df20472c1" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="3.366243ms" resp=200
+I1210 12:33:06.155879       1 handler.go:153] kube-aggregator: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by nonGoRestful
+I1210 12:33:06.155905       1 handler.go:143] kube-apiserver: PUT "/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" satisfied by gorestful with webservice /api/v1
+I1210 12:33:06.160115       1 httplog.go:132] "HTTP" verb="PUT" URI="/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath" latency="4.678699ms" userAgent="storage-provisioner/v0.0.0 (linux/amd64) kubernetes/$Format" audit-ID="8ef762de-a5b1-42bf-ba3e-0dcad3a43389" srcIP="192.168.49.2:1833" apf_pl="leader-election" apf_fs="workload-leader-election" apf_iseats=1 apf_fseats=0 apf_additionalLatency="0s" apf_execution_time="4.183255ms" resp=200

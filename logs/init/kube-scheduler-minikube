@@ -1,0 +1,398 @@
+I1210 12:31:17.654173       1 serving.go:348] Generated self-signed cert in-memory
+I1210 12:31:17.655178       1 loader.go:373] Config loaded from file:  /etc/kubernetes/scheduler.conf
+I1210 12:31:17.970633       1 loader.go:373] Config loaded from file:  /etc/kubernetes/scheduler.conf
+I1210 12:31:18.903298       1 round_trippers.go:553] GET https://192.168.49.2:8443/api/v1/namespaces/kube-system/configmaps/extension-apiserver-authentication 403 Forbidden in 931 milliseconds
+W1210 12:31:18.903668       1 requestheader_controller.go:193] Unable to get configmap/extension-apiserver-authentication in kube-system.  Usually fixed by 'kubectl create rolebinding -n kube-system ROLEBINDING_NAME --role=extension-apiserver-authentication-reader --serviceaccount=YOUR_NS:YOUR_SA'
+W1210 12:31:18.903690       1 authentication.go:368] Error looking up in-cluster authentication configuration: configmaps "extension-apiserver-authentication" is forbidden: User "system:kube-scheduler" cannot get resource "configmaps" in API group "" in the namespace "kube-system"
+W1210 12:31:18.903704       1 authentication.go:369] Continuing without authentication configuration. This may treat all requests as anonymous.
+W1210 12:31:18.903716       1 authentication.go:370] To require authentication configuration lookup to succeed, set --authentication-tolerate-lookup-failure=false
+I1210 12:31:18.904402       1 loader.go:373] Config loaded from file:  /etc/kubernetes/scheduler.conf
+I1210 12:31:18.939029       1 round_trippers.go:553] GET https://192.168.49.2:8443/apis/events.k8s.io/v1 403 Forbidden in 22 milliseconds
+I1210 12:31:18.942282       1 configfile.go:105] "Using component config" config=<
+	apiVersion: kubescheduler.config.k8s.io/v1
+	clientConnection:
+	  acceptContentTypes: ""
+	  burst: 100
+	  contentType: application/vnd.kubernetes.protobuf
+	  kubeconfig: /etc/kubernetes/scheduler.conf
+	  qps: 50
+	enableContentionProfiling: true
+	enableProfiling: true
+	kind: KubeSchedulerConfiguration
+	leaderElection:
+	  leaderElect: false
+	  leaseDuration: 15s
+	  renewDeadline: 10s
+	  resourceLock: leases
+	  resourceName: kube-scheduler
+	  resourceNamespace: kube-system
+	  retryPeriod: 2s
+	parallelism: 16
+	percentageOfNodesToScore: 0
+	podInitialBackoffSeconds: 1
+	podMaxBackoffSeconds: 10
+	profiles:
+	- pluginConfig:
+	  - args:
+	      apiVersion: kubescheduler.config.k8s.io/v1
+	      kind: DefaultPreemptionArgs
+	      minCandidateNodesAbsolute: 100
+	      minCandidateNodesPercentage: 10
+	    name: DefaultPreemption
+	  - args:
+	      apiVersion: kubescheduler.config.k8s.io/v1
+	      hardPodAffinityWeight: 1
+	      ignorePreferredTermsOfExistingPods: false
+	      kind: InterPodAffinityArgs
+	    name: InterPodAffinity
+	  - args:
+	      apiVersion: kubescheduler.config.k8s.io/v1
+	      kind: NodeAffinityArgs
+	    name: NodeAffinity
+	  - args:
+	      apiVersion: kubescheduler.config.k8s.io/v1
+	      kind: NodeResourcesBalancedAllocationArgs
+	      resources:
+	      - name: cpu
+	        weight: 1
+	      - name: memory
+	        weight: 1
+	    name: NodeResourcesBalancedAllocation
+	  - args:
+	      apiVersion: kubescheduler.config.k8s.io/v1
+	      kind: NodeResourcesFitArgs
+	      scoringStrategy:
+	        resources:
+	        - name: cpu
+	          weight: 1
+	        - name: memory
+	          weight: 1
+	        type: LeastAllocated
+	    name: NodeResourcesFit
+	  - args:
+	      apiVersion: kubescheduler.config.k8s.io/v1
+	      defaultingType: System
+	      kind: PodTopologySpreadArgs
+	    name: PodTopologySpread
+	  - args:
+	      apiVersion: kubescheduler.config.k8s.io/v1
+	      bindTimeoutSeconds: 600
+	      kind: VolumeBindingArgs
+	    name: VolumeBinding
+	  plugins:
+	    bind: {}
+	    filter: {}
+	    multiPoint:
+	      enabled:
+	      - name: PrioritySort
+	        weight: 0
+	      - name: NodeUnschedulable
+	        weight: 0
+	      - name: NodeName
+	        weight: 0
+	      - name: TaintToleration
+	        weight: 3
+	      - name: NodeAffinity
+	        weight: 2
+	      - name: NodePorts
+	        weight: 0
+	      - name: NodeResourcesFit
+	        weight: 1
+	      - name: VolumeRestrictions
+	        weight: 0
+	      - name: EBSLimits
+	        weight: 0
+	      - name: GCEPDLimits
+	        weight: 0
+	      - name: NodeVolumeLimits
+	        weight: 0
+	      - name: AzureDiskLimits
+	        weight: 0
+	      - name: VolumeBinding
+	        weight: 0
+	      - name: VolumeZone
+	        weight: 0
+	      - name: PodTopologySpread
+	        weight: 2
+	      - name: InterPodAffinity
+	        weight: 2
+	      - name: DefaultPreemption
+	        weight: 0
+	      - name: NodeResourcesBalancedAllocation
+	        weight: 1
+	      - name: ImageLocality
+	        weight: 1
+	      - name: DefaultBinder
+	        weight: 0
+	      - name: SchedulingGates
+	        weight: 0
+	    permit: {}
+	    postBind: {}
+	    postFilter: {}
+	    preBind: {}
+	    preEnqueue: {}
+	    preFilter: {}
+	    preScore: {}
+	    queueSort: {}
+	    reserve: {}
+	    score: {}
+	  schedulerName: default-scheduler
+ >
+I1210 12:31:18.942527       1 server.go:154] "Starting Kubernetes Scheduler" version="v1.27.4"
+I1210 12:31:18.942536       1 server.go:156] "Golang settings" GOGC="" GOMAXPROCS="" GOTRACEBACK=""
+I1210 12:31:18.942563       1 healthz.go:172] No default health checks specified. Installing the ping handler.
+I1210 12:31:18.942573       1 healthz.go:176] Installing health checkers for (/healthz): "ping"
+I1210 12:31:18.943438       1 configmap_cafile_content.go:202] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+I1210 12:31:18.943470       1 shared_informer.go:311] Waiting for caches to sync for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+I1210 12:31:18.943594       1 reflector.go:287] Starting reflector *v1.ConfigMap (12h0m0s) from pkg/server/dynamiccertificates/configmap_cafile_content.go:206
+I1210 12:31:18.943602       1 reflector.go:323] Listing and watching *v1.ConfigMap from pkg/server/dynamiccertificates/configmap_cafile_content.go:206
+I1210 12:31:18.943729       1 tlsconfig.go:200] "Loaded serving cert" certName="Generated self signed cert" certDetail="\"localhost@1702211477\" [serving] validServingFor=[127.0.0.1,127.0.0.1,localhost] issuer=\"localhost-ca@1702211477\" (2023-12-10 11:31:17 +0000 UTC to 2024-12-09 11:31:17 +0000 UTC (now=2023-12-10 12:31:18.943704164 +0000 UTC))"
+I1210 12:31:18.944056       1 named_certificates.go:53] "Loaded SNI cert" index=0 certName="self-signed loopback" certDetail="\"apiserver-loopback-client@1702211477\" [serving] validServingFor=[apiserver-loopback-client] issuer=\"apiserver-loopback-client-ca@1702211477\" (2023-12-10 11:31:17 +0000 UTC to 2024-12-09 11:31:17 +0000 UTC (now=2023-12-10 12:31:18.94403269 +0000 UTC))"
+I1210 12:31:18.944071       1 secure_serving.go:210] Serving securely on 127.0.0.1:10259
+I1210 12:31:18.944111       1 tlsconfig.go:240] "Starting DynamicServingCertificateController"
+I1210 12:31:18.944173       1 reflector.go:287] Starting reflector *v1.Service (0s) from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:18.944187       1 reflector.go:323] Listing and watching *v1.Service from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:18.944210       1 reflector.go:287] Starting reflector *v1.PersistentVolume (0s) from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:18.944792       1 reflector.go:323] Listing and watching *v1.PersistentVolume from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:18.945137       1 reflector.go:287] Starting reflector *v1.CSIStorageCapacity (0s) from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:18.945151       1 reflector.go:323] Listing and watching *v1.CSIStorageCapacity from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:18.945150       1 reflector.go:287] Starting reflector *v1.Namespace (0s) from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:18.945284       1 reflector.go:323] Listing and watching *v1.Namespace from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:18.944574       1 reflector.go:287] Starting reflector *v1.Pod (0s) from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:18.945305       1 reflector.go:323] Listing and watching *v1.Pod from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:18.944718       1 reflector.go:287] Starting reflector *v1.StorageClass (0s) from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:18.945326       1 reflector.go:323] Listing and watching *v1.StorageClass from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:18.944468       1 reflector.go:287] Starting reflector *v1.CSINode (0s) from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:18.945350       1 reflector.go:323] Listing and watching *v1.CSINode from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:18.945141       1 reflector.go:287] Starting reflector *v1.PersistentVolumeClaim (0s) from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:18.945577       1 reflector.go:323] Listing and watching *v1.PersistentVolumeClaim from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:18.945611       1 reflector.go:287] Starting reflector *v1.CSIDriver (0s) from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:18.945624       1 reflector.go:287] Starting reflector *v1.ReplicaSet (0s) from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:18.945635       1 reflector.go:323] Listing and watching *v1.ReplicaSet from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:18.945672       1 reflector.go:287] Starting reflector *v1.ReplicationController (0s) from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:18.945682       1 reflector.go:323] Listing and watching *v1.ReplicationController from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:18.945716       1 reflector.go:287] Starting reflector *v1.PodDisruptionBudget (0s) from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:18.945724       1 reflector.go:323] Listing and watching *v1.PodDisruptionBudget from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:18.945628       1 reflector.go:323] Listing and watching *v1.CSIDriver from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:18.945818       1 reflector.go:287] Starting reflector *v1.Node (0s) from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:18.945613       1 reflector.go:287] Starting reflector *v1.StatefulSet (0s) from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:18.945834       1 reflector.go:323] Listing and watching *v1.StatefulSet from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:18.945827       1 reflector.go:323] Listing and watching *v1.Node from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:18.946001       1 round_trippers.go:553] GET https://192.168.49.2:8443/api/v1/services?limit=500&resourceVersion=0 403 Forbidden in 1 milliseconds
+I1210 12:31:18.946067       1 round_trippers.go:553] GET https://192.168.49.2:8443/api/v1/namespaces/kube-system/configmaps?fieldSelector=metadata.name%3Dextension-apiserver-authentication&limit=500&resourceVersion=0 403 Forbidden in 1 milliseconds
+W1210 12:31:18.946212       1 reflector.go:533] pkg/server/dynamiccertificates/configmap_cafile_content.go:206: failed to list *v1.ConfigMap: configmaps "extension-apiserver-authentication" is forbidden: User "system:kube-scheduler" cannot list resource "configmaps" in API group "" in the namespace "kube-system"
+E1210 12:31:18.946260       1 reflector.go:148] pkg/server/dynamiccertificates/configmap_cafile_content.go:206: Failed to watch *v1.ConfigMap: failed to list *v1.ConfigMap: configmaps "extension-apiserver-authentication" is forbidden: User "system:kube-scheduler" cannot list resource "configmaps" in API group "" in the namespace "kube-system"
+W1210 12:31:18.946939       1 reflector.go:533] vendor/k8s.io/client-go/informers/factory.go:150: failed to list *v1.Service: services is forbidden: User "system:kube-scheduler" cannot list resource "services" in API group "" at the cluster scope
+E1210 12:31:18.946987       1 reflector.go:148] vendor/k8s.io/client-go/informers/factory.go:150: Failed to watch *v1.Service: failed to list *v1.Service: services is forbidden: User "system:kube-scheduler" cannot list resource "services" in API group "" at the cluster scope
+I1210 12:31:18.948318       1 round_trippers.go:553] GET https://192.168.49.2:8443/api/v1/replicationcontrollers?limit=500&resourceVersion=0 403 Forbidden in 2 milliseconds
+I1210 12:31:18.948440       1 round_trippers.go:553] GET https://192.168.49.2:8443/api/v1/nodes?limit=500&resourceVersion=0 403 Forbidden in 2 milliseconds
+I1210 12:31:18.948448       1 round_trippers.go:553] GET https://192.168.49.2:8443/apis/apps/v1/statefulsets?limit=500&resourceVersion=0 403 Forbidden in 2 milliseconds
+W1210 12:31:18.948501       1 reflector.go:533] vendor/k8s.io/client-go/informers/factory.go:150: failed to list *v1.ReplicationController: replicationcontrollers is forbidden: User "system:kube-scheduler" cannot list resource "replicationcontrollers" in API group "" at the cluster scope
+E1210 12:31:18.948527       1 reflector.go:148] vendor/k8s.io/client-go/informers/factory.go:150: Failed to watch *v1.ReplicationController: failed to list *v1.ReplicationController: replicationcontrollers is forbidden: User "system:kube-scheduler" cannot list resource "replicationcontrollers" in API group "" at the cluster scope
+W1210 12:31:18.948530       1 reflector.go:533] vendor/k8s.io/client-go/informers/factory.go:150: failed to list *v1.Node: nodes is forbidden: User "system:kube-scheduler" cannot list resource "nodes" in API group "" at the cluster scope
+E1210 12:31:18.948553       1 reflector.go:148] vendor/k8s.io/client-go/informers/factory.go:150: Failed to watch *v1.Node: failed to list *v1.Node: nodes is forbidden: User "system:kube-scheduler" cannot list resource "nodes" in API group "" at the cluster scope
+I1210 12:31:18.948355       1 round_trippers.go:553] GET https://192.168.49.2:8443/api/v1/persistentvolumes?limit=500&resourceVersion=0 403 Forbidden in 2 milliseconds
+W1210 12:31:18.948563       1 reflector.go:533] vendor/k8s.io/client-go/informers/factory.go:150: failed to list *v1.StatefulSet: statefulsets.apps is forbidden: User "system:kube-scheduler" cannot list resource "statefulsets" in API group "apps" at the cluster scope
+E1210 12:31:18.948611       1 reflector.go:148] vendor/k8s.io/client-go/informers/factory.go:150: Failed to watch *v1.StatefulSet: failed to list *v1.StatefulSet: statefulsets.apps is forbidden: User "system:kube-scheduler" cannot list resource "statefulsets" in API group "apps" at the cluster scope
+W1210 12:31:18.948652       1 reflector.go:533] vendor/k8s.io/client-go/informers/factory.go:150: failed to list *v1.PersistentVolume: persistentvolumes is forbidden: User "system:kube-scheduler" cannot list resource "persistentvolumes" in API group "" at the cluster scope
+E1210 12:31:18.948678       1 reflector.go:148] vendor/k8s.io/client-go/informers/factory.go:150: Failed to watch *v1.PersistentVolume: failed to list *v1.PersistentVolume: persistentvolumes is forbidden: User "system:kube-scheduler" cannot list resource "persistentvolumes" in API group "" at the cluster scope
+I1210 12:31:18.948381       1 round_trippers.go:553] GET https://192.168.49.2:8443/api/v1/persistentvolumeclaims?limit=500&resourceVersion=0 403 Forbidden in 2 milliseconds
+W1210 12:31:18.948735       1 reflector.go:533] vendor/k8s.io/client-go/informers/factory.go:150: failed to list *v1.PersistentVolumeClaim: persistentvolumeclaims is forbidden: User "system:kube-scheduler" cannot list resource "persistentvolumeclaims" in API group "" at the cluster scope
+E1210 12:31:18.949259       1 reflector.go:148] vendor/k8s.io/client-go/informers/factory.go:150: Failed to watch *v1.PersistentVolumeClaim: failed to list *v1.PersistentVolumeClaim: persistentvolumeclaims is forbidden: User "system:kube-scheduler" cannot list resource "persistentvolumeclaims" in API group "" at the cluster scope
+I1210 12:31:18.948398       1 round_trippers.go:553] GET https://192.168.49.2:8443/apis/storage.k8s.io/v1/csistoragecapacities?limit=500&resourceVersion=0 403 Forbidden in 2 milliseconds
+W1210 12:31:18.949363       1 reflector.go:533] vendor/k8s.io/client-go/informers/factory.go:150: failed to list *v1.CSIStorageCapacity: csistoragecapacities.storage.k8s.io is forbidden: User "system:kube-scheduler" cannot list resource "csistoragecapacities" in API group "storage.k8s.io" at the cluster scope
+I1210 12:31:18.948938       1 round_trippers.go:553] GET https://192.168.49.2:8443/api/v1/pods?fieldSelector=status.phase%21%3DSucceeded%2Cstatus.phase%21%3DFailed&limit=500&resourceVersion=0 403 Forbidden in 2 milliseconds
+E1210 12:31:18.949402       1 reflector.go:148] vendor/k8s.io/client-go/informers/factory.go:150: Failed to watch *v1.CSIStorageCapacity: failed to list *v1.CSIStorageCapacity: csistoragecapacities.storage.k8s.io is forbidden: User "system:kube-scheduler" cannot list resource "csistoragecapacities" in API group "storage.k8s.io" at the cluster scope
+W1210 12:31:18.949486       1 reflector.go:533] vendor/k8s.io/client-go/informers/factory.go:150: failed to list *v1.Pod: pods is forbidden: User "system:kube-scheduler" cannot list resource "pods" in API group "" at the cluster scope
+I1210 12:31:18.948965       1 round_trippers.go:553] GET https://192.168.49.2:8443/apis/apps/v1/replicasets?limit=500&resourceVersion=0 403 Forbidden in 3 milliseconds
+E1210 12:31:18.949509       1 reflector.go:148] vendor/k8s.io/client-go/informers/factory.go:150: Failed to watch *v1.Pod: failed to list *v1.Pod: pods is forbidden: User "system:kube-scheduler" cannot list resource "pods" in API group "" at the cluster scope
+I1210 12:31:18.949529       1 round_trippers.go:553] GET https://192.168.49.2:8443/apis/policy/v1/poddisruptionbudgets?limit=500&resourceVersion=0 403 Forbidden in 3 milliseconds
+I1210 12:31:18.949029       1 round_trippers.go:553] GET https://192.168.49.2:8443/api/v1/namespaces?limit=500&resourceVersion=0 403 Forbidden in 3 milliseconds
+I1210 12:31:18.949546       1 round_trippers.go:553] GET https://192.168.49.2:8443/apis/storage.k8s.io/v1/csidrivers?limit=500&resourceVersion=0 403 Forbidden in 3 milliseconds
+W1210 12:31:18.949578       1 reflector.go:533] vendor/k8s.io/client-go/informers/factory.go:150: failed to list *v1.ReplicaSet: replicasets.apps is forbidden: User "system:kube-scheduler" cannot list resource "replicasets" in API group "apps" at the cluster scope
+E1210 12:31:18.949596       1 reflector.go:148] vendor/k8s.io/client-go/informers/factory.go:150: Failed to watch *v1.ReplicaSet: failed to list *v1.ReplicaSet: replicasets.apps is forbidden: User "system:kube-scheduler" cannot list resource "replicasets" in API group "apps" at the cluster scope
+W1210 12:31:18.949601       1 reflector.go:533] vendor/k8s.io/client-go/informers/factory.go:150: failed to list *v1.PodDisruptionBudget: poddisruptionbudgets.policy is forbidden: User "system:kube-scheduler" cannot list resource "poddisruptionbudgets" in API group "policy" at the cluster scope
+W1210 12:31:18.949615       1 reflector.go:533] vendor/k8s.io/client-go/informers/factory.go:150: failed to list *v1.Namespace: namespaces is forbidden: User "system:kube-scheduler" cannot list resource "namespaces" in API group "" at the cluster scope
+E1210 12:31:18.949618       1 reflector.go:148] vendor/k8s.io/client-go/informers/factory.go:150: Failed to watch *v1.PodDisruptionBudget: failed to list *v1.PodDisruptionBudget: poddisruptionbudgets.policy is forbidden: User "system:kube-scheduler" cannot list resource "poddisruptionbudgets" in API group "policy" at the cluster scope
+W1210 12:31:18.949618       1 reflector.go:533] vendor/k8s.io/client-go/informers/factory.go:150: failed to list *v1.CSIDriver: csidrivers.storage.k8s.io is forbidden: User "system:kube-scheduler" cannot list resource "csidrivers" in API group "storage.k8s.io" at the cluster scope
+I1210 12:31:18.949106       1 round_trippers.go:553] GET https://192.168.49.2:8443/apis/storage.k8s.io/v1/storageclasses?limit=500&resourceVersion=0 403 Forbidden in 3 milliseconds
+E1210 12:31:18.949640       1 reflector.go:148] vendor/k8s.io/client-go/informers/factory.go:150: Failed to watch *v1.CSIDriver: failed to list *v1.CSIDriver: csidrivers.storage.k8s.io is forbidden: User "system:kube-scheduler" cannot list resource "csidrivers" in API group "storage.k8s.io" at the cluster scope
+E1210 12:31:18.949645       1 reflector.go:148] vendor/k8s.io/client-go/informers/factory.go:150: Failed to watch *v1.Namespace: failed to list *v1.Namespace: namespaces is forbidden: User "system:kube-scheduler" cannot list resource "namespaces" in API group "" at the cluster scope
+W1210 12:31:18.949683       1 reflector.go:533] vendor/k8s.io/client-go/informers/factory.go:150: failed to list *v1.StorageClass: storageclasses.storage.k8s.io is forbidden: User "system:kube-scheduler" cannot list resource "storageclasses" in API group "storage.k8s.io" at the cluster scope
+E1210 12:31:18.949699       1 reflector.go:148] vendor/k8s.io/client-go/informers/factory.go:150: Failed to watch *v1.StorageClass: failed to list *v1.StorageClass: storageclasses.storage.k8s.io is forbidden: User "system:kube-scheduler" cannot list resource "storageclasses" in API group "storage.k8s.io" at the cluster scope
+I1210 12:31:18.949190       1 round_trippers.go:553] GET https://192.168.49.2:8443/apis/storage.k8s.io/v1/csinodes?limit=500&resourceVersion=0 403 Forbidden in 3 milliseconds
+W1210 12:31:18.949825       1 reflector.go:533] vendor/k8s.io/client-go/informers/factory.go:150: failed to list *v1.CSINode: csinodes.storage.k8s.io is forbidden: User "system:kube-scheduler" cannot list resource "csinodes" in API group "storage.k8s.io" at the cluster scope
+E1210 12:31:18.949839       1 reflector.go:148] vendor/k8s.io/client-go/informers/factory.go:150: Failed to watch *v1.CSINode: failed to list *v1.CSINode: csinodes.storage.k8s.io is forbidden: User "system:kube-scheduler" cannot list resource "csinodes" in API group "storage.k8s.io" at the cluster scope
+I1210 12:31:19.779666       1 reflector.go:323] Listing and watching *v1.PersistentVolume from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:19.780896       1 round_trippers.go:553] GET https://192.168.49.2:8443/api/v1/persistentvolumes?limit=500&resourceVersion=0 403 Forbidden in 1 milliseconds
+W1210 12:31:19.780969       1 reflector.go:533] vendor/k8s.io/client-go/informers/factory.go:150: failed to list *v1.PersistentVolume: persistentvolumes is forbidden: User "system:kube-scheduler" cannot list resource "persistentvolumes" in API group "" at the cluster scope
+E1210 12:31:19.780988       1 reflector.go:148] vendor/k8s.io/client-go/informers/factory.go:150: Failed to watch *v1.PersistentVolume: failed to list *v1.PersistentVolume: persistentvolumes is forbidden: User "system:kube-scheduler" cannot list resource "persistentvolumes" in API group "" at the cluster scope
+I1210 12:31:19.799225       1 reflector.go:323] Listing and watching *v1.ReplicationController from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:19.800175       1 round_trippers.go:553] GET https://192.168.49.2:8443/api/v1/replicationcontrollers?limit=500&resourceVersion=0 403 Forbidden in 0 milliseconds
+W1210 12:31:19.800235       1 reflector.go:533] vendor/k8s.io/client-go/informers/factory.go:150: failed to list *v1.ReplicationController: replicationcontrollers is forbidden: User "system:kube-scheduler" cannot list resource "replicationcontrollers" in API group "" at the cluster scope
+E1210 12:31:19.800252       1 reflector.go:148] vendor/k8s.io/client-go/informers/factory.go:150: Failed to watch *v1.ReplicationController: failed to list *v1.ReplicationController: replicationcontrollers is forbidden: User "system:kube-scheduler" cannot list resource "replicationcontrollers" in API group "" at the cluster scope
+I1210 12:31:19.878532       1 reflector.go:323] Listing and watching *v1.CSINode from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:19.879634       1 round_trippers.go:553] GET https://192.168.49.2:8443/apis/storage.k8s.io/v1/csinodes?limit=500&resourceVersion=0 403 Forbidden in 0 milliseconds
+W1210 12:31:19.879715       1 reflector.go:533] vendor/k8s.io/client-go/informers/factory.go:150: failed to list *v1.CSINode: csinodes.storage.k8s.io is forbidden: User "system:kube-scheduler" cannot list resource "csinodes" in API group "storage.k8s.io" at the cluster scope
+E1210 12:31:19.879738       1 reflector.go:148] vendor/k8s.io/client-go/informers/factory.go:150: Failed to watch *v1.CSINode: failed to list *v1.CSINode: csinodes.storage.k8s.io is forbidden: User "system:kube-scheduler" cannot list resource "csinodes" in API group "storage.k8s.io" at the cluster scope
+I1210 12:31:20.020327       1 reflector.go:323] Listing and watching *v1.Service from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:20.021357       1 round_trippers.go:553] GET https://192.168.49.2:8443/api/v1/services?limit=500&resourceVersion=0 403 Forbidden in 0 milliseconds
+W1210 12:31:20.021442       1 reflector.go:533] vendor/k8s.io/client-go/informers/factory.go:150: failed to list *v1.Service: services is forbidden: User "system:kube-scheduler" cannot list resource "services" in API group "" at the cluster scope
+E1210 12:31:20.021458       1 reflector.go:148] vendor/k8s.io/client-go/informers/factory.go:150: Failed to watch *v1.Service: failed to list *v1.Service: services is forbidden: User "system:kube-scheduler" cannot list resource "services" in API group "" at the cluster scope
+I1210 12:31:20.050673       1 reflector.go:323] Listing and watching *v1.CSIDriver from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:20.051937       1 round_trippers.go:553] GET https://192.168.49.2:8443/apis/storage.k8s.io/v1/csidrivers?limit=500&resourceVersion=0 403 Forbidden in 1 milliseconds
+W1210 12:31:20.052033       1 reflector.go:533] vendor/k8s.io/client-go/informers/factory.go:150: failed to list *v1.CSIDriver: csidrivers.storage.k8s.io is forbidden: User "system:kube-scheduler" cannot list resource "csidrivers" in API group "storage.k8s.io" at the cluster scope
+E1210 12:31:20.052058       1 reflector.go:148] vendor/k8s.io/client-go/informers/factory.go:150: Failed to watch *v1.CSIDriver: failed to list *v1.CSIDriver: csidrivers.storage.k8s.io is forbidden: User "system:kube-scheduler" cannot list resource "csidrivers" in API group "storage.k8s.io" at the cluster scope
+I1210 12:31:20.111069       1 reflector.go:323] Listing and watching *v1.CSIStorageCapacity from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:20.112192       1 round_trippers.go:553] GET https://192.168.49.2:8443/apis/storage.k8s.io/v1/csistoragecapacities?limit=500&resourceVersion=0 403 Forbidden in 0 milliseconds
+W1210 12:31:20.112288       1 reflector.go:533] vendor/k8s.io/client-go/informers/factory.go:150: failed to list *v1.CSIStorageCapacity: csistoragecapacities.storage.k8s.io is forbidden: User "system:kube-scheduler" cannot list resource "csistoragecapacities" in API group "storage.k8s.io" at the cluster scope
+E1210 12:31:20.112310       1 reflector.go:148] vendor/k8s.io/client-go/informers/factory.go:150: Failed to watch *v1.CSIStorageCapacity: failed to list *v1.CSIStorageCapacity: csistoragecapacities.storage.k8s.io is forbidden: User "system:kube-scheduler" cannot list resource "csistoragecapacities" in API group "storage.k8s.io" at the cluster scope
+I1210 12:31:20.189416       1 reflector.go:323] Listing and watching *v1.Pod from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:20.190537       1 round_trippers.go:553] GET https://192.168.49.2:8443/api/v1/pods?fieldSelector=status.phase%21%3DSucceeded%2Cstatus.phase%21%3DFailed&limit=500&resourceVersion=0 200 OK in 0 milliseconds
+I1210 12:31:20.191745       1 round_trippers.go:553] GET https://192.168.49.2:8443/api/v1/pods?allowWatchBookmarks=true&fieldSelector=status.phase%21%3DSucceeded%2Cstatus.phase%21%3DFailed&resourceVersion=1&timeout=8m39s&timeoutSeconds=519&watch=true 200 OK in 1 milliseconds
+I1210 12:31:20.211837       1 reflector.go:323] Listing and watching *v1.Node from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:20.213085       1 round_trippers.go:553] GET https://192.168.49.2:8443/api/v1/nodes?limit=500&resourceVersion=0 200 OK in 1 milliseconds
+I1210 12:31:20.213411       1 node_tree.go:65] "Added node in listed group to NodeTree" node="minikube" zone=""
+I1210 12:31:20.213445       1 eventhandlers.go:71] "Add event for node" node="minikube"
+I1210 12:31:20.214295       1 round_trippers.go:553] GET https://192.168.49.2:8443/api/v1/nodes?allowWatchBookmarks=true&resourceVersion=49&timeout=6m1s&timeoutSeconds=361&watch=true 200 OK in 0 milliseconds
+I1210 12:31:20.230412       1 reflector.go:323] Listing and watching *v1.StatefulSet from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:20.231592       1 round_trippers.go:553] GET https://192.168.49.2:8443/apis/apps/v1/statefulsets?limit=500&resourceVersion=0 200 OK in 1 milliseconds
+I1210 12:31:20.232703       1 round_trippers.go:553] GET https://192.168.49.2:8443/apis/apps/v1/statefulsets?allowWatchBookmarks=true&resourceVersion=1&timeout=9m44s&timeoutSeconds=584&watch=true 200 OK in 0 milliseconds
+I1210 12:31:20.241830       1 reflector.go:323] Listing and watching *v1.ConfigMap from pkg/server/dynamiccertificates/configmap_cafile_content.go:206
+I1210 12:31:20.242839       1 round_trippers.go:553] GET https://192.168.49.2:8443/api/v1/namespaces/kube-system/configmaps?fieldSelector=metadata.name%3Dextension-apiserver-authentication&limit=500&resourceVersion=0 403 Forbidden in 0 milliseconds
+W1210 12:31:20.242960       1 reflector.go:533] pkg/server/dynamiccertificates/configmap_cafile_content.go:206: failed to list *v1.ConfigMap: configmaps "extension-apiserver-authentication" is forbidden: User "system:kube-scheduler" cannot list resource "configmaps" in API group "" in the namespace "kube-system"
+E1210 12:31:20.242985       1 reflector.go:148] pkg/server/dynamiccertificates/configmap_cafile_content.go:206: Failed to watch *v1.ConfigMap: failed to list *v1.ConfigMap: configmaps "extension-apiserver-authentication" is forbidden: User "system:kube-scheduler" cannot list resource "configmaps" in API group "" in the namespace "kube-system"
+I1210 12:31:20.326221       1 reflector.go:323] Listing and watching *v1.ReplicaSet from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:20.327605       1 round_trippers.go:553] GET https://192.168.49.2:8443/apis/apps/v1/replicasets?limit=500&resourceVersion=0 200 OK in 1 milliseconds
+I1210 12:31:20.328853       1 round_trippers.go:553] GET https://192.168.49.2:8443/apis/apps/v1/replicasets?allowWatchBookmarks=true&resourceVersion=1&timeout=8m58s&timeoutSeconds=538&watch=true 200 OK in 1 milliseconds
+I1210 12:31:20.333965       1 reflector.go:323] Listing and watching *v1.Namespace from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:20.335090       1 round_trippers.go:553] GET https://192.168.49.2:8443/api/v1/namespaces?limit=500&resourceVersion=0 200 OK in 1 milliseconds
+I1210 12:31:20.336342       1 round_trippers.go:553] GET https://192.168.49.2:8443/api/v1/namespaces?allowWatchBookmarks=true&resourceVersion=36&timeout=6m30s&timeoutSeconds=390&watch=true 200 OK in 0 milliseconds
+I1210 12:31:20.463074       1 reflector.go:323] Listing and watching *v1.PodDisruptionBudget from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:20.464453       1 round_trippers.go:553] GET https://192.168.49.2:8443/apis/policy/v1/poddisruptionbudgets?limit=500&resourceVersion=0 200 OK in 1 milliseconds
+I1210 12:31:20.465414       1 round_trippers.go:553] GET https://192.168.49.2:8443/apis/policy/v1/poddisruptionbudgets?allowWatchBookmarks=true&resourceVersion=1&timeout=9m14s&timeoutSeconds=554&watch=true 200 OK in 0 milliseconds
+I1210 12:31:20.507879       1 reflector.go:323] Listing and watching *v1.StorageClass from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:20.507885       1 reflector.go:323] Listing and watching *v1.PersistentVolumeClaim from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:20.509056       1 round_trippers.go:553] GET https://192.168.49.2:8443/apis/storage.k8s.io/v1/storageclasses?limit=500&resourceVersion=0 200 OK in 1 milliseconds
+I1210 12:31:20.509280       1 round_trippers.go:553] GET https://192.168.49.2:8443/api/v1/persistentvolumeclaims?limit=500&resourceVersion=0 200 OK in 1 milliseconds
+I1210 12:31:20.510070       1 round_trippers.go:553] GET https://192.168.49.2:8443/apis/storage.k8s.io/v1/storageclasses?allowWatchBookmarks=true&resourceVersion=1&timeout=6m43s&timeoutSeconds=403&watch=true 200 OK in 0 milliseconds
+I1210 12:31:20.510294       1 round_trippers.go:553] GET https://192.168.49.2:8443/api/v1/persistentvolumeclaims?allowWatchBookmarks=true&resourceVersion=1&timeout=8m8s&timeoutSeconds=488&watch=true 200 OK in 0 milliseconds
+I1210 12:31:22.061558       1 eventhandlers.go:186] "Add event for scheduled pod" pod="kube-system/etcd-minikube"
+I1210 12:31:22.064085       1 eventhandlers.go:186] "Add event for scheduled pod" pod="kube-system/kube-controller-manager-minikube"
+I1210 12:31:22.064121       1 eventhandlers.go:186] "Add event for scheduled pod" pod="kube-system/kube-scheduler-minikube"
+I1210 12:31:22.064208       1 eventhandlers.go:186] "Add event for scheduled pod" pod="kube-system/kube-apiserver-minikube"
+I1210 12:31:22.156429       1 reflector.go:323] Listing and watching *v1.ConfigMap from pkg/server/dynamiccertificates/configmap_cafile_content.go:206
+I1210 12:31:22.159014       1 round_trippers.go:553] GET https://192.168.49.2:8443/api/v1/namespaces/kube-system/configmaps?fieldSelector=metadata.name%3Dextension-apiserver-authentication&limit=500&resourceVersion=0 200 OK in 2 milliseconds
+I1210 12:31:22.161572       1 round_trippers.go:553] GET https://192.168.49.2:8443/api/v1/namespaces/kube-system/configmaps?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dextension-apiserver-authentication&resourceVersion=234&timeout=5m19s&timeoutSeconds=319&watch=true 200 OK in 1 milliseconds
+I1210 12:31:22.244281       1 shared_informer.go:341] caches populated
+I1210 12:31:22.244300       1 shared_informer.go:318] Caches are synced for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+I1210 12:31:22.244520       1 tlsconfig.go:178] "Loaded client CA" index=0 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file" certDetail="\"minikubeCA\" [client,serving] issuer=\"<self>\" (2023-10-27 12:11:49 +0000 UTC to 2033-10-25 12:11:49 +0000 UTC (now=2023-12-10 12:31:22.244475646 +0000 UTC))"
+I1210 12:31:22.245488       1 tlsconfig.go:200] "Loaded serving cert" certName="Generated self signed cert" certDetail="\"localhost@1702211477\" [serving] validServingFor=[127.0.0.1,127.0.0.1,localhost] issuer=\"localhost-ca@1702211477\" (2023-12-10 11:31:17 +0000 UTC to 2024-12-09 11:31:17 +0000 UTC (now=2023-12-10 12:31:22.245443336 +0000 UTC))"
+I1210 12:31:22.246176       1 named_certificates.go:53] "Loaded SNI cert" index=0 certName="self-signed loopback" certDetail="\"apiserver-loopback-client@1702211477\" [serving] validServingFor=[apiserver-loopback-client] issuer=\"apiserver-loopback-client-ca@1702211477\" (2023-12-10 11:31:17 +0000 UTC to 2024-12-09 11:31:17 +0000 UTC (now=2023-12-10 12:31:22.246129766 +0000 UTC))"
+I1210 12:31:22.595279       1 reflector.go:323] Listing and watching *v1.PersistentVolume from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:22.596661       1 round_trippers.go:553] GET https://192.168.49.2:8443/api/v1/persistentvolumes?limit=500&resourceVersion=0 200 OK in 1 milliseconds
+I1210 12:31:22.597691       1 round_trippers.go:553] GET https://192.168.49.2:8443/api/v1/persistentvolumes?allowWatchBookmarks=true&resourceVersion=1&timeout=6m58s&timeoutSeconds=418&watch=true 200 OK in 0 milliseconds
+I1210 12:31:22.631815       1 reflector.go:323] Listing and watching *v1.Service from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:22.633217       1 round_trippers.go:553] GET https://192.168.49.2:8443/api/v1/services?limit=500&resourceVersion=0 200 OK in 1 milliseconds
+I1210 12:31:22.634338       1 round_trippers.go:553] GET https://192.168.49.2:8443/api/v1/services?allowWatchBookmarks=true&resourceVersion=233&timeout=6m37s&timeoutSeconds=397&watch=true 200 OK in 0 milliseconds
+I1210 12:31:22.738714       1 reflector.go:323] Listing and watching *v1.CSIStorageCapacity from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:22.740993       1 round_trippers.go:553] GET https://192.168.49.2:8443/apis/storage.k8s.io/v1/csistoragecapacities?limit=500&resourceVersion=0 200 OK in 2 milliseconds
+I1210 12:31:22.743944       1 round_trippers.go:553] GET https://192.168.49.2:8443/apis/storage.k8s.io/v1/csistoragecapacities?allowWatchBookmarks=true&resourceVersion=1&timeout=9m34s&timeoutSeconds=574&watch=true 200 OK in 2 milliseconds
+I1210 12:31:22.939446       1 reflector.go:323] Listing and watching *v1.ReplicationController from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:22.941603       1 round_trippers.go:553] GET https://192.168.49.2:8443/api/v1/replicationcontrollers?limit=500&resourceVersion=0 200 OK in 1 milliseconds
+I1210 12:31:22.942996       1 round_trippers.go:553] GET https://192.168.49.2:8443/api/v1/replicationcontrollers?allowWatchBookmarks=true&resourceVersion=1&timeout=9m22s&timeoutSeconds=562&watch=true 200 OK in 1 milliseconds
+I1210 12:31:22.946226       1 reflector.go:323] Listing and watching *v1.CSIDriver from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:22.948065       1 reflector.go:323] Listing and watching *v1.CSINode from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 12:31:22.948112       1 round_trippers.go:553] GET https://192.168.49.2:8443/apis/storage.k8s.io/v1/csidrivers?limit=500&resourceVersion=0 200 OK in 1 milliseconds
+I1210 12:31:22.949660       1 round_trippers.go:553] GET https://192.168.49.2:8443/apis/storage.k8s.io/v1/csinodes?limit=500&resourceVersion=0 200 OK in 1 milliseconds
+I1210 12:31:22.949727       1 round_trippers.go:553] GET https://192.168.49.2:8443/apis/storage.k8s.io/v1/csidrivers?allowWatchBookmarks=true&resourceVersion=1&timeout=7m7s&timeoutSeconds=427&watch=true 200 OK in 1 milliseconds
+I1210 12:31:22.951535       1 round_trippers.go:553] GET https://192.168.49.2:8443/apis/storage.k8s.io/v1/csinodes?allowWatchBookmarks=true&resourceVersion=44&timeout=7m13s&timeoutSeconds=433&watch=true 200 OK in 1 milliseconds
+I1210 12:31:23.013284       1 eventhandlers.go:206] "Update event for scheduled pod" pod="kube-system/kube-apiserver-minikube"
+I1210 12:31:23.026977       1 eventhandlers.go:206] "Update event for scheduled pod" pod="kube-system/etcd-minikube"
+I1210 12:31:23.041659       1 eventhandlers.go:206] "Update event for scheduled pod" pod="kube-system/kube-controller-manager-minikube"
+I1210 12:31:23.044612       1 shared_informer.go:341] caches populated
+I1210 12:31:23.044630       1 shared_informer.go:341] caches populated
+I1210 12:31:23.044637       1 shared_informer.go:341] caches populated
+I1210 12:31:23.044642       1 shared_informer.go:341] caches populated
+I1210 12:31:23.044648       1 shared_informer.go:341] caches populated
+I1210 12:31:23.044654       1 shared_informer.go:341] caches populated
+I1210 12:31:23.044660       1 shared_informer.go:341] caches populated
+I1210 12:31:23.044665       1 shared_informer.go:341] caches populated
+I1210 12:31:23.044671       1 shared_informer.go:341] caches populated
+I1210 12:31:23.044679       1 shared_informer.go:341] caches populated
+I1210 12:31:23.044691       1 shared_informer.go:341] caches populated
+I1210 12:31:23.044698       1 shared_informer.go:341] caches populated
+I1210 12:31:23.044703       1 shared_informer.go:341] caches populated
+I1210 12:31:23.044709       1 shared_informer.go:341] caches populated
+I1210 12:31:23.050585       1 eventhandlers.go:206] "Update event for scheduled pod" pod="kube-system/kube-scheduler-minikube"
+I1210 12:31:23.058647       1 eventhandlers.go:206] "Update event for scheduled pod" pod="kube-system/kube-scheduler-minikube"
+I1210 12:31:23.068894       1 eventhandlers.go:206] "Update event for scheduled pod" pod="kube-system/etcd-minikube"
+I1210 12:31:23.165636       1 eventhandlers.go:118] "Add event for unscheduled pod" pod="kube-system/storage-provisioner"
+I1210 12:31:23.165701       1 scheduling_queue.go:419] "Pod moved to an internal scheduling queue" pod="kube-system/storage-provisioner" event="PodAdd" queue="Active"
+I1210 12:31:23.165734       1 scheduling_queue.go:1133] "About to try and schedule pod" pod="kube-system/storage-provisioner"
+I1210 12:31:23.165744       1 schedule_one.go:80] "Attempting to schedule pod" pod="kube-system/storage-provisioner"
+I1210 12:31:23.165865       1 preemption.go:222] "Preemption will not help schedule pod on any node" pod="kube-system/storage-provisioner"
+I1210 12:31:23.165886       1 schedule_one.go:159] "Status after running PostFilter plugins for pod" pod="kube-system/storage-provisioner" status="preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling."
+I1210 12:31:23.165907       1 schedule_one.go:868] "Unable to schedule pod; no fit; waiting" pod="kube-system/storage-provisioner" err="0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/not-ready: }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.."
+I1210 12:31:23.165949       1 scheduling_queue.go:531] "Pod moved to an internal scheduling queue" pod="kube-system/storage-provisioner" event="ScheduleAttemptFailure" queue="Unschedulable"
+I1210 12:31:23.165976       1 schedule_one.go:944] "Updating pod condition" pod="kube-system/storage-provisioner" conditionType=PodScheduled conditionStatus=False conditionReason="Unschedulable"
+I1210 12:31:23.170642       1 round_trippers.go:553] POST https://192.168.49.2:8443/api/v1/namespaces/kube-system/events 201 Created in 4 milliseconds
+I1210 12:31:23.178777       1 round_trippers.go:553] PATCH https://192.168.49.2:8443/api/v1/namespaces/kube-system/pods/storage-provisioner/status 200 OK in 10 milliseconds
+I1210 12:31:29.671738       1 eventhandlers.go:206] "Update event for scheduled pod" pod="kube-system/etcd-minikube"
+I1210 12:31:30.011627       1 eventhandlers.go:206] "Update event for scheduled pod" pod="kube-system/etcd-minikube"
+I1210 12:31:32.864020       1 eventhandlers.go:206] "Update event for scheduled pod" pod="kube-system/kube-apiserver-minikube"
+I1210 12:31:32.875549       1 eventhandlers.go:206] "Update event for scheduled pod" pod="kube-system/kube-apiserver-minikube"
+I1210 12:31:33.726894       1 scheduling_queue.go:794] "Pod moved to an internal scheduling queue" pod="kube-system/storage-provisioner" event={Resource:Node ActionType:16 Label:NodeTaintChange} queue="Active"
+I1210 12:31:33.726934       1 scheduling_queue.go:1133] "About to try and schedule pod" pod="kube-system/storage-provisioner"
+I1210 12:31:33.726949       1 schedule_one.go:80] "Attempting to schedule pod" pod="kube-system/storage-provisioner"
+I1210 12:31:33.727119       1 default_binder.go:53] "Attempting to bind pod to node" pod="kube-system/storage-provisioner" node="minikube"
+I1210 12:31:33.732799       1 eventhandlers.go:161] "Delete event for unscheduled pod" pod="kube-system/storage-provisioner"
+I1210 12:31:33.732837       1 eventhandlers.go:186] "Add event for scheduled pod" pod="kube-system/storage-provisioner"
+I1210 12:31:33.733000       1 round_trippers.go:553] POST https://192.168.49.2:8443/api/v1/namespaces/kube-system/pods/storage-provisioner/binding 201 Created in 5 milliseconds
+I1210 12:31:33.733086       1 cache.go:401] "Finished binding for pod, can be expired" podKey="a302a4db-957f-419d-a0c3-ad9e4e18c3d4" pod="kube-system/storage-provisioner"
+I1210 12:31:33.733122       1 schedule_one.go:252] "Successfully bound pod to node" pod="kube-system/storage-provisioner" node="minikube" evaluatedNodes=1 feasibleNodes=1
+I1210 12:31:33.738113       1 round_trippers.go:553] POST https://192.168.49.2:8443/api/v1/namespaces/kube-system/events 201 Created in 4 milliseconds
+I1210 12:31:33.744529       1 eventhandlers.go:206] "Update event for scheduled pod" pod="kube-system/storage-provisioner"
+I1210 12:31:34.380527       1 eventhandlers.go:118] "Add event for unscheduled pod" pod="kube-system/kube-proxy-pb5tg"
+I1210 12:31:34.380578       1 scheduling_queue.go:419] "Pod moved to an internal scheduling queue" pod="kube-system/kube-proxy-pb5tg" event="PodAdd" queue="Active"
+I1210 12:31:34.380599       1 scheduling_queue.go:1133] "About to try and schedule pod" pod="kube-system/kube-proxy-pb5tg"
+I1210 12:31:34.380608       1 schedule_one.go:80] "Attempting to schedule pod" pod="kube-system/kube-proxy-pb5tg"
+I1210 12:31:34.380809       1 default_binder.go:53] "Attempting to bind pod to node" pod="kube-system/kube-proxy-pb5tg" node="minikube"
+I1210 12:31:34.387143       1 eventhandlers.go:161] "Delete event for unscheduled pod" pod="kube-system/kube-proxy-pb5tg"
+I1210 12:31:34.387197       1 eventhandlers.go:186] "Add event for scheduled pod" pod="kube-system/kube-proxy-pb5tg"
+I1210 12:31:34.387225       1 round_trippers.go:553] POST https://192.168.49.2:8443/api/v1/namespaces/kube-system/pods/kube-proxy-pb5tg/binding 201 Created in 6 milliseconds
+I1210 12:31:34.387289       1 cache.go:401] "Finished binding for pod, can be expired" podKey="6ae434cd-bf05-4613-969d-714b1c19d28f" pod="kube-system/kube-proxy-pb5tg"
+I1210 12:31:34.387327       1 schedule_one.go:252] "Successfully bound pod to node" pod="kube-system/kube-proxy-pb5tg" node="minikube" evaluatedNodes=1 feasibleNodes=1
+I1210 12:31:34.395373       1 round_trippers.go:553] POST https://192.168.49.2:8443/api/v1/namespaces/kube-system/events 201 Created in 7 milliseconds
+I1210 12:31:34.401946       1 eventhandlers.go:206] "Update event for scheduled pod" pod="kube-system/kube-proxy-pb5tg"
+I1210 12:31:34.773748       1 eventhandlers.go:118] "Add event for unscheduled pod" pod="kube-system/coredns-5d78c9869d-2j2hn"
+I1210 12:31:34.773806       1 scheduling_queue.go:419] "Pod moved to an internal scheduling queue" pod="kube-system/coredns-5d78c9869d-2j2hn" event="PodAdd" queue="Active"
+I1210 12:31:34.773841       1 scheduling_queue.go:1133] "About to try and schedule pod" pod="kube-system/coredns-5d78c9869d-2j2hn"
+I1210 12:31:34.773851       1 schedule_one.go:80] "Attempting to schedule pod" pod="kube-system/coredns-5d78c9869d-2j2hn"
+I1210 12:31:34.774061       1 default_binder.go:53] "Attempting to bind pod to node" pod="kube-system/coredns-5d78c9869d-2j2hn" node="minikube"
+I1210 12:31:34.780103       1 round_trippers.go:553] POST https://192.168.49.2:8443/api/v1/namespaces/kube-system/pods/coredns-5d78c9869d-2j2hn/binding 201 Created in 5 milliseconds
+I1210 12:31:34.780176       1 cache.go:401] "Finished binding for pod, can be expired" podKey="478ee212-1a2e-4a70-883e-2d1cc9dfce5f" pod="kube-system/coredns-5d78c9869d-2j2hn"
+I1210 12:31:34.780196       1 eventhandlers.go:186] "Add event for scheduled pod" pod="kube-system/coredns-5d78c9869d-2j2hn"
+I1210 12:31:34.780204       1 schedule_one.go:252] "Successfully bound pod to node" pod="kube-system/coredns-5d78c9869d-2j2hn" node="minikube" evaluatedNodes=1 feasibleNodes=1
+I1210 12:31:34.780239       1 eventhandlers.go:161] "Delete event for unscheduled pod" pod="kube-system/coredns-5d78c9869d-2j2hn"
+I1210 12:31:34.792151       1 round_trippers.go:553] POST https://192.168.49.2:8443/api/v1/namespaces/kube-system/events 201 Created in 11 milliseconds
+I1210 12:31:34.801909       1 eventhandlers.go:206] "Update event for scheduled pod" pod="kube-system/coredns-5d78c9869d-2j2hn"
+I1210 12:31:35.606084       1 pathrecorder.go:241] kube-scheduler: "/healthz" satisfied by exact match
+I1210 12:31:35.606152       1 httplog.go:132] "HTTP" verb="GET" URI="/healthz" latency="92.612µs" userAgent="kube-probe/1.27" audit-ID="" srcIP="127.0.0.1:48774" resp=200
+I1210 12:31:35.617101       1 eventhandlers.go:206] "Update event for scheduled pod" pod="kube-system/kube-scheduler-minikube"
+I1210 12:31:35.631064       1 eventhandlers.go:206] "Update event for scheduled pod" pod="kube-system/kube-scheduler-minikube"
+I1210 12:31:35.877647       1 eventhandlers.go:206] "Update event for scheduled pod" pod="kube-system/kube-controller-manager-minikube"
+I1210 12:31:36.036171       1 eventhandlers.go:206] "Update event for scheduled pod" pod="kube-system/storage-provisioner"
+I1210 12:31:36.045810       1 eventhandlers.go:206] "Update event for scheduled pod" pod="kube-system/kube-proxy-pb5tg"
+I1210 12:31:36.057523       1 eventhandlers.go:206] "Update event for scheduled pod" pod="kube-system/coredns-5d78c9869d-2j2hn"
+I1210 12:31:44.559317       1 pathrecorder.go:241] kube-scheduler: "/healthz" satisfied by exact match
+I1210 12:31:44.559359       1 httplog.go:132] "HTTP" verb="GET" URI="/healthz" latency="60.074µs" userAgent="kube-probe/1.27" audit-ID="" srcIP="127.0.0.1:47714" resp=200
+I1210 12:31:54.558767       1 pathrecorder.go:241] kube-scheduler: "/healthz" satisfied by exact match
+I1210 12:31:54.558820       1 httplog.go:132] "HTTP" verb="GET" URI="/healthz" latency="66.611µs" userAgent="kube-probe/1.27" audit-ID="" srcIP="127.0.0.1:50388" resp=200
+I1210 12:32:04.558837       1 pathrecorder.go:241] kube-scheduler: "/healthz" satisfied by exact match
+I1210 12:32:04.558895       1 httplog.go:132] "HTTP" verb="GET" URI="/healthz" latency="63.979µs" userAgent="kube-probe/1.27" audit-ID="" srcIP="127.0.0.1:55730" resp=200
+I1210 12:32:14.558912       1 pathrecorder.go:241] kube-scheduler: "/healthz" satisfied by exact match
+I1210 12:32:14.558972       1 httplog.go:132] "HTTP" verb="GET" URI="/healthz" latency="83.185µs" userAgent="kube-probe/1.27" audit-ID="" srcIP="127.0.0.1:50666" resp=200
+I1210 12:32:15.103774       1 eventhandlers.go:206] "Update event for scheduled pod" pod="kube-system/coredns-5d78c9869d-2j2hn"
+I1210 12:32:24.559571       1 pathrecorder.go:241] kube-scheduler: "/healthz" satisfied by exact match
+I1210 12:32:24.559620       1 httplog.go:132] "HTTP" verb="GET" URI="/healthz" latency="69µs" userAgent="kube-probe/1.27" audit-ID="" srcIP="127.0.0.1:32996" resp=200

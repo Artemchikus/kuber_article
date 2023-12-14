@@ -1,0 +1,29 @@
+I1210 15:19:52.530971       1 config.go:351] "Calling handler.OnNodeUpdate"
+I1210 15:20:05.683395       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:20:05.683402       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:20:35.683069       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:20:35.683094       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:21:01.210847       1 config.go:207] "Calling handler.OnServiceAdd"
+I1210 15:21:01.211217       1 service.go:324] "Service updated ports" service="default/vault" portCount=1
+I1210 15:21:01.211648       1 service.go:457] "Adding new service port" portName="default/vault" servicePort="10.98.203.137:8200/TCP"
+I1210 15:21:01.211670       1 proxier.go:857] "Syncing iptables rules"
+I1210 15:21:01.211723       1 iptables.go:358] "Running" command="iptables-save" arguments=[-t nat]
+I1210 15:21:01.217837       1 proxier.go:1573] "Reloading service iptables data" numServices=5 numEndpoints=4 numFilterChains=6 numFilterRules=6 numNATChains=4 numNATRules=9
+I1210 15:21:01.217870       1 iptables.go:423] "Running" command="iptables-restore" arguments=[-w 5 -W 100000 --noflush --counters]
+I1210 15:21:01.219717       1 config.go:116] "Calling handler.OnEndpointSliceAdd" endpoints="default/vault-89fq5"
+I1210 15:21:01.238739       1 proxier.go:1626] "Deleting conntrack stale entries for services" IPs=[]
+I1210 15:21:01.238778       1 proxier.go:1632] "Deleting conntrack stale entries for services" nodePorts=[]
+I1210 15:21:01.238812       1 proxier.go:1639] "Deleting stale endpoint connections" endpoints=[]
+I1210 15:21:01.238826       1 proxier.go:822] "SyncProxyRules complete" elapsed="27.233821ms"
+I1210 15:21:01.238835       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I1210 15:21:01.238882       1 endpointslicecache.go:373] "Setting endpoints for service port name" portName="default/vault" endpoints=[10.244.0.3:8200]
+I1210 15:21:01.238906       1 proxier.go:857] "Syncing iptables rules"
+I1210 15:21:01.238972       1 iptables.go:358] "Running" command="iptables-save" arguments=[-t nat]
+I1210 15:21:01.244203       1 proxier.go:1573] "Reloading service iptables data" numServices=5 numEndpoints=5 numFilterChains=6 numFilterRules=4 numNATChains=7 numNATRules=17
+I1210 15:21:01.244232       1 iptables.go:423] "Running" command="iptables-restore" arguments=[-w 5 -W 100000 --noflush --counters]
+I1210 15:21:01.262734       1 proxier.go:1602] "Network programming" endpoint="default/vault" elapsed=0.262678272
+I1210 15:21:01.262808       1 proxier.go:1626] "Deleting conntrack stale entries for services" IPs=[]
+I1210 15:21:01.262846       1 proxier.go:1632] "Deleting conntrack stale entries for services" nodePorts=[]
+I1210 15:21:01.262877       1 proxier.go:1639] "Deleting stale endpoint connections" endpoints=[]
+I1210 15:21:01.262892       1 proxier.go:822] "SyncProxyRules complete" elapsed="24.039915ms"
+I1210 15:21:01.262911       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s

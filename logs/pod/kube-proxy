@@ -1,0 +1,5 @@
+I1210 15:19:05.683388       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:19:05.683396       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:19:35.683402       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:19:35.683401       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:19:42.193157       1 config.go:351] "Calling handler.OnNodeUpdate"

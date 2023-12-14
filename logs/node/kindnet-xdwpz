@@ -1,0 +1,15 @@
+I1210 13:03:07.295187       1 main.go:102] connected to apiserver: https://10.96.0.1:443
+I1210 13:03:07.295236       1 main.go:107] hostIP = 192.168.49.2
+podIP = 192.168.49.2
+I1210 13:03:07.295343       1 main.go:116] setting mtu 1500 for CNI 
+I1210 13:03:07.295357       1 main.go:146] kindnetd IP family: "ipv4"
+I1210 13:03:07.295373       1 main.go:150] noMask IPv4 subnets: [10.244.0.0/16]
+I1210 13:03:07.593188       1 main.go:223] Handling node with IPs: map[192.168.49.2:{}]
+I1210 13:03:07.593216       1 main.go:227] handling current node
+I1210 13:03:07.594967       1 main.go:223] Handling node with IPs: map[192.168.49.3:{}]
+I1210 13:03:07.594982       1 main.go:250] Node minikube-m02 has CIDR [10.244.1.0/24] 
+I1210 13:03:07.595113       1 routes.go:62] Adding route {Ifindex: 0 Dst: 10.244.1.0/24 Src: <nil> Gw: 192.168.49.3 Flags: [] Table: 0} 
+I1210 13:03:17.607933       1 main.go:223] Handling node with IPs: map[192.168.49.2:{}]
+I1210 13:03:17.607953       1 main.go:227] handling current node
+I1210 13:03:17.607969       1 main.go:223] Handling node with IPs: map[192.168.49.3:{}]
+I1210 13:03:17.607978       1 main.go:250] Node minikube-m02 has CIDR [10.244.1.0/24] 

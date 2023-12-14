@@ -1,0 +1,30 @@
+I1210 13:03:38.194294 1 eventhandlers.go:118] "Add event for unscheduled pod" pod="default/react-d-86c848f59-dfv47"
+I1210 13:03:38.194338 1 scheduling_queue.go:419] "Pod moved to an internal scheduling queue" pod="default/react-d-86c848f59-dfv47" event="PodAdd" queue="Active"
+I1210 13:03:38.194365 1 scheduling_queue.go:1133] "About to try and schedule pod" pod="default/react-d-86c848f59-dfv47"
+I1210 13:03:38.194379 1 schedule_one.go:80] "Attempting to schedule pod" pod="default/react-d-86c848f59-dfv47"
+I1210 13:03:38.194977 1 default_binder.go:53] "Attempting to bind pod to node" pod="default/react-d-86c848f59-dfv47" node="minikube-m02"
+I1210 13:03:38.199051 1 eventhandlers.go:118] "Add event for unscheduled pod" pod="default/react-d-86c848f59-tmtmd"
+I1210 13:03:38.199091 1 scheduling_queue.go:419] "Pod moved to an internal scheduling queue" pod="default/react-d-86c848f59-tmtmd" event="PodAdd" queue="Active"
+I1210 13:03:38.199115 1 scheduling_queue.go:1133] "About to try and schedule pod" pod="default/react-d-86c848f59-tmtmd"
+I1210 13:03:38.199124 1 schedule_one.go:80] "Attempting to schedule pod" pod="default/react-d-86c848f59-tmtmd"
+I1210 13:03:38.199565 1 default_binder.go:53] "Attempting to bind pod to node" pod="default/react-d-86c848f59-tmtmd" node="minikube"
+I1210 13:03:38.201193 1 eventhandlers.go:161] "Delete event for unscheduled pod" pod="default/react-d-86c848f59-dfv47"
+I1210 13:03:38.202416 1 round_trippers.go:553] POST https://192.168.49.2:8443/api/v1/namespaces/default/pods/react-d-86c848f59-dfv47/binding 201 Created in 7 milliseconds
+I1210 13:03:38.204136 1 cache.go:401] "Finished binding for pod, can be expired" podKey="99eb1811-1ced-4b90-83fc-13de47785d27" pod="default/react-d-86c848f59-dfv47"
+I1210 13:03:38.204191 1 schedule_one.go:252] "Successfully bound pod to node" pod="default/react-d-86c848f59-dfv47" node="minikube-m02" evaluatedNodes=2 feasibleNodes=2
+I1210 13:03:38.202469 1 eventhandlers.go:186] "Add event for scheduled pod" pod="default/react-d-86c848f59-dfv47"
+I1210 13:03:38.213550 1 round_trippers.go:553] POST https://192.168.49.2:8443/api/v1/namespaces/default/events 201 Created in 9 milliseconds
+I1210 13:03:38.213914 1 eventhandlers.go:161] "Delete event for unscheduled pod" pod="default/react-d-86c848f59-tmtmd"
+I1210 13:03:38.213956 1 round_trippers.go:553] POST https://192.168.49.2:8443/api/v1/namespaces/default/pods/react-d-86c848f59-tmtmd/binding 201 Created in 14 milliseconds
+I1210 13:03:38.214009 1 cache.go:401] "Finished binding for pod, can be expired" podKey="ef8912ed-c734-4124-804c-00952eb3b477" pod="default/react-d-86c848f59-tmtmd"
+I1210 13:03:38.214036 1 schedule_one.go:252] "Successfully bound pod to node" pod="default/react-d-86c848f59-tmtmd" node="minikube" evaluatedNodes=2 feasibleNodes=2
+I1210 13:03:38.214103 1 eventhandlers.go:186] "Add event for scheduled pod" pod="default/react-d-86c848f59-tmtmd"
+I1210 13:03:38.218845 1 eventhandlers.go:206] "Update event for scheduled pod" pod="default/react-d-86c848f59-dfv47"
+I1210 13:03:38.222221 1 round_trippers.go:553] POST https://192.168.49.2:8443/api/v1/namespaces/default/events 201 Created in 8 milliseconds
+I1210 13:03:38.229866 1 eventhandlers.go:206] "Update event for scheduled pod" pod="default/react-d-86c848f59-tmtmd"
+I1210 13:03:44.960987 1 pathrecorder.go:241] kube-scheduler: "/healthz" satisfied by exact match
+I1210 13:03:44.961049 1 httplog.go:132] "HTTP" verb="GET" URI="/healthz" latency="81.193µs" userAgent="kube-probe/1.27" audit-ID="" srcIP="127.0.0.1:52320" resp=200
+I1210 13:03:54.962806 1 pathrecorder.go:241] kube-scheduler: "/healthz" satisfied by exact match
+I1210 13:03:54.962872 1 httplog.go:132] "HTTP" verb="GET" URI="/healthz" latency="84.522µs" userAgent="kube-probe/1.27" audit-ID="" srcIP="127.0.0.1:48126" resp=200
+I1210 13:04:01.337153 1 eventhandlers.go:206] "Update event for scheduled pod" pod="default/react-d-86c848f59-tmtmd"
+I1210 13:04:01.571914 1 eventhandlers.go:206] "Update event for scheduled pod" pod="default/react-d-86c848f59-dfv47"

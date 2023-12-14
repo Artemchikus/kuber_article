@@ -1,0 +1,13 @@
+I1210 12:32:52.094999       1 eventhandlers.go:118] "Add event for unscheduled pod" pod="default/vault"
+I1210 12:32:52.095040       1 scheduling_queue.go:419] "Pod moved to an internal scheduling queue" pod="default/vault" event="PodAdd" queue="Active"
+I1210 12:32:52.095069       1 scheduling_queue.go:1133] "About to try and schedule pod" pod="default/vault"
+I1210 12:32:52.095077       1 schedule_one.go:80] "Attempting to schedule pod" pod="default/vault"
+I1210 12:32:52.095271       1 default_binder.go:53] "Attempting to bind pod to node" pod="default/vault" node="minikube"
+I1210 12:32:52.099275       1 eventhandlers.go:161] "Delete event for unscheduled pod" pod="default/vault"
+I1210 12:32:52.099293       1 eventhandlers.go:186] "Add event for scheduled pod" pod="default/vault"
+I1210 12:32:52.099636       1 round_trippers.go:553] POST https://192.168.49.2:8443/api/v1/namespaces/default/pods/vault/binding 201 Created in 4 milliseconds
+I1210 12:32:52.099716       1 cache.go:401] "Finished binding for pod, can be expired" podKey="f3f30dac-cb09-4c3d-9732-5771eae431fe" pod="default/vault"
+I1210 12:32:52.099750       1 schedule_one.go:252] "Successfully bound pod to node" pod="default/vault" node="minikube" evaluatedNodes=1 feasibleNodes=1
+I1210 12:32:52.108510       1 round_trippers.go:553] POST https://192.168.49.2:8443/api/v1/namespaces/default/events 201 Created in 8 milliseconds
+I1210 12:32:52.113523       1 eventhandlers.go:206] "Update event for scheduled pod" pod="default/vault"
+I1210 12:33:00.401581       1 eventhandlers.go:206] "Update event for scheduled pod" pod="default/vault"

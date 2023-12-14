@@ -1,0 +1,38 @@
+I1210 12:32:52.095084       1 graph_builder.go:639] "GraphBuilder process object" apiVersion="v1" kind="Pod" object="default/vault" uid="f3f30dac-cb09-4c3d-9732-5771eae431fe" eventType="add" virtual=false
+I1210 12:32:52.095106       1 disruption.go:481] addPod called on pod "vault"
+I1210 12:32:52.095119       1 disruption.go:572] No PodDisruptionBudgets found for pod vault, PodDisruptionBudget controller will avoid syncing.
+I1210 12:32:52.095125       1 disruption.go:484] No matching pdb for pod "vault"
+I1210 12:32:52.095150       1 taint_manager.go:436] "Noticed pod update" pod="default/vault"
+I1210 12:32:52.095158       1 pvc_protection_controller.go:384] "Enqueuing PVCs for Pod" pod="default/vault" podUID=f3f30dac-cb09-4c3d-9732-5771eae431fe
+I1210 12:32:52.099373       1 taint_manager.go:436] "Noticed pod update" pod="default/vault"
+I1210 12:32:52.099405       1 disruption.go:496] updatePod called on pod "vault"
+I1210 12:32:52.099428       1 disruption.go:572] No PodDisruptionBudgets found for pod vault, PodDisruptionBudget controller will avoid syncing.
+I1210 12:32:52.099442       1 disruption.go:499] No matching pdb for pod "vault"
+I1210 12:32:52.099481       1 graph_builder.go:639] "GraphBuilder process object" apiVersion="v1" kind="Pod" object="default/vault" uid="f3f30dac-cb09-4c3d-9732-5771eae431fe" eventType="update" virtual=false
+I1210 12:32:52.106644       1 endpointslicemirroring_controller.go:416] Skipping mirroring for kube-system/k8s.io-minikube-hostpath
+I1210 12:32:52.106669       1 graph_builder.go:639] "GraphBuilder process object" apiVersion="v1" kind="Endpoints" object="kube-system/k8s.io-minikube-hostpath" uid="a4d31ea3-c651-4323-8e3b-fadbf066a4b4" eventType="update" virtual=false
+I1210 12:32:52.113378       1 disruption.go:496] updatePod called on pod "vault"
+I1210 12:32:52.113415       1 disruption.go:572] No PodDisruptionBudgets found for pod vault, PodDisruptionBudget controller will avoid syncing.
+I1210 12:32:52.113427       1 disruption.go:499] No matching pdb for pod "vault"
+I1210 12:32:52.113488       1 graph_builder.go:639] "GraphBuilder process object" apiVersion="v1" kind="Pod" object="default/vault" uid="f3f30dac-cb09-4c3d-9732-5771eae431fe" eventType="update" virtual=false
+I1210 12:32:53.055266       1 pathrecorder.go:241] controller-manager: "/healthz" satisfied by exact match
+I1210 12:32:53.055279       1 pathrecorder.go:241] healthz: "/healthz" satisfied by exact match
+I1210 12:32:53.055348       1 httplog.go:132] "HTTP" verb="GET" URI="/healthz" latency="105.545µs" userAgent="kube-probe/1.27" audit-ID="" srcIP="127.0.0.1:53588" resp=200
+I1210 12:32:53.723808       1 gc_controller.go:150] GC'ing terminating pods that are on out-of-service nodes
+I1210 12:32:53.723860       1 gc_controller.go:227] GC'ing orphaned
+I1210 12:32:53.723867       1 gc_controller.go:296] GC'ing unscheduled pods which are terminating.
+I1210 12:32:53.812883       1 graph_builder.go:639] "GraphBuilder process object" apiVersion="coordination.k8s.io/v1" kind="Lease" object="kube-node-lease/minikube" uid="9111bf46-730d-498d-bb47-7ad88fcbea71" eventType="update" virtual=false
+I1210 12:32:54.112974       1 endpointslicemirroring_controller.go:416] Skipping mirroring for kube-system/k8s.io-minikube-hostpath
+I1210 12:32:54.113010       1 graph_builder.go:639] "GraphBuilder process object" apiVersion="v1" kind="Endpoints" object="kube-system/k8s.io-minikube-hostpath" uid="a4d31ea3-c651-4323-8e3b-fadbf066a4b4" eventType="update" virtual=false
+I1210 12:32:56.122521       1 endpointslicemirroring_controller.go:416] Skipping mirroring for kube-system/k8s.io-minikube-hostpath
+I1210 12:32:56.122531       1 graph_builder.go:639] "GraphBuilder process object" apiVersion="v1" kind="Endpoints" object="kube-system/k8s.io-minikube-hostpath" uid="a4d31ea3-c651-4323-8e3b-fadbf066a4b4" eventType="update" virtual=false
+I1210 12:32:58.131039       1 endpointslicemirroring_controller.go:416] Skipping mirroring for kube-system/k8s.io-minikube-hostpath
+I1210 12:32:58.131089       1 graph_builder.go:639] "GraphBuilder process object" apiVersion="v1" kind="Endpoints" object="kube-system/k8s.io-minikube-hostpath" uid="a4d31ea3-c651-4323-8e3b-fadbf066a4b4" eventType="update" virtual=false
+I1210 12:33:00.137713       1 endpointslicemirroring_controller.go:416] Skipping mirroring for kube-system/k8s.io-minikube-hostpath
+I1210 12:33:00.137757       1 graph_builder.go:639] "GraphBuilder process object" apiVersion="v1" kind="Endpoints" object="kube-system/k8s.io-minikube-hostpath" uid="a4d31ea3-c651-4323-8e3b-fadbf066a4b4" eventType="update" virtual=false
+I1210 12:33:00.287725       1 graph_builder.go:639] "GraphBuilder process object" apiVersion="coordination.k8s.io/v1" kind="Lease" object="kube-system/apiserver-eqt674mfxb4j56mrjjkoe7b7ii" uid="fd4815dc-f480-45ce-b0a8-bde8b4f1022d" eventType="update" virtual=false
+I1210 12:33:00.401464       1 graph_builder.go:639] "GraphBuilder process object" apiVersion="v1" kind="Pod" object="default/vault" uid="f3f30dac-cb09-4c3d-9732-5771eae431fe" eventType="update" virtual=false
+I1210 12:33:00.401487       1 disruption.go:496] updatePod called on pod "vault"
+I1210 12:33:00.401519       1 disruption.go:572] No PodDisruptionBudgets found for pod vault, PodDisruptionBudget controller will avoid syncing.
+I1210 12:33:00.401525       1 disruption.go:499] No matching pdb for pod "vault"
+I1210 12:33:02.143449       1 endpointslicemirroring_controller.go:416] Skipping mirroring for kube-system/k8s.io-minikube-hostpath

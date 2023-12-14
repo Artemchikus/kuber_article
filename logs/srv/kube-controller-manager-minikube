@@ -1,0 +1,15 @@
+I1210 12:33:16.877497       1 endpointslice_controller.go:343] About to update endpoint slices for service "default/vault"
+I1210 12:33:16.877634       1 endpoints_controller.go:393] About to update endpoints for service "default/vault"
+I1210 12:33:16.877672       1 graph_builder.go:639] "GraphBuilder process object" apiVersion="v1" kind="Service" object="default/vault" uid="0daa6f2d-dde4-454a-a741-459bea443b30" eventType="add" virtual=false
+I1210 12:33:16.877726       1 endpoints_controller.go:519] Update endpoints for default/vault, ready: 1 not ready: 0
+I1210 12:33:16.882343       1 endpointslicemirroring_controller.go:273] syncEndpoints("default/vault")
+I1210 12:33:16.882353       1 graph_builder.go:639] "GraphBuilder process object" apiVersion="v1" kind="Endpoints" object="default/vault" uid="486403e6-43fd-4ab0-8f31-f92aef7c64c3" eventType="add" virtual=false
+I1210 12:33:16.882361       1 endpointslicemirroring_controller.go:308] default/vault Service now has selector, cleaning up any mirrored EndpointSlices
+I1210 12:33:16.882393       1 endpointslicemirroring_controller.go:270] Finished syncing EndpointSlices for "default/vault" Endpoints. (57.698µs)
+I1210 12:33:16.882572       1 round_trippers.go:553] POST https://192.168.49.2:8443/api/v1/namespaces/default/endpoints 201 Created in 4 milliseconds
+I1210 12:33:16.882658       1 endpoints_controller.go:355] Finished syncing service "default/vault" endpoints. (5.026474ms)
+I1210 12:33:16.884020       1 graph_builder.go:639] "GraphBuilder process object" apiVersion="discovery.k8s.io/v1" kind="EndpointSlice" object="default/vault-k97d7" uid="a8e7bd74-7e8b-4f95-872e-9ebec09f2983" eventType="add" virtual=false
+I1210 12:33:16.884083       1 round_trippers.go:553] POST https://192.168.49.2:8443/apis/discovery.k8s.io/v1/namespaces/default/endpointslices 201 Created in 6 milliseconds
+I1210 12:33:16.884203       1 endpointslice_controller.go:310] Finished syncing service "default/vault" endpoint slices. (6.673985ms)
+I1210 12:33:17.884949       1 endpointslice_controller.go:343] About to update endpoint slices for service "default/vault"
+I1210 12:33:17.885106       1 endpointslice_controller.go:310] Finished syncing service "default/vault" endpoint slices. (167.16µs)

@@ -1,0 +1,4 @@
+I1210 15:50:59.287390       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:50:59.287391       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:51:29.287388       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:51:29.287391       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]

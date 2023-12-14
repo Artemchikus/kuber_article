@@ -1,0 +1,7 @@
+I1210 13:03:03.044225       1 storage_provisioner.go:116] Initializing the minikube storage provisioner...
+I1210 13:03:03.050579       1 storage_provisioner.go:141] Storage provisioner initialized, now starting service!
+I1210 13:03:03.050614       1 leaderelection.go:243] attempting to acquire leader lease kube-system/k8s.io-minikube-hostpath...
+I1210 13:03:03.056861       1 leaderelection.go:253] successfully acquired lease kube-system/k8s.io-minikube-hostpath
+I1210 13:03:03.056966       1 controller.go:835] Starting provisioner controller k8s.io/minikube-hostpath_minikube_f66fe4d8-4ac2-4333-b46d-9101ac87a83d!
+I1210 13:03:03.057010       1 event.go:282] Event(v1.ObjectReference{Kind:"Endpoints", Namespace:"kube-system", Name:"k8s.io-minikube-hostpath", UID:"1b586283-e290-4a8e-a278-05aea404fc9d", APIVersion:"v1", ResourceVersion:"377", FieldPath:""}): type: 'Normal' reason: 'LeaderElection' minikube_f66fe4d8-4ac2-4333-b46d-9101ac87a83d became leader
+I1210 13:03:03.157160       1 controller.go:884] Started provisioner controller k8s.io/minikube-hostpath_minikube_f66fe4d8-4ac2-4333-b46d-9101ac87a83d!

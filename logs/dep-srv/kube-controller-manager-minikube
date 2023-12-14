@@ -1,0 +1,17 @@
+I1210 13:04:42.785508       1 graph_builder.go:639] "GraphBuilder process object" apiVersion="v1" kind="Service" object="default/react-np" uid="5d1782e2-9155-40b7-9dbd-cd79c31f0ee5" eventType="add" virtual=false
+I1210 13:04:42.785533       1 endpoints_controller.go:393] About to update endpoints for service "default/react-np"
+I1210 13:04:42.785552       1 endpointslice_controller.go:343] About to update endpoint slices for service "default/react-np"
+I1210 13:04:42.785665       1 endpoints_controller.go:519] Update endpoints for default/react-np, ready: 2 not ready: 0
+I1210 13:04:42.790407       1 endpointslicemirroring_controller.go:273] syncEndpoints("default/react-np")
+I1210 13:04:42.790433       1 endpointslicemirroring_controller.go:308] default/react-np Service now has selector, cleaning up any mirrored EndpointSlices
+I1210 13:04:42.790458       1 endpointslicemirroring_controller.go:270] Finished syncing EndpointSlices for "default/react-np" Endpoints. (58.284µs)
+I1210 13:04:42.790505       1 graph_builder.go:639] "GraphBuilder process object" apiVersion="v1" kind="Endpoints" object="default/react-np" uid="175ddbb7-3071-4745-bb1a-10bdf78de5fa" eventType="add" virtual=false
+I1210 13:04:42.791021       1 round_trippers.go:553] POST https://192.168.49.2:8443/api/v1/namespaces/default/endpoints 201 Created in 5 milliseconds
+I1210 13:04:42.791114       1 endpoints_controller.go:355] Finished syncing service "default/react-np" endpoints. (5.603095ms)
+I1210 13:04:42.792373       1 graph_builder.go:639] "GraphBuilder process object" apiVersion="discovery.k8s.io/v1" kind="EndpointSlice" object="default/react-np-vmbcc" uid="824a560e-aeaa-4441-bd31-be9433c63245" eventType="add" virtual=false
+I1210 13:04:42.792615       1 round_trippers.go:553] POST https://192.168.49.2:8443/apis/discovery.k8s.io/v1/namespaces/default/endpointslices 201 Created in 6 milliseconds
+I1210 13:04:42.792731       1 endpointslice_controller.go:310] Finished syncing service "default/react-np" endpoint slices. (7.178544ms)
+I1210 13:04:43.544065       1 graph_builder.go:639] "GraphBuilder process object" apiVersion="v1" kind="Endpoints" object="kube-system/k8s.io-minikube-hostpath" uid="1b586283-e290-4a8e-a278-05aea404fc9d" eventType="update" virtual=false
+I1210 13:04:43.544089       1 endpointslicemirroring_controller.go:416] Skipping mirroring for kube-system/k8s.io-minikube-hostpath
+I1210 13:04:43.792500       1 endpointslice_controller.go:343] About to update endpoint slices for service "default/react-np"
+I1210 13:04:43.792663       1 endpointslice_controller.go:310] Finished syncing service "default/react-np" endpoint slices. (169.003µs)

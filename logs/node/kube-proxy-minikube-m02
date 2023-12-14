@@ -1,0 +1,208 @@
+I1210 15:41:20.018384       1 feature_gate.go:249] feature gates: &{map[]}
+I1210 15:41:20.018492       1 feature_gate.go:249] feature gates: &{map[]}
+I1210 15:41:20.019443       1 loader.go:373] Config loaded from file:  /var/lib/kube-proxy/kubeconfig.conf
+I1210 15:41:20.027872       1 round_trippers.go:553] GET https://control-plane.minikube.internal:8443/api/v1/nodes/minikube-m02 200 OK in 7 milliseconds
+I1210 15:41:20.028033       1 node.go:141] Successfully retrieved node IP: 192.168.49.3
+I1210 15:41:20.028059       1 server_others.go:110] "Detected node IP" address="192.168.49.3"
+I1210 15:41:20.028086       1 server_others.go:554] "Using iptables proxy"
+I1210 15:41:20.028098       1 server_others.go:428] "Defaulting detect-local-mode" localModeClusterCIDR="ClusterCIDR"
+I1210 15:41:20.028111       1 server_others.go:149] "DetectLocalMode" localMode="ClusterCIDR"
+I1210 15:41:20.043550       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -S POSTROUTING -t nat]
+I1210 15:41:20.045786       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -S POSTROUTING -t nat]
+I1210 15:41:20.047300       1 server_others.go:192] "Using iptables Proxier"
+I1210 15:41:20.047327       1 server_others.go:199] "kube-proxy running in dual-stack mode" ipFamily=IPv4
+I1210 15:41:20.047345       1 server_others.go:200] "Creating dualStackProxier for iptables"
+I1210 15:41:20.047364       1 server_others.go:484] "Detect-local-mode set to ClusterCIDR, but no IPv6 cluster CIDR defined, defaulting to no-op detect-local for IPv6"
+I1210 15:41:20.047397       1 proxier.go:253] "Setting route_localnet=1 to allow node-ports on localhost; to change this either disable iptables.localhostNodePorts (--iptables-localhost-nodeports) or set nodePortAddresses (--nodeport-addresses) to filter loopback addresses"
+I1210 15:41:20.047577       1 proxier.go:269] "Using iptables mark for masquerade" ipFamily=IPv4 mark="0x00004000"
+I1210 15:41:20.047765       1 proxier.go:303] "Iptables sync params" ipFamily=IPv4 minSyncPeriod="1s" syncPeriod="30s" burstSyncs=2
+I1210 15:41:20.047800       1 proxier.go:313] "Iptables supports --random-fully" ipFamily=IPv4
+I1210 15:41:20.047841       1 proxier.go:269] "Using iptables mark for masquerade" ipFamily=IPv6 mark="0x00004000"
+I1210 15:41:20.047918       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -N KUBE-PROXY-CANARY -t mangle]
+I1210 15:41:20.048009       1 proxier.go:303] "Iptables sync params" ipFamily=IPv6 minSyncPeriod="1s" syncPeriod="30s" burstSyncs=2
+I1210 15:41:20.048041       1 proxier.go:313] "Iptables supports --random-fully" ipFamily=IPv6
+I1210 15:41:20.048189       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -N KUBE-PROXY-CANARY -t mangle]
+I1210 15:41:20.048208       1 server.go:658] "Version info" version="v1.27.4"
+I1210 15:41:20.048221       1 server.go:660] "Golang settings" GOGC="" GOMAXPROCS="" GOTRACEBACK=""
+I1210 15:41:20.048230       1 oom_linux.go:65] attempting to set "/proc/self/oom_score_adj" to "-999"
+I1210 15:41:20.048374       1 healthz.go:172] No default health checks specified. Installing the ping handler.
+I1210 15:41:20.048392       1 healthz.go:176] Installing health checkers for (/healthz): "ping"
+I1210 15:41:20.048784       1 proxier_health.go:146] "Starting healthz HTTP server" address="0.0.0.0:10256"
+I1210 15:41:20.048839       1 config.go:188] "Starting service config controller"
+I1210 15:41:20.048863       1 config.go:97] "Starting endpoint slice config controller"
+I1210 15:41:20.048867       1 shared_informer.go:311] Waiting for caches to sync for service config
+I1210 15:41:20.048879       1 bounded_frequency_runner.go:192] sync-runner Loop running
+I1210 15:41:20.048887       1 shared_informer.go:311] Waiting for caches to sync for endpoint slice config
+I1210 15:41:20.048897       1 bounded_frequency_runner.go:192] sync-runner Loop running
+I1210 15:41:20.048909       1 config.go:315] "Starting node config controller"
+I1210 15:41:20.048917       1 shared_informer.go:311] Waiting for caches to sync for node config
+I1210 15:41:20.048952       1 reflector.go:287] Starting reflector *v1.Service (15m0s) from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 15:41:20.048969       1 reflector.go:323] Listing and watching *v1.Service from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 15:41:20.049002       1 reflector.go:287] Starting reflector *v1.EndpointSlice (15m0s) from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 15:41:20.049024       1 reflector.go:323] Listing and watching *v1.EndpointSlice from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 15:41:20.049118       1 reflector.go:287] Starting reflector *v1.Node (15m0s) from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 15:41:20.049132       1 reflector.go:323] Listing and watching *v1.Node from vendor/k8s.io/client-go/informers/factory.go:150
+I1210 15:41:20.049735       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -N KUBE-PROXY-CANARY -t nat]
+I1210 15:41:20.050822       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -N KUBE-PROXY-CANARY -t nat]
+I1210 15:41:20.052241       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -N KUBE-PROXY-CANARY -t filter]
+I1210 15:41:20.052234       1 round_trippers.go:553] GET https://control-plane.minikube.internal:8443/api/v1/services?labelSelector=%21service.kubernetes.io%2Fheadless%2C%21service.kubernetes.io%2Fservice-proxy-name&limit=500&resourceVersion=0 200 OK in 3 milliseconds
+I1210 15:41:20.052253       1 round_trippers.go:553] GET https://control-plane.minikube.internal:8443/apis/discovery.k8s.io/v1/endpointslices?labelSelector=%21service.kubernetes.io%2Fheadless%2C%21service.kubernetes.io%2Fservice-proxy-name&limit=500&resourceVersion=0 200 OK in 2 milliseconds
+I1210 15:41:20.052743       1 round_trippers.go:553] GET https://control-plane.minikube.internal:8443/api/v1/nodes?fieldSelector=metadata.name%3Dminikube-m02&limit=500&resourceVersion=0 200 OK in 3 milliseconds
+I1210 15:41:20.052833       1 config.go:207] "Calling handler.OnServiceAdd"
+I1210 15:41:20.053335       1 service.go:324] "Service updated ports" service="default/kubernetes" portCount=1
+I1210 15:41:20.053355       1 config.go:207] "Calling handler.OnServiceAdd"
+I1210 15:41:20.052932       1 config.go:116] "Calling handler.OnEndpointSliceAdd" endpoints="default/kubernetes"
+I1210 15:41:20.053417       1 config.go:116] "Calling handler.OnEndpointSliceAdd" endpoints="kube-system/kube-dns-k9x7q"
+I1210 15:41:20.053240       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -N KUBE-PROXY-CANARY -t filter]
+I1210 15:41:20.053391       1 service.go:324] "Service updated ports" service="kube-system/kube-dns" portCount=3
+I1210 15:41:20.053993       1 config.go:334] "Calling handler.OnNodeAdd"
+I1210 15:41:20.054092       1 proxier.go:621] "Updated proxier node labels" labels=map[beta.kubernetes.io/arch:amd64 beta.kubernetes.io/os:linux kubernetes.io/arch:amd64 kubernetes.io/hostname:minikube-m02 kubernetes.io/os:linux]
+I1210 15:41:20.054122       1 proxier.go:621] "Updated proxier node labels" labels=map[beta.kubernetes.io/arch:amd64 beta.kubernetes.io/os:linux kubernetes.io/arch:amd64 kubernetes.io/hostname:minikube-m02 kubernetes.io/os:linux]
+I1210 15:41:20.054337       1 round_trippers.go:553] GET https://control-plane.minikube.internal:8443/apis/discovery.k8s.io/v1/endpointslices?allowWatchBookmarks=true&labelSelector=%21service.kubernetes.io%2Fheadless%2C%21service.kubernetes.io%2Fservice-proxy-name&resourceVersion=615&timeout=9m12s&timeoutSeconds=552&watch=true 200 OK in 1 milliseconds
+I1210 15:41:20.054585       1 proxier.go:814] "Not syncing iptables until Services and Endpoints have been received from master"
+I1210 15:41:20.055005       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I1210 15:41:20.054944       1 proxier.go:814] "Not syncing iptables until Services and Endpoints have been received from master"
+I1210 15:41:20.055069       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I1210 15:41:20.055346       1 round_trippers.go:553] GET https://control-plane.minikube.internal:8443/api/v1/services?allowWatchBookmarks=true&labelSelector=%21service.kubernetes.io%2Fheadless%2C%21service.kubernetes.io%2Fservice-proxy-name&resourceVersion=604&timeout=6m27s&timeoutSeconds=387&watch=true 200 OK in 2 milliseconds
+I1210 15:41:20.057108       1 round_trippers.go:553] POST https://control-plane.minikube.internal:8443/apis/events.k8s.io/v1/namespaces/default/events 201 Created in 8 milliseconds
+I1210 15:41:20.057363       1 round_trippers.go:553] GET https://control-plane.minikube.internal:8443/api/v1/nodes?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dminikube-m02&resourceVersion=606&timeout=6m35s&timeoutSeconds=395&watch=true 200 OK in 2 milliseconds
+I1210 15:41:20.149543       1 shared_informer.go:341] caches populated
+I1210 15:41:20.149565       1 shared_informer.go:318] Caches are synced for endpoint slice config
+I1210 15:41:20.149580       1 config.go:104] "Calling handler.OnEndpointSlicesSynced()"
+I1210 15:41:20.149593       1 shared_informer.go:341] caches populated
+I1210 15:41:20.149604       1 shared_informer.go:318] Caches are synced for service config
+I1210 15:41:20.149613       1 config.go:195] "Calling handler.OnServiceSynced()"
+I1210 15:41:20.149583       1 shared_informer.go:341] caches populated
+I1210 15:41:20.149694       1 shared_informer.go:318] Caches are synced for node config
+I1210 15:41:20.149701       1 service.go:457] "Adding new service port" portName="default/kubernetes:https" servicePort="10.96.0.1:443/TCP"
+I1210 15:41:20.149708       1 config.go:322] "Calling handler.OnNodeSynced()"
+I1210 15:41:20.149725       1 service.go:457] "Adding new service port" portName="kube-system/kube-dns:dns" servicePort="10.96.0.10:53/UDP"
+I1210 15:41:20.149745       1 service.go:457] "Adding new service port" portName="kube-system/kube-dns:dns-tcp" servicePort="10.96.0.10:53/TCP"
+I1210 15:41:20.149765       1 service.go:457] "Adding new service port" portName="kube-system/kube-dns:metrics" servicePort="10.96.0.10:9153/TCP"
+I1210 15:41:20.149814       1 endpointslicecache.go:373] "Setting endpoints for service port name" portName="kube-system/kube-dns:metrics" endpoints=[10.244.0.2:9153]
+I1210 15:41:20.149830       1 endpointslicecache.go:373] "Setting endpoints for service port name" portName="kube-system/kube-dns:dns" endpoints=[10.244.0.2:53]
+I1210 15:41:20.149843       1 endpointslicecache.go:373] "Setting endpoints for service port name" portName="kube-system/kube-dns:dns-tcp" endpoints=[10.244.0.2:53]
+I1210 15:41:20.149866       1 endpointslicecache.go:373] "Setting endpoints for service port name" portName="default/kubernetes:https" endpoints=[192.168.49.2:8443]
+I1210 15:41:20.149889       1 proxier.go:842] "Newly-active UDP service may have stale conntrack entries" servicePortName="kube-system/kube-dns:dns"
+I1210 15:41:20.149903       1 proxier.go:857] "Syncing iptables rules"
+I1210 15:41:20.149921       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -N KUBE-EXTERNAL-SERVICES -t filter]
+I1210 15:41:20.151343       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -C INPUT -t filter -m conntrack --ctstate NEW -m comment --comment kubernetes externally-visible service portals -j KUBE-EXTERNAL-SERVICES]
+I1210 15:41:20.153211       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -N KUBE-EXTERNAL-SERVICES -t filter]
+I1210 15:41:20.154729       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -C FORWARD -t filter -m conntrack --ctstate NEW -m comment --comment kubernetes externally-visible service portals -j KUBE-EXTERNAL-SERVICES]
+I1210 15:41:20.156793       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -N KUBE-NODEPORTS -t filter]
+I1210 15:41:20.158135       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -C INPUT -t filter -m comment --comment kubernetes health check service ports -j KUBE-NODEPORTS]
+I1210 15:41:20.160069       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -N KUBE-SERVICES -t filter]
+I1210 15:41:20.161369       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -C FORWARD -t filter -m conntrack --ctstate NEW -m comment --comment kubernetes service portals -j KUBE-SERVICES]
+I1210 15:41:20.163279       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -N KUBE-SERVICES -t filter]
+I1210 15:41:20.164514       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -C OUTPUT -t filter -m conntrack --ctstate NEW -m comment --comment kubernetes service portals -j KUBE-SERVICES]
+I1210 15:41:20.166225       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -N KUBE-FORWARD -t filter]
+I1210 15:41:20.167811       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -C FORWARD -t filter -m comment --comment kubernetes forwarding rules -j KUBE-FORWARD]
+I1210 15:41:20.169812       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -N KUBE-PROXY-FIREWALL -t filter]
+I1210 15:41:20.171212       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -C INPUT -t filter -m conntrack --ctstate NEW -m comment --comment kubernetes load balancer firewall -j KUBE-PROXY-FIREWALL]
+I1210 15:41:20.172958       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -N KUBE-PROXY-FIREWALL -t filter]
+I1210 15:41:20.174664       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -C OUTPUT -t filter -m conntrack --ctstate NEW -m comment --comment kubernetes load balancer firewall -j KUBE-PROXY-FIREWALL]
+I1210 15:41:20.176629       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -N KUBE-PROXY-FIREWALL -t filter]
+I1210 15:41:20.178185       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -C FORWARD -t filter -m conntrack --ctstate NEW -m comment --comment kubernetes load balancer firewall -j KUBE-PROXY-FIREWALL]
+I1210 15:41:20.179821       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -N KUBE-SERVICES -t nat]
+I1210 15:41:20.181081       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -C OUTPUT -t nat -m comment --comment kubernetes service portals -j KUBE-SERVICES]
+I1210 15:41:20.182688       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -N KUBE-SERVICES -t nat]
+I1210 15:41:20.183914       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -C PREROUTING -t nat -m comment --comment kubernetes service portals -j KUBE-SERVICES]
+I1210 15:41:20.185693       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -N KUBE-FIREWALL -t filter]
+I1210 15:41:20.187049       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -C INPUT -t filter -j KUBE-FIREWALL]
+I1210 15:41:20.189263       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -N KUBE-FIREWALL -t filter]
+I1210 15:41:20.190807       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -C OUTPUT -t filter -j KUBE-FIREWALL]
+I1210 15:41:20.192570       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -N KUBE-POSTROUTING -t nat]
+I1210 15:41:20.193875       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -C POSTROUTING -t nat -m comment --comment kubernetes postrouting rules -j KUBE-POSTROUTING]
+I1210 15:41:20.195593       1 iptables.go:358] "Running" command="iptables-save" arguments=[-t nat]
+I1210 15:41:20.199988       1 proxier.go:1573] "Reloading service iptables data" numServices=4 numEndpoints=4 numFilterChains=6 numFilterRules=4 numNATChains=12 numNATRules=25
+I1210 15:41:20.200011       1 iptables.go:423] "Running" command="iptables-restore" arguments=[-w 5 -W 100000 --noflush --counters]
+I1210 15:41:20.221860       1 proxier.go:1626] "Deleting conntrack stale entries for services" IPs=[10.96.0.10]
+I1210 15:41:20.221971       1 conntrack.go:66] Clearing conntrack entries [-D --orig-dst 10.96.0.10 -p udp]
+I1210 15:41:20.227476       1 proxier.go:1632] "Deleting conntrack stale entries for services" nodePorts=[]
+I1210 15:41:20.227504       1 proxier.go:1639] "Deleting stale endpoint connections" endpoints=[]
+I1210 15:41:20.227513       1 proxier.go:822] "SyncProxyRules complete" elapsed="77.888778ms"
+I1210 15:41:20.227532       1 proxier.go:814] "Not syncing iptables until Services and Endpoints have been received from master"
+I1210 15:41:20.227552       1 proxier.go:857] "Syncing iptables rules"
+I1210 15:41:20.227616       1 iptables.go:358] "Running" command="iptables-save" arguments=[-t nat]
+I1210 15:41:20.231642       1 proxier.go:1573] "Reloading service iptables data" numServices=4 numEndpoints=4 numFilterChains=6 numFilterRules=4 numNATChains=4 numNATRules=9
+I1210 15:41:20.231659       1 iptables.go:423] "Running" command="iptables-restore" arguments=[-w 5 -W 100000 --noflush --counters]
+I1210 15:41:20.243472       1 proxier.go:1626] "Deleting conntrack stale entries for services" IPs=[]
+I1210 15:41:20.243504       1 proxier.go:1632] "Deleting conntrack stale entries for services" nodePorts=[]
+I1210 15:41:20.243539       1 proxier.go:1639] "Deleting stale endpoint connections" endpoints=[]
+I1210 15:41:20.243554       1 proxier.go:822] "SyncProxyRules complete" elapsed="16.007338ms"
+I1210 15:41:20.243570       1 proxier.go:857] "Syncing iptables rules"
+I1210 15:41:20.243594       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -N KUBE-EXTERNAL-SERVICES -t filter]
+I1210 15:41:20.244972       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -C INPUT -t filter -m conntrack --ctstate NEW -m comment --comment kubernetes externally-visible service portals -j KUBE-EXTERNAL-SERVICES]
+I1210 15:41:20.246782       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -N KUBE-EXTERNAL-SERVICES -t filter]
+I1210 15:41:20.248230       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -C FORWARD -t filter -m conntrack --ctstate NEW -m comment --comment kubernetes externally-visible service portals -j KUBE-EXTERNAL-SERVICES]
+I1210 15:41:20.250684       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -N KUBE-NODEPORTS -t filter]
+I1210 15:41:20.252001       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -C INPUT -t filter -m comment --comment kubernetes health check service ports -j KUBE-NODEPORTS]
+I1210 15:41:20.253843       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -N KUBE-SERVICES -t filter]
+I1210 15:41:20.255304       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -C FORWARD -t filter -m conntrack --ctstate NEW -m comment --comment kubernetes service portals -j KUBE-SERVICES]
+I1210 15:41:20.257376       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -N KUBE-SERVICES -t filter]
+I1210 15:41:20.258727       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -C OUTPUT -t filter -m conntrack --ctstate NEW -m comment --comment kubernetes service portals -j KUBE-SERVICES]
+I1210 15:41:20.260413       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -N KUBE-FORWARD -t filter]
+I1210 15:41:20.261775       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -C FORWARD -t filter -m comment --comment kubernetes forwarding rules -j KUBE-FORWARD]
+I1210 15:41:20.263549       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -N KUBE-PROXY-FIREWALL -t filter]
+I1210 15:41:20.265054       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -C INPUT -t filter -m conntrack --ctstate NEW -m comment --comment kubernetes load balancer firewall -j KUBE-PROXY-FIREWALL]
+I1210 15:41:20.266815       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -N KUBE-PROXY-FIREWALL -t filter]
+I1210 15:41:20.268083       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -C OUTPUT -t filter -m conntrack --ctstate NEW -m comment --comment kubernetes load balancer firewall -j KUBE-PROXY-FIREWALL]
+I1210 15:41:20.269830       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -N KUBE-PROXY-FIREWALL -t filter]
+I1210 15:41:20.271347       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -C FORWARD -t filter -m conntrack --ctstate NEW -m comment --comment kubernetes load balancer firewall -j KUBE-PROXY-FIREWALL]
+I1210 15:41:20.273152       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -N KUBE-SERVICES -t nat]
+I1210 15:41:20.274412       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -C OUTPUT -t nat -m comment --comment kubernetes service portals -j KUBE-SERVICES]
+I1210 15:41:20.275928       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -N KUBE-SERVICES -t nat]
+I1210 15:41:20.277153       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -C PREROUTING -t nat -m comment --comment kubernetes service portals -j KUBE-SERVICES]
+I1210 15:41:20.278754       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -N KUBE-FIREWALL -t filter]
+I1210 15:41:20.280275       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -C INPUT -t filter -j KUBE-FIREWALL]
+I1210 15:41:20.281700       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -N KUBE-FIREWALL -t filter]
+I1210 15:41:20.283043       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -C OUTPUT -t filter -j KUBE-FIREWALL]
+I1210 15:41:20.284667       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -N KUBE-POSTROUTING -t nat]
+I1210 15:41:20.285892       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -C POSTROUTING -t nat -m comment --comment kubernetes postrouting rules -j KUBE-POSTROUTING]
+I1210 15:41:20.287532       1 iptables.go:358] "Running" command="ip6tables-save" arguments=[-t nat]
+I1210 15:41:20.290070       1 proxier.go:1573] "Reloading service iptables data" numServices=0 numEndpoints=0 numFilterChains=5 numFilterRules=3 numNATChains=4 numNATRules=5
+I1210 15:41:20.290092       1 iptables.go:423] "Running" command="ip6tables-restore" arguments=[-w 5 -W 100000 --noflush --counters]
+I1210 15:41:20.315648       1 proxier.go:1626] "Deleting conntrack stale entries for services" IPs=[]
+I1210 15:41:20.315693       1 proxier.go:1632] "Deleting conntrack stale entries for services" nodePorts=[]
+I1210 15:41:20.315728       1 proxier.go:1639] "Deleting stale endpoint connections" endpoints=[]
+I1210 15:41:20.315742       1 proxier.go:822] "SyncProxyRules complete" elapsed="72.175586ms"
+I1210 15:41:50.055515       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:41:50.055716       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:42:20.055529       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:42:20.055897       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:42:50.055449       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:42:50.055853       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:43:20.055408       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:43:20.055742       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:43:50.055356       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:43:50.055742       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:44:20.054989       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:44:20.056183       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:44:39.484842       1 config.go:351] "Calling handler.OnNodeUpdate"
+I1210 15:44:50.055347       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:44:50.055733       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:45:20.055089       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:45:20.056288       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:45:50.055413       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:45:50.055850       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:46:20.055079       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:46:20.056288       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:46:50.055328       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:46:50.055702       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:47:20.055113       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:47:20.056346       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:47:47.055883       1 reflector.go:788] vendor/k8s.io/client-go/informers/factory.go:150: Watch close - *v1.Service total 8 items received
+I1210 15:47:47.057578       1 round_trippers.go:553] GET https://control-plane.minikube.internal:8443/api/v1/services?allowWatchBookmarks=true&labelSelector=%21service.kubernetes.io%2Fheadless%2C%21service.kubernetes.io%2Fservice-proxy-name&resourceVersion=986&timeout=7m57s&timeoutSeconds=477&watch=true 200 OK in 1 milliseconds
+I1210 15:47:50.055467       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:47:50.055811       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:47:55.057542       1 reflector.go:788] vendor/k8s.io/client-go/informers/factory.go:150: Watch close - *v1.Node total 8 items received
+I1210 15:47:55.058412       1 round_trippers.go:553] GET https://control-plane.minikube.internal:8443/api/v1/nodes?allowWatchBookmarks=true&fieldSelector=metadata.name%3Dminikube-m02&resourceVersion=991&timeout=8m26s&timeoutSeconds=506&watch=true 200 OK in 0 milliseconds
+I1210 15:48:20.055374       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:48:20.055724       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:48:50.055379       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:48:50.055781       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:49:20.055354       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:49:20.055672       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:49:45.619095       1 config.go:351] "Calling handler.OnNodeUpdate"
+I1210 15:49:50.055492       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:49:50.055726       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]

@@ -1,0 +1,8 @@
+[INFO] 10.244.0.3:47757 - 54802 "A IN registry.npmjs.org.default.svc.cluster.local. udp 62 false 512" NXDOMAIN qr,aa,rd 155 0.000155086s
+[INFO] 10.244.0.3:40024 - 56606 "A IN registry.npmjs.org.svc.cluster.local. udp 54 false 512" NXDOMAIN qr,aa,rd 147 0.000094052s
+[INFO] 10.244.0.3:49846 - 12883 "A IN registry.npmjs.org.cluster.local. udp 50 false 512" NXDOMAIN qr,aa,rd 143 0.000114683s
+[INFO] 10.244.0.3:37871 - 58787 "A IN registry.npmjs.org. udp 36 false 512" NOERROR qr,rd,ra 444 0.006785765s
+[INFO] 10.244.1.2:42591 - 12466 "A IN registry.npmjs.org.default.svc.cluster.local. udp 62 false 512" NXDOMAIN qr,aa,rd 155 0.000115199s
+[INFO] 10.244.1.2:49067 - 53894 "A IN registry.npmjs.org.svc.cluster.local. udp 54 false 512" NXDOMAIN qr,aa,rd 147 0.000067656s
+[INFO] 10.244.1.2:60059 - 29938 "A IN registry.npmjs.org.cluster.local. udp 50 false 512" NXDOMAIN qr,aa,rd 143 0.000063727s
+[INFO] 10.244.1.2:52061 - 31237 "A IN registry.npmjs.org. udp 36 false 512" NOERROR qr,aa,rd,ra 444 0.000100528s

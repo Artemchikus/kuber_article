@@ -1,0 +1,5 @@
+.:53
+[INFO] plugin/reload: Running configuration SHA512 = 05e3eaddc414b2d71a69b2e2bc6f2681fc1f4d04bcdd3acc1a41457bb7db518208b95ddfc4c9fffedc59c25a8faf458be1af4915a4a3c0d6777cb7a346bc5d86
+CoreDNS-1.10.1
+linux/amd64, go1.20, 055b2c3
+[INFO] 127.0.0.1:33960 - 14761 "HINFO IN 956764443213045102.2837012370238556316. udp 56 false 512" NXDOMAIN qr,rd,ra 131 0.010477618s

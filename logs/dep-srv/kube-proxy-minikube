@@ -1,0 +1,27 @@
+I1210 15:51:56.369227       1 config.go:351] "Calling handler.OnNodeUpdate"
+I1210 15:51:59.287466       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:51:59.287466       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:52:03.194976       1 config.go:207] "Calling handler.OnServiceAdd"
+I1210 15:52:03.195083       1 service.go:324] "Service updated ports" service="default/react-np" portCount=1
+I1210 15:52:03.195253       1 service.go:457] "Adding new service port" portName="default/react-np:http" servicePort="10.97.87.218:80/TCP"
+I1210 15:52:03.195298       1 proxier.go:857] "Syncing iptables rules"
+I1210 15:52:03.195383       1 iptables.go:358] "Running" command="iptables-save" arguments=[-t nat]
+I1210 15:52:03.200182       1 config.go:116] "Calling handler.OnEndpointSliceAdd" endpoints="default/react-np-6wtft"
+I1210 15:52:03.201123       1 proxier.go:1573] "Reloading service iptables data" numServices=5 numEndpoints=4 numFilterChains=6 numFilterRules=6 numNATChains=4 numNATRules=9
+I1210 15:52:03.201157       1 iptables.go:423] "Running" command="iptables-restore" arguments=[-w 5 -W 100000 --noflush --counters]
+I1210 15:52:03.229772       1 proxier.go:1626] "Deleting conntrack stale entries for services" IPs=[]
+I1210 15:52:03.229827       1 proxier.go:1632] "Deleting conntrack stale entries for services" nodePorts=[]
+I1210 15:52:03.229871       1 proxier.go:1639] "Deleting stale endpoint connections" endpoints=[]
+I1210 15:52:03.229893       1 proxier.go:822] "SyncProxyRules complete" elapsed="34.74373ms"
+I1210 15:52:03.229906       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I1210 15:52:03.229964       1 endpointslicecache.go:373] "Setting endpoints for service port name" portName="default/react-np:http" endpoints=[10.244.0.3:3000 10.244.1.2:3000]
+I1210 15:52:03.229984       1 proxier.go:857] "Syncing iptables rules"
+I1210 15:52:03.230071       1 iptables.go:358] "Running" command="iptables-save" arguments=[-t nat]
+I1210 15:52:03.237190       1 proxier.go:1573] "Reloading service iptables data" numServices=5 numEndpoints=6 numFilterChains=6 numFilterRules=4 numNATChains=8 numNATRules=20
+I1210 15:52:03.237223       1 iptables.go:423] "Running" command="iptables-restore" arguments=[-w 5 -W 100000 --noflush --counters]
+I1210 15:52:03.265284       1 proxier.go:1602] "Network programming" endpoint="default/react-np" elapsed=0.265218136
+I1210 15:52:03.265361       1 proxier.go:1626] "Deleting conntrack stale entries for services" IPs=[]
+I1210 15:52:03.265400       1 proxier.go:1632] "Deleting conntrack stale entries for services" nodePorts=[]
+I1210 15:52:03.265441       1 proxier.go:1639] "Deleting stale endpoint connections" endpoints=[]
+I1210 15:52:03.265462       1 proxier.go:822] "SyncProxyRules complete" elapsed="35.53618ms"
+I1210 15:52:03.265479       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s

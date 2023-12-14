@@ -1,0 +1,9 @@
+I1210 15:50:20.055390       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:50:20.055852       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:50:32.055046       1 reflector.go:788] vendor/k8s.io/client-go/informers/factory.go:150: Watch close - *v1.EndpointSlice total 10 items received
+I1210 15:50:32.056803       1 round_trippers.go:553] GET https://control-plane.minikube.internal:8443/apis/discovery.k8s.io/v1/endpointslices?allowWatchBookmarks=true&labelSelector=%21service.kubernetes.io%2Fheadless%2C%21service.kubernetes.io%2Fservice-proxy-name&resourceVersion=1137&timeout=7m10s&timeoutSeconds=430&watch=true 200 OK in 1 milliseconds
+I1210 15:50:50.055359       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:50:50.055717       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:51:20.054563       1 iptables.go:467] "Running" command="iptables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:51:20.055771       1 iptables.go:467] "Running" command="ip6tables" arguments=[-w 5 -W 100000 -S KUBE-PROXY-CANARY -t mangle]
+I1210 15:51:38.406499       1 config.go:351] "Calling handler.OnNodeUpdate"
